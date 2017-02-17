@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="home">
+    <ul class="post-list">
+          {% for post in site.posts %}
+          <li class="post-section">
+                <!-- "%b %-d, %Y" -->
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="post-title">
+                    <label>[{{ post.categories }}]</label>
+                    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </span>
+          </li>
+          {% endfor %}
+    </ul>
+</div>

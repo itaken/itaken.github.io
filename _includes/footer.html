@@ -1,0 +1,25 @@
+<footer class="site-footer">
+    <div class="wrapper">
+        <div class="footer-col-wrapper">
+            {% if site.github_avatar %}
+                <div class="footer-avatar">
+                    <img src="{{ site.github_avatar }}">
+                </div>
+            {% endif %}
+            <div class="footer-info">
+                {% if site.description %}
+                    <div class="footer-info-description">{{ site.description }}</div>
+                {% endif %}
+                {% if site.github_username %}
+                <div class="footer-info-contact">
+                    {% include icon-github.html username=site.github_username %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="hide">
+            {% include google-analytics.html %}
+            {% include baidu-analytics.html %}
+        </div>
+    </div>
+</footer>
