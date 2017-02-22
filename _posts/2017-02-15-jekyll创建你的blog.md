@@ -9,18 +9,18 @@ tags: jekyll gem
 ---
 
 ```
- 系统: Ubuntu 16.10
- ruby: 2.3.1p112
- gem: 2.6.7
- jekyll: 3.4.0
+  Ubuntu: 16.10
+  ruby: 2.3.1p112
+  gem: 2.6.7
+  jekyll: 3.4.0
 ```
 
-1. 安装 gem, [https://rubygems.org/](https://rubygems.org/)
+\1. 安装 gem, [https://rubygems.org/](https://rubygems.org/)
 
-2. 安装 ffi
-
-{% highlight linux linenos %}sudo gem install ffi
-{% endhighlight %}
+\2. 安装 ffi
+```shell
+sudo gem install ffi
+```
 
 如果报错:
 
@@ -39,32 +39,36 @@ Gem files will remain installed in /var/lib/gems/2.3.0/gems/ffi-1.9.17 for inspe
 Results logged to /var/lib/gems/2.3.0/extensions/x86_64-linux/2.3.0/ffi-1.9.17/gem_make.out
 ```
 
-{% highlight linux linenos %}sudo apt-get install ruby-dev
+解决方案如下: [^1]
+
+```shell
+sudo apt-get install ruby-dev
 sudo apt-get install make  # 如果还不成功, 执行如下语句
-{% endhighlight %}
+```
 
-FR: http://stackoverflow.com/questions/13767725/unable-to-install-gem-failed-to-build-gem-native-extension-cannot-load-such
+\3. 安装 minima
+```shell
+sudo gem install minima
+```
 
-3. 安装 minima
+\4. 使用 gem 安装 jekyll
+```shell
+sudo gem install jekyll bundler
+```
 
-{% highlight linux linenos %}sudo gem install minima {% endhighlight %}
+\5. 创建blog
+```shell
+jekyll new myblog
+```
 
-4. 使用 gem 安装 jekyll
-
-{% highlight linux linenos %}sudo gem install jekyll bundler
-{% endhighlight %}
-
-5. 创建blog
-
-{% highlight linux linenos %}jekyll new myblog
-{% endhighlight %}
-
-6. 开始博客之旅
-
-{% highlight linux linenos %}cd myblog
+\6. 开始博客之旅
+```shell
+cd myblog
 bundle exec jekyll serve
-{% endhighlight %}
+```
 
 打开: http://127.0.0.1:4000/
 
 ![jekyll blog]({{ site.url }}/assets/images/201702/15-01.png)
+
+[^1]: http://stackoverflow.com/questions/13767725/unable-to-install-gem-failed-to-build-gem-native-extension-cannot-load-such

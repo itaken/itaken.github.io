@@ -9,17 +9,21 @@ tags: github jekyll gem
 ---
 
 ```
- 系统: Ubuntu 16.10
- git: 2.9.3
+  Ubuntu: 16.10
+  git: 2.9.3
 ```
-1. 讲 github pages clone 到本地
-{% highlight linux linenos %}git clone https://github.com/itaken/itaken.github.io.git
-{% endhighlight %}
 
-2. 进入你本地的github pages目录
+\1. 将 github pages **clone** 到本地
+```shell
+git clone https://github.com/itaken/itaken.github.io.git
+```
 
-{% highlight linux linenos %}$ jekyll new .
-{% endhighlight %}
+\2. 进入你本地的github pages目录
+```shell
+$ jekyll new .
+```
+
+报错, 提示文件夹不为空:
 
 ```
   Conflict: /var/www/git/mine/itaken.github.io exists and is not empty.
@@ -27,23 +31,33 @@ tags: github jekyll gem
 
 使用下面语句
 
-{% highlight linux linenos %}$ jekyll new . --force
-{% endhighlight %}
+```shell
+$ jekyll new . --force
+```
 
-3. 开启服务
+\3. 开启服务 [^1]
 
-{% highlight linux linenos %}$ jekyll serve
-{% endhighlight %}
-
-FR: [https://jekyllrb.com/docs/usage/](https://jekyllrb.com/docs/usage/)
+```shell
+$ jekyll serve
+```
 
 打开: http://127.0.0.1:4000/
 
-4. 开始书写或修改博客
+\4. 开始书写或修改博客
 
-5. 提交到 git
-
-{% highlight linux linenos %}$ git add .
+\5. 提交到 git
+```shell
+$ git add .
 $ git commit -m "提交信息"
 $ git push origin master
-{% endhighlight %}
+```
+
+### 参考文档 ###
+
+[jekyll quick start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+
+[jekyll markdown internal links](http://stackoverflow.com/questions/4629675/jekyll-markdown-internal-links)
+
+[Jekyll: How to get markdown parsing inside blocks using Kramdown?](http://stackoverflow.com/questions/22291211/jekyll-how-to-get-markdown-parsing-inside-blocks-using-kramdown)
+
+[^1]: [jekyllrb usage](https://jekyllrb.com/docs/usage/)

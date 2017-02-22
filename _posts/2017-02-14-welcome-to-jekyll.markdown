@@ -2,8 +2,8 @@
 layout: post
 
 title: "Welcome to Jekyll!"
-author: itaken   
-date: 2017-02-14 16:27:08 +0800
+author: jekyll
+date: 2017-02-14 16:27:08
 
 categories: post
 ---
