@@ -2,7 +2,7 @@
 layout: post
 
 title: "使用jekyll来创建自己的blog"
-date: 2017-02-15 10:47:38
+date: 2017-02-15 10:47:38 +0800
 
 categories: post
 tags: jekyll gem

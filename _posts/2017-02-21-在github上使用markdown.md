@@ -2,7 +2,7 @@
 layout: post
 
 title: "在github上使用markdown写日记"
-date: 2017-02-21 17:03:57
+date: 2017-02-21 17:03:57 +0800
 
 categories: post
 tags: markdown github

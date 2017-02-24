@@ -2,7 +2,7 @@
 layout: post
 
 title: "使用jekyll来管理github pages"
-date: 2017-02-16 10:20:01
+date: 2017-02-16 10:20:01 +0800
 
 categories: post
 tags: github jekyll gem
