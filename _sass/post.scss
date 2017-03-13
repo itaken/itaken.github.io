@@ -1,0 +1,189 @@
+// POST 页面样式
+@charset "utf-8";
+
+.post-header{
+    user-select: none;
+    cursor: default;
+    display: block;
+    margin-bottom: 38px;
+    h1{
+        font-size: 32px;
+        color: #099;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e8e8e8;
+        margin: 0px;
+        display: block;
+        &:hover{
+            color: #0086b3;
+        }
+    }
+    .post-meta{
+        float: right;
+        display: block;
+    }
+    ul{
+        list-style: none;
+        margin: 5px 1px;
+        li{
+            background-color: #37bed4;
+            float: left;
+            padding: 0px 5px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-right: 5px;
+            a{
+                color: #fffdf3;
+            }
+            &:hover{
+                background-color: #fffdf3;
+                a{
+                    color: #37bed4;
+                }
+            }
+        }
+    }
+}
+.post-content{
+    h1{
+        font-size: 26px;
+        font-weight: 600;
+        color: #000;
+        margin: 1px 0px;
+        padding: 0px;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 500;
+        color: #171717;
+        margin: 1px 0px;
+        padding: 0px;
+    }
+    h3{
+        font-size: 22px;
+        font-weight: 400;
+        color: #272727;
+        margin: 1px 0px;
+        padding: 0px;
+    }
+    h4{
+        font-size: 20px;
+        font-weight: 400;
+        color: #2b2b2b;
+        margin: 0px;
+        padding: 0px;
+    }
+    h5{
+        font-size: 18px;
+        font-weight: 400;
+        color: #353535;
+        margin: 0px;
+        padding: 0px;
+    }
+    h6{
+        font-size: 16px;
+        font-weight: 400;
+        color: #3c3c3c;
+        margin: 0px;
+        padding: 0px;
+    }
+    // 区块
+    blockquote{
+        font-family: 微软雅黑;
+        background-color: rgba(228, 255, 253, 0.44);
+        padding: 5px 10px;
+        font-size: 16px;
+        color: #998;
+        p{
+            margin: 1px 0px;
+            font-size: 16px;
+            user-select: text;
+        }
+        h2{
+            font-size: 20px;
+            padding: 0px;
+            margin: 2px 0px;
+        }
+        blockquote{
+            margin: 2px 0px;
+            font-size: 16px;
+            background-color: #e4fff0;
+            p{
+                font-size: 14px;
+                color: #ff9393;
+            }
+        }
+        ol,ul{
+            margin: 5px 0px 5px 25px;
+            li{
+                color: #4bab50;
+                border: none;
+            }
+        }
+    }
+    .highlighter-rouge{
+        border: 1px solid #c8caff;
+        border-radius: 6px;
+        margin: 5px 0px;
+        .highlight{
+            color: #290229;
+            margin: 0;
+            padding: 3px 6px;
+            // code{
+            //     white-space: normal;
+            //     word-break: break-word;
+            //     word-wrap: break-word;
+            // }
+        }
+    }
+    p{
+        margin-bottom: 5px;
+        font-size: 16px;
+        user-select:none;
+        cursor: default;
+        code{
+            color: #4a008e;
+            background: #fff0f0;
+            border: 1px solid #fdd;
+        }
+        a{
+            &:hover{
+                color: #00bdbd;
+            }
+        }
+        sup{
+            font-weight: 600;
+            background-color: #ff981a;
+            padding: 0px 4px;
+            border-radius: 8px;
+            a{
+                color: #fff;
+            }
+        }
+        img{
+            border: 1px solid #81e2ff;
+            border-radius: 8px;
+        }
+    }
+    hr{
+        margin: 3px 0 8px 0;
+    }
+    ul{
+        li{
+            color: #341452;
+            border-bottom: 1px solid #d4d4d4;
+            margin-bottom: 2px;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    ol{
+        li{
+            border-bottom: 1px solid #d4d4d4;
+            margin-bottom: 2px;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}

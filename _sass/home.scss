@@ -1,0 +1,25 @@
+// home 页面样式
+.page-content{
+    background-color: #fffdf3;
+}
+.post-section{
+    border-bottom: 1px solid #f1f1f1;
+    padding: 5px 8px;
+    margin-bottom: 15px;
+    .post-meta{
+        float: right;
+    }
+    .post-title{
+        display: block;
+        label{
+            float: left;
+            font-size: 22px;
+            color: #ffdeb6;
+            margin-right: 8px;
+        }
+        a{
+            font-size: 20px;
+            color: #2a7ae2;
+        }
+    }
+}

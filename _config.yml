@@ -19,20 +19,29 @@ description: 总想留下点什么,记忆太短暂,罢了,记录下来吧.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://itaken.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+tag_url: "/dish/tags.html"
 github_username:  itaken
 github_avatar: https://avatars3.githubusercontent.com/u/2723658?v=3&s=120
 timezone: Asia/Shanghai
 encoding: utf-8
 # Build settings
 markdown: kramdown
+
 #theme: default # minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+
 exclude:
   - Gemfile
   - Gemfile.lock
 
-permalink: /:categories/:year/:month/:day/:title.html
+# Pagination
+paginate: 5
+paginate_path: "posts/:num/"
+
+#permalink: /:categories/:year/:month/:day/:title.html
 
 sass:
     #sass_dir: _sass

@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: "使用jekyll来管理github pages"
+title: "使用jekyll来管理你的github pages"
 date: 2017-02-16 10:20:01 +0800
 
 categories: post
-tags: github jekyll gem
+tags: [github, jekyll]
 ---
 
 ```
@@ -13,44 +13,43 @@ tags: github jekyll gem
   git: 2.9.3
 ```
 
-\1. 将 github pages **clone** 到本地
-```shell
-git clone https://github.com/itaken/itaken.github.io.git
-```
+1. 将 github pages **clone** 到本地
+    ```shell
+    git clone https://github.com/itaken/itaken.github.io.git
+    ```
 
-\2. 进入你本地的github pages目录
-```shell
-$ jekyll new .
-```
+1. 进入你本地的github pages目录
+    ```shell
+    $ jekyll new .
+    ```
 
-报错, 提示文件夹不为空:
+    报错, 提示文件夹不为空:
 
-```
-  Conflict: /var/www/git/mine/itaken.github.io exists and is not empty.
-```
+    ```
+      Conflict: /var/www/git/mine/itaken.github.io exists and is not empty.
+    ```
 
-使用下面语句
+    使用下面语句
 
-```shell
-$ jekyll new . --force
-```
+    ```shell
+    $ jekyll new . --force
+    ```
 
-\3. 开启服务 [^1]
+1. 开启服务 [^1]
+    ```shell
+    $ jekyll serve
+    ```
 
-```shell
-$ jekyll serve
-```
+    打开: http://127.0.0.1:4000/
 
-打开: http://127.0.0.1:4000/
+1. 开始书写或修改博客
 
-\4. 开始书写或修改博客
-
-\5. 提交到 git
-```shell
-$ git add .
-$ git commit -m "提交信息"
-$ git push origin master
-```
+1. 提交到 git
+    ```shell
+    $ git add .
+    $ git commit -m "提交信息"
+    $ git push origin master
+    ```
 
 ### 参考文档 ###
 

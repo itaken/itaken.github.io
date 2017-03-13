@@ -2,9 +2,11 @@
     <div class="wrapper">
         <div class="footer-col-wrapper">
             {% if site.github_avatar %}
+            <a href="{{site.url}}">
                 <div class="footer-avatar">
                     <img src="{{ site.github_avatar }}">
                 </div>
+            </a>
             {% endif %}
             <div class="footer-info">
                 {% if site.description %}

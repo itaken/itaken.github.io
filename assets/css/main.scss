@@ -5,37 +5,17 @@
 
 @import "minima";
 
+@import "home";
+
+@import "post";
+
+@import "page";
+
 // common
 .hide{
     visibility: hidden;
     width: 0;
     height: 0;
-}
-
-// home
-.page-content{
-    background-color: #fffdf3;
-}
-.post-section{
-    border-bottom: 1px solid #f1f1f1;
-    padding: 5px 8px;
-    margin-bottom: 15px;
-    .post-meta{
-        float: right;
-    }
-    .post-title{
-        display: block;
-        label{
-            float: left;
-            font-size: 22px;
-            color: #ffdeb6;
-            margin-right: 8px;
-        }
-        a{
-            font-size: 20px;
-            color: #2a7ae2;
-        }
-    }
 }
 
 // footer
@@ -47,6 +27,7 @@
     user-select: none;
 }
 .footer-info{
+    margin-right: 10px;
     float: right;
 }
 .footer-info-description{
@@ -60,12 +41,12 @@
     float: right;
     font-size: 20px;
     a{
-        color: #ccc;
+        color: #555;
     }
 }
 .footer-avatar{
     float: right;
-    margin-left: 10px;
+    margin-right: 10px;
     img{
         border: 1px solid #ffcbcb;
         border-radius: 18px;
