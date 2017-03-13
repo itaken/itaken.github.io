@@ -27,6 +27,11 @@ encoding: utf-8
 # Build settings
 markdown: kramdown
 
+# highlighter: rouge
+# lsi:         false
+# excerpt_separator: "\n\n"
+# incremental: false
+
 #theme: default # minima
 gems:
   - jekyll-feed
@@ -39,10 +44,10 @@ exclude:
 
 # Pagination
 paginate: 5
-paginate_path: "posts/:num/"
+paginate_path: "pages/:num/"
 
 #permalink: /:categories/:year/:month/:day/:title.html
 
 sass:
-    #sass_dir: _sass
+    sass_dir: _sass
     style: compressed
