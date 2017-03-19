@@ -44,5 +44,6 @@ tags: jekyll
 
 ---
 更多阅读:
+- [jekyll variables](https://jekyllrb.com/docs/variables/)
 - [use-tags-and-categories-in-your-jekyll-based-github-pages](https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/)
 - [tags.html](https://github.com/codinfox/codinfox-lanyon/blob/dev/blog/tags.html)

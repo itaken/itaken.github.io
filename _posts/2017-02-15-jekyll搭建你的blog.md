@@ -19,7 +19,7 @@ tags: jekyll
 
 1. 安装 ffi
     ```shell
-    sudo gem install ffi
+    $ sudo gem install ffi
     ```
 
     如果报错:
@@ -42,29 +42,29 @@ tags: jekyll
     解决方案如下: [^1]
 
     ```shell
-    sudo apt-get install ruby-dev
-    sudo apt-get install make  # 如果还不成功, 执行如下语句
+    $ sudo apt-get install ruby-dev
+    $ sudo apt-get install make  # 如果还不成功, 执行如下语句
     ```
 
 1. 安装 minima
     ```shell
-    sudo gem install minima
+    $ sudo gem install minima
     ```
 
 1. 使用 gem 安装 jekyll
     ```shell
-    sudo gem install jekyll bundler
+    $ sudo gem install jekyll bundler
     ```
 
 1. 创建blog
     ```shell
-    jekyll new myblog
+    $ jekyll new myblog
     ```
 
 1. 开始博客之旅
     ```shell
-    cd myblog
-    bundle exec jekyll serve
+    $ cd myblog
+    $ bundle exec jekyll serve
     ```
 
     打开: http://127.0.0.1:4000/

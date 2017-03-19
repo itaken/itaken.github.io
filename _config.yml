@@ -33,20 +33,20 @@ markdown: kramdown
 # incremental: false
 
 #theme: default # minima
+# Pagination
+paginate: 5
+paginate_path: "pages:num"
+
 gems:
-  - jekyll-feed
   - jekyll-paginate
+  - jekyll-feed
   - jekyll-gist
 
 exclude:
   - Gemfile
   - Gemfile.lock
 
-# Pagination
-paginate: 5
-paginate_path: "pages/:num/"
-
-#permalink: /:categories/:year/:month/:day/:title.html
+permalink: /:categories/:year/:month/:day/:title.html
 
 sass:
     sass_dir: _sass

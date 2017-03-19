@@ -12,19 +12,19 @@ tags: [github, git]
 
 1. 初始化 git 库
     ```shell
-    cd jekyll-document-to-pdf
-    git init
+    $ cd jekyll-document-to-pdf
+    $ git init
     ```
 
 1. 添加改动文件 (添加所有文件)
     ```shell
-    git add .
+    $ git add .
     ```
 
 1. 本地提交 git代码库
     ```shell
-    git commit -m "初次提交"
-    git push origin master
+    $ git commit -m "初次提交"
+    $ git push origin master
     ```
 
     > 如果没有**关联远程库**, 直接**push**, 则会报错
@@ -42,14 +42,16 @@ tags: [github, git]
 
 1. 关联本地库
     ```shell
-    git remote add origin https://github.com/itaken/jekyll-document-to-pdf.git
+    $ git remote add origin https://github.com/itaken/jekyll-document-to-pdf.git
     ```
 
 1. 提交
     ```shell
-    git push -u origin master
+    $ git push -u origin master
     ```
     ![提交代码]({{ site.url }}/assets/images/201702/19-02.png)
 
 ---
-参考文档: [添加远程库](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000)
+参考文档:
+
+- [添加远程库](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000)

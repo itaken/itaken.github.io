@@ -15,7 +15,7 @@ tags: [github, jekyll]
 
 1. 将 github pages **clone** 到本地
     ```shell
-    git clone https://github.com/itaken/itaken.github.io.git
+    $ git clone https://github.com/itaken/itaken.github.io.git
     ```
 
 1. 进入你本地的github pages目录

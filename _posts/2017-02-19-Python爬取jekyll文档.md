@@ -67,7 +67,9 @@ wkhtmltopdf: 0.12.4 (with patched qt)
 > 完整代码 :
 >> [jekyll-document-to-pdf](https://github.com/itaken/python-example/tree/master/jekyll-document-to-pdf)
 
-------
-参考文档: [beautifulsoup文档](http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/index.html?highlight=new_tag)
+---
+参考文档:
+
+- [beautifulsoup文档](http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/index.html?highlight=new_tag)
 
 [^1]: [jekyll_spider_demo.py](https://github.com/itaken/python-example/blob/master/jekyll-document-to-pdf/jekyll_spider_demo.py)

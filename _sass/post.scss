@@ -187,3 +187,27 @@
         }
     }
 }
+.post-nav{
+    display: inline-block;
+    width: 100%;
+    font-size: 28px;
+    div{
+        a{
+            color: #099;
+            padding: 3px 5px;
+            text-decoration: none;
+            &:hover{
+                background-color: #099;
+                color: #fff;
+                border-radius: 6px;
+                box-shadow: 1px 1px 8px -1px #099;
+            }
+        }
+    }
+    .page-previous{
+        float: left;
+    }
+    .page-next{
+        float: right;
+    }
+}
