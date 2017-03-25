@@ -7,12 +7,6 @@ date: 2017-02-19 17:20:05 +0800
 categories: python
 tags: [python, 爬虫]
 ---
-```
-Ubuntu: 16.10
-Python: 3.5.2+
-wkhtmltopdf: 0.12.4 (with patched qt)
-```
-
 1. 获取页面URL列表 [^1]
 
     ```python
@@ -68,8 +62,19 @@ wkhtmltopdf: 0.12.4 (with patched qt)
 >> [jekyll-document-to-pdf](https://github.com/itaken/python-example/tree/master/jekyll-document-to-pdf)
 
 ---
-参考文档:
+运行环境
 
+```
+Ubuntu: 16.10
+Python: 3.5.2+
+wkhtmltopdf: 0.12.4 (with patched qt)
+```
+
+---
+更多阅读
 - [beautifulsoup文档](http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/index.html?highlight=new_tag)
+
+---
+索引
 
 [^1]: [jekyll_spider_demo.py](https://github.com/itaken/python-example/blob/master/jekyll-document-to-pdf/jekyll_spider_demo.py)
