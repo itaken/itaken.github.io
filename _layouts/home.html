@@ -3,26 +3,34 @@ layout: default
 title: Home
 ---
 <div class="home">
-    <!-- 遍历分页后的文章 -->
-    {% for post in paginator.posts %}
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <p class="author">
-        <span class="date">{{ post.date }}</span>
-    </p>
-    <div class="content">
-        {{ post.content }}
-    </div>
-    {% endfor %}
-    <ul class="post-list">
-          {% for post in site.posts limit:10 %}
-          <li class="post-section">
+    <div class="posts-container">
+        <!-- 遍历分页后的文章 -->
+        {% for post in paginator.posts %}
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <p class="author">
+            <span class="date">{{ post.date }}</span>
+        </p>
+        <div class="content">
+            {{ post.content }}
+        </div>
+        {% endfor %}
+        <ul class="post-list">
+            {% for post in site.posts limit:10 %}
+            <li class="post-section">
                 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
                 <span class="post-title">
-                    <label>[{{ post.categories | escape }}]</label>
+                    <!-- <label>[{{ post.categories | escape }}]</label> -->
                     <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
                 </span>
-          </li>
-          {% endfor %}
-    </ul>
-
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="posts-sidebar">
+        <ul>
+        {% for tag in site.tags %}
+        <li><a href="{{ site.tag_url }}#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
 </div>

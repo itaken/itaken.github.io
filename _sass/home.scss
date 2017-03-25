@@ -1,11 +1,59 @@
 // home 页面样式
+.wrapper, .home{
+    padding: 0;
+    // margin: 0;
+    width: 100%;
+    .posts-container{
+        width: 100%;
+    }
+    .posts-sidebar{
+        display: none;
+        padding-left: 8px;
+        border-left: 1px solid #ccc;
+        li{
+            cursor: pointer;
+            list-style: none;
+            float: left;
+            background: #099;
+            margin: 1px;
+            padding: 0 1px;
+            border-radius: 5px;
+            a{
+                cursor: pointer;
+                color: #fff;
+                margin: 0 1px;
+                font-size: 0.6em;
+                padding: 0 1px;
+            }
+            &:hover{
+                background: transparent;
+                a{
+                    color: #099;
+                    // font-weight: 700;
+                }
+            }
+        }
+    }
+    @media (min-width: 48em) {
+        .posts-container{
+            width: 75%;
+            float:left;
+        }
+        .posts-sidebar{
+            width: 20%;
+            float:right;
+            display: block;
+        }
+    }
+}
 .page-content{
     background-color: #fffdf3;
 }
 .post-section{
     border-bottom: 1px solid #f1f1f1;
     padding: 5px 8px;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
+    user-select:none;
     .post-meta{
         float: right;
     }
@@ -18,8 +66,12 @@
             margin-right: 8px;
         }
         a{
+            cursor: pointer;
             font-size: 20px;
             color: #2a7ae2;
+            &:hover{
+                color: #099;
+            }
         }
     }
 }

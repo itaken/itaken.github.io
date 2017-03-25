@@ -17,6 +17,16 @@
     width: 0;
     height: 0;
 }
+// header
+.site-header{
+    user-select:none;
+    .site-title, .page-link{
+        cursor: pointer;
+        &:hover{
+            color: #099;
+        }
+    }
+}
 
 // footer
 .footer-col-wrapper{
