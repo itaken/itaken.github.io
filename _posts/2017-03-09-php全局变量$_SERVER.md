@@ -54,9 +54,12 @@ tags: [php, 网络安全]
 1. $\_SERVER['HTTP_USER_AGENT'] `返回客户端ua`
 
 ---
-更多阅读:
-> - [浅谈审计中如何快速定位引入单引号的地方](http://www.am0s.com/codesec/229.html)
-> - [$_SERVER](http://php.net/manual/en/reserved.variables.server.php)
-> - [What is the difference between HTTP_CLIENT_IP and HTTP_X_FORWARDED_FOR?](http://stackoverflow.com/questions/7445592/what-is-the-difference-between-http-client-ip-and-http-x-forwarded-for)
+更多阅读
+- [浅谈审计中如何快速定位引入单引号的地方](http://www.am0s.com/codesec/229.html)
+- [$_SERVER](http://php.net/manual/en/reserved.variables.server.php)
+- [What is the difference between HTTP_CLIENT_IP and HTTP_X_FORWARDED_FOR?](http://stackoverflow.com/questions/7445592/what-is-the-difference-between-http-client-ip-and-http-x-forwarded-for)
+
+---
+索引
 
 [^1]: [php中HTTP_X_FORWARDED_FOR 和 REMOTE_ADDR的使用](http://www.cnblogs.com/andhm/archive/2010/12/18/1910030.html)

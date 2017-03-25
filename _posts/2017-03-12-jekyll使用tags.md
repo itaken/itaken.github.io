@@ -9,7 +9,7 @@ tags: jekyll
 ---
 1. 在根目录下, 新建文件 `tags.html`
 
-2. 复制如下代码到 `tags.html` 文件中(去掉`\`).
+2. 复制如下代码到 `tags.html` 文件中 (去掉内容中的`\`).
 
     ```html
     ---
@@ -43,7 +43,7 @@ tags: jekyll
     ![jekyll tags]({{ site.url }}/assets/images/201703/12-01.png)
 
 ---
-更多阅读:
+更多阅读
 - [jekyll variables](https://jekyllrb.com/docs/variables/)
 - [use-tags-and-categories-in-your-jekyll-based-github-pages](https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/)
 - [tags.html](https://github.com/codinfox/codinfox-lanyon/blob/dev/blog/tags.html)

@@ -1,11 +1,13 @@
 // POST 页面样式
 @charset "utf-8";
 
+// 头部 (标题)
 .post-header{
     user-select: none;
     cursor: default;
     display: block;
     margin-bottom: 38px;
+    // 标题名
     h1{
         font-size: 32px;
         color: #099;
@@ -17,10 +19,12 @@
             color: #0086b3;
         }
     }
+    // 时间
     .post-meta{
         float: right;
         display: block;
     }
+    // 标签 (无序列表)
     ul{
         list-style: none;
         margin: 5px 1px;
@@ -43,6 +47,7 @@
         }
     }
 }
+// 日志内容
 .post-content{
     h1{
         font-size: 26px;
@@ -86,7 +91,7 @@
         margin: 0px;
         padding: 0px;
     }
-    // 区块
+    // 引用区块
     blockquote{
         font-family: 微软雅黑;
         background-color: rgba(228, 255, 253, 0.44);
@@ -97,44 +102,76 @@
             margin: 1px 0px;
             font-size: 16px;
             user-select: text;
+            font-style: normal;
+            letter-spacing: normal;
         }
+        // 标题
         h2{
             font-size: 20px;
             padding: 0px;
             margin: 2px 0px;
+            font-style: normal;
+            letter-spacing: normal;
+            color: #290229;
         }
+        // 滑过变色
+        &:hover{
+            // box-shadow: 1px 1px 0px 1px #a5d6bb;
+            background: #e4fff0;
+            blockquote{
+                background-color: #dbdbff; // #eeeeff;
+            }
+        }
+        // 二级引用
         blockquote{
             margin: 2px 0px;
             font-size: 16px;
             background-color: #e4fff0;
+            // 文字内容
             p{
                 font-size: 14px;
-                color: #ff9393;
+                color: #a00;
             }
         }
+        // 列表
         ol,ul{
             margin: 5px 0px 5px 25px;
             li{
-                color: #4bab50;
+                color: #008080;
                 border: none;
+                a{
+                    font-size: 14px;
+                    font-style: normal;
+                }
             }
         }
     }
+    // 代码块样式
     .highlighter-rouge{
-        border: 1px solid #c8caff;
-        border-radius: 6px;
-        margin: 5px 0px;
+        // border: 1px solid #c8caff;
+        // border-radius: 6px;
+        margin: 5px 1px;
         .highlight{
             color: #290229;
             margin: 0;
             padding: 3px 6px;
-            // code{
-            //     white-space: normal;
-            //     word-break: break-word;
-            //     word-wrap: break-word;
-            // }
+            code{
+                background: transparent;
+                span.gu{
+                    color: #5d5d5d;
+                }
+            }
         }
     }
+    // 代码块样式 (+滑过变色)
+    pre{
+        border: 1px solid #c8caff;
+        border-radius: 6px;
+        &:hover{
+            background: #dbdbff; //#dbdbff; #e4fff0
+        }
+    }
+    // 文字内容
     p{
         margin-bottom: 5px;
         font-size: 16px;
@@ -146,27 +183,36 @@
             border: 1px solid #fdd;
         }
         a{
+            cursor: pointer;
             &:hover{
                 color: #00bdbd;
             }
         }
-        sup{
-            font-weight: 600;
-            background-color: #ff981a;
-            padding: 0px 4px;
-            border-radius: 8px;
-            a{
-                color: #fff;
-            }
-        }
+        // 图片
         img{
             border: 1px solid #81e2ff;
             border-radius: 8px;
+            margin: 4px 0px;
+
+            &:hover{
+                box-shadow: 1px 1px 0px 1px #65b8fb;
+            }
+        }
+    }
+    // 索引
+    sup{
+        font-weight: 600;
+        background-color: #ff981a;
+        padding: 0px 4px;
+        border-radius: 8px;
+        a{
+            color: #fff;
         }
     }
     hr{
-        margin: 3px 0 8px 0;
+        margin: 15px 0 8px 0;
     }
+    // 无序列表
     ul{
         li{
             color: #341452;
@@ -177,6 +223,7 @@
             }
         }
     }
+    // 有序列表
     ol{
         li{
             border-bottom: 1px solid #d4d4d4;
@@ -187,6 +234,7 @@
         }
     }
 }
+// 底部文章导航
 .post-nav{
     display: inline-block;
     width: 100%;
