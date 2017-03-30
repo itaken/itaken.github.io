@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: itaken's pages
 email: ""
-description: 总想留下点什么,记忆太短暂,罢了,记录下来吧.
+description: 记笔记,记笔记,记笔记.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://itaken.github.io/" # the base hostname & protocol for your site, e.g. http://example.com

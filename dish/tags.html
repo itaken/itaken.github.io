@@ -14,7 +14,7 @@ showTitle: on
     {% for tag in site.tags %}
     <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
     <ul class="tags-items-posts">
-      {% for post in tag[1] limit:15 %}
+      {% for post in tag[1] limit:8 %}
       <li>
           <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
               {{ post.title }}<small class="post-date">{{ post.date | date: "%b %-d, %Y" }}</small>
