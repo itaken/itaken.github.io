@@ -26,6 +26,8 @@ timezone: Asia/Shanghai
 encoding: utf-8
 # Build settings
 markdown: kramdown
+kramdown:
+    input: GFM
 
 # highlighter: rouge
 # lsi:         false
@@ -41,6 +43,7 @@ gems:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-gist
+  - jekyll-sitemap
 
 exclude:
   - Gemfile

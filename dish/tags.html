@@ -6,13 +6,13 @@ showTitle: on
 <div class="tags-items">
   <div class="tags-items-list">
     {% for tag in site.tags %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    <a href="#{{ tag[0] | slugify }}" class="post-tag"><i class="fa fa-tag" aria-hidden="true"></i>{{ tag[0] }}</a>
     {% endfor %}
   </div>
   <hr/>
   <div class="tags-items-section">
     {% for tag in site.tags %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    <h2 id="{{ tag[0] | slugify }}"><i class="fa fa-hashtag" aria-hidden="true"></i>&nbsp;{{ tag[0] }}</h2>
     <ul class="tags-items-posts">
       {% for post in tag[1] limit:8 %}
       <li>

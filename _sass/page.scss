@@ -5,6 +5,7 @@
 $list-a-bg-color: #97f3f3;
 $list-a-text-color: #fff;
 $section-a-text-color: #009999;
+
 .tags-items-list{
     user-select:none;
     margin-bottom: 10px;
@@ -26,6 +27,9 @@ $section-a-text-color: #009999;
             color: $list-a-bg-color;
             background-color: $list-a-text-color;
         }
+        i{
+            margin-right: 2px;
+        }
     }
 }
 .tags-items-section{
@@ -33,7 +37,7 @@ $section-a-text-color: #009999;
     h2{
         cursor: default;
     }
-    ul{
+    ul.tags-items-posts{
         list-style: none;
         li{
             margin: 3px 0px;
@@ -47,8 +51,8 @@ $section-a-text-color: #009999;
             padding: 6px 3px;
             &:hover{
                 border-radius: 5px;
+                color: #fff !important;
                 background-color: $section-a-text-color;
-                color: #fff;
                 small{
                     background-color: $section-a-text-color;
                     color: #e0fff3;

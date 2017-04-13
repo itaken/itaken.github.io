@@ -228,59 +228,68 @@
     sup{
         font-weight: 600;
         background-color: #ff981a;
-        padding: 0px 4px;
+        padding: 1px 3px;
         border-radius: 8px;
         a{
             color: #fff;
+            text-decoration: none;
         }
     }
     hr{
         margin: 8px 0 15px 0;
     }
-    // 无序列表
-    ul{
+    // 无序列表, 有序列表
+    ul, ol{
         li{
             color: #341452;
-            border-bottom: 1px solid #d4d4d4;
-            margin-bottom: 2px;
-            &:last-child{
-                border-bottom: none;
+            a{
+                border-bottom: 1px solid #d4d4d4;
+                padding: 1px 3px 2px 2px;
+                &:hover{
+                    color: #099;
+                    font-weight: 600;
+                }
             }
-        }
-    }
-    // 有序列表
-    ol{
-        li{
-            border-bottom: 1px solid #d4d4d4;
-            margin-bottom: 2px;
             &:last-child{
-                border-bottom: none;
+                a{
+                    border-bottom: none;
+                }
             }
         }
     }
 }
 // 底部文章导航
-.post-nav{
+.post-footer{
     display: inline-block;
     width: 100%;
     font-size: 28px;
-    div{
-        a{
-            color: #099;
-            padding: 3px 5px;
-            text-decoration: none;
+    .post-nav{
+        width: 180px;
+        margin: 0 auto;
+        div{
+            background-color: #2a7ae2;
+            float: left;
+            width: 50%;
+            // box-shadow: 1px 2px 8px 1px #099;
             &:hover{
-                background-color: #099;
-                color: #fff;
-                border-radius: 6px;
-                box-shadow: 1px 1px 8px -1px #099;
+                background-color: #ff255c;
+                a{
+                    // color: #ff9800;
+                    text-shadow: 0px 0px 2px #00BCD4;
+                }
             }
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+            margin: 0 3px;
         }
     }
     .page-previous{
-        float: left;
+        border-radius: 5px 0 0 5px;
     }
     .page-next{
-        float: right;
+        border-radius: 0 5px 5px 0;
+        text-align: right;
     }
 }

@@ -6,7 +6,7 @@ showTitle: on
 <div class="tags-items">
   <div class="tags-items-section">
     {% for categorie in site.categories %}
-    <h2 id="{{ tag[0] | slugify }}">{{ categorie[0] | upcase }}</h2>
+    <h2 id="{{ tag[0] | slugify }}"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;{{ categorie[0] | upcase }}</h2>
     <ul class="tags-items-posts">
       {% for post in categorie[1] limit:8 %}
       <li>

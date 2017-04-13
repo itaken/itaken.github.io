@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "zh" }}">
   {% include head.html %}
+  {% if page.stylesheet %}
+    <link rel="stylesheet" href="{{ page.stylesheet }}">
+  {% endif %}
   <body>
     {% include header.html %}
     <main class="page-content" aria-label="Content">
