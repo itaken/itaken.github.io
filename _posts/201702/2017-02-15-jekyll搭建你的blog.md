@@ -10,6 +10,11 @@ tags: jekyll
 1. 安装 gem [^1]
     >一般安装`ruby`, 就会自动安装了gem
 
+    ```bash
+    $ sudo apt install ruby
+    $ sudo gem update --system  # 更新gem
+    ```
+
 1. 安装 `ffi`
     ```bash
     $ sudo gem install ffi
