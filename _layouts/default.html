@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "zh" }}">
-  {% include head.html %}
-  {% if page.stylesheet %}
-    <link rel="stylesheet" href="{{ page.stylesheet }}">
-  {% endif %}
+    {% include head.html %}
   <body>
-    {% include header.html %}
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    {% include nav.html %}
+    <div class="container-content">
         {{ content }}
-      </div>
-    </main>
+    </div>
     {% include footer.html %}
   </body>
 </html>

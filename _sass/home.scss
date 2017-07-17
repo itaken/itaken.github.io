@@ -1,8 +1,33 @@
-// home 页面样式
-.wrapper, .home{
+// 头部
+.navbar{
+  display: block;
+  height: 16px;
+  .navbar-header{
+    float: left;
+    a{
+        font-size: 24px;
+    }
+  }
+  .navbar-collapse{
+    ul{
+      float: right;
+      list-style-type: none;
+      margin-right: 20px;
+      li{
+        float: left;
+        margin: 8px;
+      }
+    }
+  }
+}
+// 内容
+.container-content{
     padding: 0;
-    // margin: 0;
     width: 100%;
+    .posts{
+        width: 80%;
+        margin: 25px auto 5px auto;
+    }
     .posts-container{
         width: 100%;
     }
@@ -46,6 +71,7 @@
         }
     }
 }
+// 内容
 .page-content{
     background-color: #fffdf3;
 }
@@ -74,4 +100,8 @@
             }
         }
     }
+}
+// 底部
+.fonter-viewer-flags{
+    float: left;
 }
