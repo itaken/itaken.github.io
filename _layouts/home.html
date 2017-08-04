@@ -1,30 +1,41 @@
 ---
 layout: default
-title: Home
+title: "首页"
 ---
-<div class="posts">
-  <div class="posts-container">
-    <ul class="post-list">
-      {% for post in site.posts limit:12 %}
-      <li class="post-section">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <span class="post-title">
-          <!-- <label>[{{ post.categories | escape }}]</label> -->
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </span>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="posts-sidebar">
-    <ul>
-      {% for tag in site.tags reversed limit:25 %}
-      <li><a href="{{ site.tag_url }}#{{ tag[0] | slugify }}" class="post-tag">
-        <i class="fa fa-hashtag" aria-hidden="true"></i>{{ tag[0] }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <!-- Pager -->
-  {% include pagination.html %}
+<div class="posts-container">
+{% for post in paginator.posts %}
+    <article class="posts" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          {% if post.image.feature %}
+            <div class="posts-image">
+              <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+                <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}">
+              </a>
+            </div>
+          {% endif %}
+            <a class="permalink" href="{{ site.url }}{{ post.url }}">
+              <h1 class="post-title" itemprop="name headline">
+                <i class="fa fa-bookmark"></i>{{ post.title | escape }}
+              </h1>
+            </a>
+            <p class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%m/%d, %Y | %a" }}</time>
+                {% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">{{ post.author }}</span></span>
+                {% endif %}
+            </p>
+            <ul>
+                {% for tag in page.tags %}
+                    {% if tag != "" %}
+                    <li><a href="{{ site.tag_url }}#{{ tag | slugify }}"> {{ tag }} </a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          {{ post.content }}
+        </div>
+    </article>
+{% endfor %}
 </div>
+{% include pagination.html %}

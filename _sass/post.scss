@@ -8,16 +8,22 @@
     display: block;
     margin-bottom: 38px;
     // 标题名
-    h1{
-        font-size: 32px;
-        color: #099;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #e8e8e8;
-        margin: 0px;
-        display: block;
-        &:hover{
-            color: #2a7ae2;
-            // font-weight: 700;
+    a{
+        text-decoration: none;
+        h1{
+            font-size: 32px;
+            color: #099;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e8e8e8;
+            margin: 0px;
+            display: block;
+            &:hover{
+                color: #2a7ae2;
+                // font-weight: 700;
+            }
+            i{
+                margin-right: 5px;
+            }
         }
     }
     // 时间
@@ -63,6 +69,10 @@
         color: #171717;
         margin: 1px 0px;
         padding: 0px;
+        &::before, &::after {
+            content: " —— ";
+            font-family: Arial;
+        }
     }
     h3{
         font-size: 22px;
@@ -94,11 +104,22 @@
     }
     // 引用区块
     blockquote{
-        font-family: 微软雅黑;
-        background-color: rgba(228, 255, 253, 0.44);
-        padding: 5px 10px;
+        font-family: 'Microsoft YaHei','Verdana', 'SimSun';
+        background-color: #eafff3;
+        padding: 10px;
         font-size: 16px;
         color: #998;
+        margin: 5px 0;
+        display: block;
+        &:before{
+            content: "\f10d";
+            color: #e2e2e2;
+            font-size: 32px;
+            font-family: FontAwesome;
+            float: left;
+            position: relative;
+            padding: 0 10px 0 0;
+        }
         p{
             margin: 1px 0px;
             font-size: 16px;
@@ -245,6 +266,7 @@
             a{
                 border-bottom: 1px solid #d4d4d4;
                 padding: 1px 3px 2px 2px;
+                text-decoration: none;
                 &:hover{
                     color: #099;
                     font-weight: 600;

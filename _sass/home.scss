@@ -1,107 +1,82 @@
 // 头部
 .navbar{
-  display: block;
-  height: 16px;
-  .navbar-header{
-    float: left;
+    position: fixed;
+    width: 100%;
+    display: block;
+    height: 33px;
+    background: #5f9ea0;
+    margin: 0;
+    padding: 2px 20px 4px 20px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    top: 0;
+    left: 0;
+    right: 0;
     a{
-        font-size: 24px;
+        color: #FFF;
     }
-  }
-  .navbar-collapse{
-    ul{
-      float: right;
-      list-style-type: none;
-      margin-right: 20px;
-      li{
+    .navbar-header{
         float: left;
-        margin: 8px;
-      }
+        a{
+            font-size: 24px;
+        }
     }
-  }
+    .navbar-collapse{
+        margin: 8px 40px 0 0;
+        ul{
+            float: right;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                float: left;
+                margin-left: 5px;
+            }
+        }
+    }
+    .navbar-toggle{
+        display: none;
+    }
 }
 // 内容
-.container-content{
-    padding: 0;
-    width: 100%;
+.posts-container{
     .posts{
-        width: 80%;
-        margin: 25px auto 5px auto;
+        border: 1px solid #ccc;
+        padding: 15px 10px;
+        border-radius: 5px;
+        margin: 10px auto !important;
+        box-shadow: 0px 0px 15px 1px #dedede;
+        background: #FFF;
     }
-    .posts-container{
-        width: 100%;
-    }
-    .posts-sidebar{
-        display: none;
-        padding-left: 8px;
-        border-left: 1px solid #ccc;
+}
+// 底部翻页
+.pagination{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    padding-bottom: 20px;
+    ul{
+        user-select: none;
+        margin: 0 auto;
+        width: 60%;
+        list-style: none;
         li{
-            cursor: pointer;
-            list-style: none;
             float: left;
-            background: #4995ef;
-            margin: 1px;
-            padding: 0 1px;
-            border-radius: 5px;
+            margin: 0 5px;
+            background: #5f9ea0;
+            color: #fff;
+            padding: 1px 4px;
+            cursor: pointer;
             a{
-                cursor: pointer;
                 color: #fff;
-                margin: 0 1px;
-                font-size: 0.6em;
-                padding: 0 1px;
-            }
-            &:hover{
-                background: transparent;
-                a{
-                    color: #099;
-                    // font-weight: 700;
+                &:hover{
+                    color: #f00;
+                    font-weight: 600;
                 }
             }
-        }
-    }
-    @media (min-width: 48em) {
-        .posts-container{
-            width: 75%;
-            float:left;
-        }
-        .posts-sidebar{
-            width: 20%;
-            float:right;
-            display: block;
-        }
-    }
-}
-// 内容
-.page-content{
-    background-color: #fffdf3;
-}
-.post-section{
-    border-bottom: 1px solid #f1f1f1;
-    padding: 5px 8px;
-    margin-bottom: 15px !important;
-    user-select:none;
-    .post-meta{
-        float: right;
-    }
-    .post-title{
-        display: block;
-        label{
-            float: left;
-            font-size: 22px;
-            color: #ffdeb6;
-            margin-right: 8px;
-        }
-        a{
-            cursor: pointer;
-            font-size: 20px;
-            color: #2a7ae2;
-            &:hover{
-                color: #099;
+            .current-page{
+                color: #00ff08;
             }
         }
     }
-}
-// 底部
-.fonter-viewer-flags{
-    float: left;
 }

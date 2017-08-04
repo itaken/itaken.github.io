@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 
-@import "minima";
+// @import "minima";
 
 @import "home";
 
@@ -14,55 +14,71 @@
 // 字体 图标
 @import "font-awesome/css/font-awesome.min.css";
 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei','Verdana', 'SimSun';
+    background: #fffefa;
+}
 // common
 .hide{
     visibility: hidden;
     width: 0;
     height: 0;
 }
-// header
-.site-header{
-    user-select:none;
-    .site-title, .page-link{
-        cursor: pointer;
-        &:hover{
-            color: #099;
-        }
+// article
+.main-container{
+    margin-top: 45px;
+    .posts{
+        margin: 0 auto;
+        width: 70%;
     }
 }
-
 // footer
-.footer-col-wrapper{
-    float: right;
+footer{
     display: block;
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
-    user-select: none;
-}
-.footer-info{
-    margin-right: 10px;
-    float: right;
-}
-.footer-info-description{
-    font-size: 16px;
-    color: #f3d9d9;
-    margin: 5px 0;
-    cursor: default;
-}
-.footer-info-contact{
-    float: right;
-    float: right;
-    font-size: 20px;
-    a{
-        color: #555;
+    clear: both;
+    .site-footer{
+        width: 70%;
+        margin: 20px auto 0 auto;
     }
-}
-.footer-avatar{
-    float: right;
-    margin-right: 10px;
-    img{
-        border: 1px solid #ffcbcb;
-        border-radius: 18px;
-        width: 60px;
+    .fonter-viewer-flags{
+        float: left;
+    }
+    .footer-author-info{
+        float: right;
+        display: block;
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        .footer-avatar{
+            float: right;
+            margin-right: 10px;
+            img{
+                border: 1px solid #ffcbcb;
+                border-radius: 18px;
+                width: 60px;
+            }
+        }
+        .footer-info{
+            margin-right: 10px;
+            float: right;
+            .footer-info-description{
+                font-size: 16px;
+                color: #f3d9d9;
+                margin: 5px 0;
+                cursor: default;
+            }
+            .footer-info-contact{
+                float: right;
+                float: right;
+                font-size: 20px;
+                a{
+                    color: #555;
+                }
+            }
+        }
     }
 }

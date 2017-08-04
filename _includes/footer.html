@@ -1,9 +1,9 @@
-<footer class="site-footer">
-    <div class="wrapper">
+<footer role="contentinfo">
+    <div class="site-footer">
         <div class="fonter-viewer-flags">
-          <a href="http://s11.flagcounter.com/more/GBM"><img src="//s11.flagcounter.com/count2/GBM/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+            <a href="http://s11.flagcounter.com/more/GBM"><img src="//s11.flagcounter.com/count2/GBM/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
         </div>
-        <div class="footer-col-wrapper">
+        <div class="footer-author-info">
             {% if site.github_avatar %}
             <a href="{{site.url}}">
                 <div class="footer-avatar">
@@ -13,7 +13,7 @@
             {% endif %}
             <div class="footer-info">
                 {% if site.description %}
-                    <div class="footer-info-description">{{ site.description }}</div>
+                <div class="footer-info-description">{{ site.description }}</div>
                 {% endif %}
                 {% if site.github_username %}
                 <div class="footer-info-contact">

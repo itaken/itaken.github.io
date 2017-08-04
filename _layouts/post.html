@@ -21,6 +21,11 @@ layout: default
     <div class="post-content" itemprop="articleBody">
       {{ content }}
     </div>
+    {% if page.modified %}
+    <span class="posts-modified">
+      <i>{{ page.modified }}</i>
+    </span>
+    {% endif %}
     <div class="post-footer">
         <div class="post-nav">
             {% if page.previous != nil %}
