@@ -1,11 +1,19 @@
 ---
 layout: default
+stylesheet: /assets/js/highlight.js/atom-one-dark.css
 ---
 <article class="posts" itemscope itemtype="http://schema.org/BlogPosting">
+    {% if page.image == true %}
+    <div class="post-bg">
+        <div class="post-image">
+            <img src="{{ site.url }}/assets/images/{{ page.date | date: '%Y%m' }}/{{ page.date | date: '%d' }}-01.png" alt="{{ page.title }}">
+        </div>
+    </div>
+    {% endif %}
     <header class="post-header">
         <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
         <p class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%m/%d, %Y | %a" }}</time>
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%m/%d %Y | %a" }}</time>
             {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">{{ page.author }}</span></span>
             {% endif %}
@@ -41,3 +49,5 @@ layout: default
         </div>
     </div>
 </article>
+<script type="text/javascript" src="/assets/js/highlight.js/highlight.min.js"></script>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>

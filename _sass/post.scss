@@ -1,54 +1,66 @@
 // POST 页面样式
 @charset "utf-8";
-
-// 头部 (标题)
-.post-header{
-    user-select: none;
-    cursor: default;
-    display: block;
-    margin-bottom: 38px;
-    // 标题名
+article{
     a{
         text-decoration: none;
-        h1{
-            font-size: 32px;
-            color: #099;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e8e8e8;
-            margin: 0px;
-            display: block;
-            &:hover{
-                color: #2a7ae2;
-                // font-weight: 700;
-            }
-            i{
-                margin-right: 5px;
-            }
+    }
+    .post-bg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        z-index: -99;
+        filter: blur(5px);
+        opacity: 0.5;
+        img{
+            width: 100%;
         }
     }
-    // 时间
-    .post-meta{
-        float: right;
+    // 头部 (标题)
+    .post-header{
+        user-select: none;
+        cursor: default;
         display: block;
-    }
-    // 标签 (无序列表)
-    ul{
-        list-style: none;
-        margin: 5px 1px;
-        li{
-            background-color: #37bed4;
-            float: left;
-            padding: 0px 5px;
-            border-radius: 8px;
-            font-size: 12px;
-            margin-right: 5px;
-            a{
-                color: #fffdf3;
-            }
+        margin: 80px 0 40px 0;
+        // 标题名
+        .post-title{
+            color: #1d9d74;
+            border-bottom: 1px solid #5f9ea0;
+            padding: 0 0 8px 0;
+            margin: 0;
             &:hover{
-                background-color: #fffdf3;
+                color: #551a8b;
+            }
+        }
+        // 时间
+        .post-meta{
+            float: right;
+            display: block;
+            margin: 2px 0;
+            color: #5f9ea0;
+        }
+        // 标签 (无序列表)
+        ul{
+            list-style: none;
+            margin: 5px 1px;
+            padding-left: 0;
+            li{
+                background-color: #37bed4;
+                float: left;
+                padding: 1px 5px 2px 5px;
+                border-radius: 8px;
+                font-size: 12px;
+                margin-right: 5px;
                 a{
-                    color: #37bed4;
+                    color: #fffdf3;
+                }
+                &:hover{
+                    background-color: #fffdf3;
+                    a{
+                        color: #37bed4;
+                        font-weight: 700;
+                    }
                 }
             }
         }
@@ -173,33 +185,9 @@
             font-style: normal;
         }
     }
-    // 代码块样式
-    .highlighter-rouge{
-        // border: 1px solid #c8caff;
-        // border-radius: 6px;
-        margin: 5px 1px;
-        .highlight{
-            color: #290229;
-            margin: 0;
-            padding: 3px 6px;
-            code{
-                background: transparent;
-                span.gu{
-                    color: #5d5d5d;
-                }
-            }
-        }
-    }
     // 代码块样式 (+滑过变色)
     pre{
         border: 1px solid #c8caff;
-        border-radius: 6px;
-        &:hover{
-            background: #dbdbff; //#dbdbff; #e4fff0
-            pre{
-                background: #dbdbff; //#dbdbff; #e4fff0
-            }
-        }
         // 处理 有行号的代码块
         table{
             tr{
@@ -223,11 +211,6 @@
         font-size: 16px;
         user-select:none;
         cursor: default;
-        code{
-            color: #4a008e;
-            background: #fff0f0;
-            border: 1px solid #fdd;
-        }
         a{
             cursor: pointer;
             &:hover{
@@ -239,9 +222,9 @@
             border: 1px solid #81e2ff;
             border-radius: 8px;
             margin: 4px 0px;
-
+            width: 100%;
             &:hover{
-                box-shadow: 1px 1px 0px 1px #65b8fb;
+                box-shadow: 0px 0px 8px 0px #65b8fb;
             }
         }
     }
@@ -308,12 +291,11 @@
         width: 180px;
         margin: 0 auto;
         div{
-            background-color: #2a7ae2;
+            background-color: #5f9ea0;
             float: left;
             width: 50%;
-            // box-shadow: 1px 2px 8px 1px #099;
             &:hover{
-                background-color: #ff255c;
+                background-color: #1d9d74;
                 a{
                     // color: #ff9800;
                     text-shadow: 0px 0px 2px #00BCD4;

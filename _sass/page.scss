@@ -36,6 +36,10 @@ $section-a-text-color: #009999;
     user-select:none;
     h2{
         cursor: default;
+        font-weight: 700;
+        &::before, &::after {
+            content: "";
+        }
     }
     ul.tags-items-posts{
         list-style: none;
