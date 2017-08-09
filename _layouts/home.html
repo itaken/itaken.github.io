@@ -4,14 +4,12 @@ title: "首页"
 ---
 {% for post in paginator.posts %}
 <section class="posts" itemscope itemtype="http://schema.org/BlogPosting">
-    {% if post.image == true %}
-    <div class="post-bg">
+    <!-- <div class="post-bg">
         <div class="post-image">
             <img src="{{ site.url }}/assets/images/{{ post.date | date: '%Y%m' }}/{{ post.date | date: '%d' }}-01.png" alt="{{ post.title }}">
         </div>
-    </div>
-    {% endif %}
-    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+    </div> -->
+    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" {% if post.image == true %}class= "time-special"{% endif %}>
         <span class="time-day">{{ post.date | date: "%-d" }}</span>
         <span class="time-month">{{ post.date | date: "%b" }}</span>
     </time>
