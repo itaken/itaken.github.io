@@ -14,21 +14,22 @@ tags: [mysql, ]
 ## 解决方法
 
 1. 修改 `/etc/mysql/mysql.conf.d/mysqld.cnf` 配置 [^2]
-  - 设置`wait_timeout`
-  >`wait_timeout=180`
+    - 设置`wait_timeout`
+    >例如: 设置`wait_timeout=180`
 
-  - 设置`max_allowed_packet`
-  ```info
-  [mysqld]
-  max_allowed_packet=16M
-  ```
-  - 使用 `mysqli_ping` [^1]
+    - 设置`max_allowed_packet`
+
+    ```apache
+    [mysqld]
+    max_allowed_packet=16M
+    ```
+    - 使用 `mysqli_ping` [^1]
 
 
 1. 重启 **mysql**
-  ```bash
-  $ sudo /etc/init.d/mysql restart
-  ```
+    ```bash
+    $ sudo /etc/init.d/mysql restart
+    ```
 
 ---
 更多阅读

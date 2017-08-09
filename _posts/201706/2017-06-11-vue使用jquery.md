@@ -12,16 +12,16 @@ tags: [ubuntu, vue, jquery]
 
 1. webpack 配置添加 jquery插件
 
-```bash
-module.exports = merge(baseWebpackConfig, {
-    ...
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: 'jquery'
-        })
-    ]
-}
-```
+    ```bash
+    module.exports = merge(baseWebpackConfig, {
+        ...
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery'
+            })
+        ]
+    }
+    ```
 
 1. 在项目JavaScript中直接 使用 `$` 即可调用jquery.
 

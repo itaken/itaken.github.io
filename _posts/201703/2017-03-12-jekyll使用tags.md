@@ -3,6 +3,7 @@ layout: post
 
 title: "在jekyll中使用tags"
 date: 2017-03-12 23:10:36 +0800
+image: true
 
 categories: post
 tags: jekyll

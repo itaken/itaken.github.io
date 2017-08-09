@@ -3,6 +3,7 @@ layout: post
 
 title: "ubuntu 安装docker"
 date: 2017-05-10 15:12:23 +0800
+image: true
 
 categories: post
 tags: [ubuntu, docker]

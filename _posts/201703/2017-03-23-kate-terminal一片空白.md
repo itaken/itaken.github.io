@@ -3,6 +3,7 @@ layout: post
 
 title: "kate terminal面板无法使用问题处理"
 date: 2017-03-23 10:03:21 +0800
+image: true
 
 categories: post
 tags: [kate, IDE]

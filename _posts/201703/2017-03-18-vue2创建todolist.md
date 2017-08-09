@@ -3,6 +3,7 @@ layout: post
 
 title: "使用vue 2创建todolist"
 date: 2017-03-18 17:36:01 +0800
+image: true
 
 categories: post
 tags: [vue]
