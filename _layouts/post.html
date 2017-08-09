@@ -28,12 +28,12 @@ stylesheet: /assets/js/highlight.js/atom-one-dark.css
     </header>
     <div class="post-content" itemprop="articleBody">
       {{ content }}
+      {% if page.modified %}
+      <div class="posts-modified">
+          最后编辑于<span>{{ page.modified | date: "%F %R" }}</span>
+      </div>
+      {% endif %}
     </div>
-    {% if page.modified %}
-    <span class="posts-modified">
-      <i>{{ page.modified }}</i>
-    </span>
-    {% endif %}
     <div class="post-footer">
         <div class="post-nav">
             {% if page.previous != nil %}

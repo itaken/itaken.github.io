@@ -3,12 +3,13 @@
 
 // 代码样式
 %code{
-    color: #9b58d8;
+    color: #ef53d4;
     background: #fff0f0;
     border: 1px solid #fdd;
-    padding: 1px 2px;
-    border-radius: 3px;
-    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 6px;
+    font-weight: 500;
+    margin: 2px;
 }
 article{
     a{
@@ -239,8 +240,21 @@ article{
                 box-shadow: 0px 0px 8px 0px #65b8fb;
             }
         }
-        code{
+        code.highlighter-rouge{
             @extend %code;
+        }
+    }
+    // 重编辑
+    .posts-modified{
+        float: right;
+        margin: 8px 0;
+        color: #959595;
+        user-select: none;
+        cursor: default;
+        border-top: 1px solid #ccc;
+        padding: 1px 0;
+        span{
+            color: #a52a2a;
         }
     }
     // 索引
@@ -259,8 +273,14 @@ article{
     }
     // 无序列表, 有序列表
     ul, ol{
+        margin: 0;
+        padding: 0 0 0 17px;
         li{
             color: #341452;
+            p{
+                padding: 0;
+                margin: 1px 0 0 0;
+            }
             a{
                 border-bottom: 1px solid #d4d4d4;
                 padding: 1px 3px 2px 2px;
@@ -275,7 +295,7 @@ article{
                     border-bottom: none;
                 }
             }
-            code{
+            code.highlighter-rouge{
                 @extend %code;
             }
         }

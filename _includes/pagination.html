@@ -5,9 +5,9 @@
     {% comment %} 上一页 {% endcomment %}
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <li><a href="{{ site.url }}" class="btn">Previous</a></li>
+        <li><a href="{{ site.url }}" class="btn">Prev</a></li>
       {% else %}
-        <li><a href="{{ site.url }}/pages/No.{{ paginator.previous_page }}" class="btn">Previous</a></li>
+        <li><a href="{{ site.url }}/pages/No.{{ paginator.previous_page }}" class="btn">Prev</a></li>
       {% endif %}
     {% endif %}
 
