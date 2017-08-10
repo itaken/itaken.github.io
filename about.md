@@ -1,10 +1,12 @@
 ---
 layout: page
-title: About
+title: "About Pages"
+
 permalink: /about/
 ---
 
-This is my github pages.
+>This is **itaken's** github pages!
 
+---
 
 {% include icon-github.html username="itaken" %}
