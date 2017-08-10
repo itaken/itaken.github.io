@@ -12,6 +12,9 @@
     margin: 2px;
 }
 article{
+    background: #fffdfd;
+    padding: 10px;
+    box-shadow: 0px 0px 11px 0px #ccc;
     a{
         text-decoration: none;
     }
@@ -33,7 +36,7 @@ article{
         user-select: none;
         cursor: default;
         display: block;
-        margin: 80px 0 40px 0;
+        margin: 50px 0 40px 0;
         // 标题名
         .post-title{
             color: #1d9d74;
@@ -51,6 +54,12 @@ article{
             display: block;
             margin: 2px 0;
             color: #5f9ea0;
+            .post-author{
+                background: #5f9ea0;
+                color: #fff;
+                padding: 0 5px;
+                border-radius: 4px;
+            }
         }
         // 标签 (无序列表)
         ul{
@@ -93,10 +102,6 @@ article{
         color: #171717;
         margin: 1px 0px;
         padding: 0px;
-        &::before, &::after {
-            content: " —— ";
-            font-family: Arial;
-        }
     }
     h3{
         font-size: 22px;
@@ -126,13 +131,20 @@ article{
         margin: 0px;
         padding: 0px;
     }
+    // jekyll 代码块
+    & > figure{
+        margin: 0 0 0 1em;
+    }
+    & > div.highlighter-rouge{
+        margin: 0 0 0 1em;
+    }
     // 引用区块
     blockquote{
         font-family: 'Microsoft YaHei','Verdana', 'SimSun';
         background-color: #eafff3;
         padding: 10px;
         font-size: 16px;
-        color: #998;
+        color: #868686;
         margin: 5px 0;
         display: block;
         &:before{
@@ -163,27 +175,27 @@ article{
         // 滑过变色
         &:hover{
             // box-shadow: 1px 1px 0px 1px #a5d6bb;
-            background: #e4fff0;
+            background: #d1ffdd;
             blockquote{
-                background-color: #dbdbff; // #eeeeff;
+                background-color: #a3e4ae; // #eeeeff;
             }
         }
         // 二级引用
         blockquote{
             margin: 2px 0px;
             font-size: 16px;
-            background-color: #e4fff0;
+            background-color: #d1ffdd;;
             // 文字内容
             p{
-                font-size: 14px;
-                color: #a00;
+                color: #868686;
+                font-weight: 600;
             }
         }
         // 列表
         ol,ul{
             margin: 5px 0px 5px 25px;
             li{
-                color: #008080;
+                color: #5f9ea0;
                 border: none;
                 a{
                     cursor: pointer;
@@ -199,29 +211,35 @@ article{
     }
     // 代码块样式 (+滑过变色)
     pre{
-        border: 1px solid #c8caff;
         // 处理 有行号的代码块
         table{
-            tr{
-                pre{
-                    margin: 0;
-                    padding: 2px;
-                    border-radius: 2px;
-                    border: none;
-                }
-                // 行号
-                .lineno{
-                    margin-right: 5px;
-                    border-right: 1px solid #ccc;
-                }
+            td.gutter{
+                padding: 0 9px 0 0;
             }
         }
     }
     // 文字内容
+    & > p{
+        text-indent: 2em;  // 首行缩进
+        & > mark{
+            display: block;
+            margin: 2px 0;
+            padding: 3px 0;
+            font-size: 1.3em;
+            color: #1d9d74;
+            background-color: #ffff00;
+            text-align: center;
+            font-weight: 600;
+            &::before, &::after {
+                content: " —— ";
+                font-family: Arial;
+            }
+        }
+    }
     p{
-        margin-bottom: 5px;
+        margin: 3px 0px 4px 0;
         font-size: 16px;
-        user-select:none;
+        user-select: none;
         cursor: default;
         a{
             cursor: pointer;
@@ -242,6 +260,14 @@ article{
         }
         code.highlighter-rouge{
             @extend %code;
+        }
+        span.post-author{
+            user-select: none;
+            color: #8a2be2;
+            background: #5f9ea0;
+            color: #fff;
+            padding: 1px 6px;
+            border-radius: 4px;
         }
     }
     // 重编辑
@@ -277,6 +303,7 @@ article{
         padding: 0 0 0 17px;
         li{
             color: #341452;
+            margin: 2px 0 3px 0;
             p{
                 padding: 0;
                 margin: 1px 0 0 0;
@@ -300,23 +327,31 @@ article{
             }
         }
     }
-    table{
+    // div 下的table样式
+    & > table{
           border: 1px solid #ccc;
           padding: 10px;
-          margin: 10px auto;
+          margin: 10px;
           border-radius: 8px;
           background: #f5f5f5;
           tr{
-            color: #005d5d;
-            &:hover{
+              color: #1b9ea2;
+            //   border: 1px solid #dcdcdc;
+          }
+          thead > tr{
+              cursor: default;
+              color: #005d5d;
+          }
+          // 内容快中变色
+          tbody > tr{
+              &:hover{
                   background: #f5ece1;
                   color: #8a2be2;
-            }
+              }
           }
-          td{
-                border: 1px solid #dcdcdc;
+          th, td{
                 padding: 2px 10px;
-                border-radius: 5px;
+                // border-radius: 5px;
           }
     }
 }
