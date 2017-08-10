@@ -45,7 +45,7 @@ tags: [vue]
        Documentation can be found at https://vuejs-templates.github.io/webpack
     ```
 
-    > 说明: 本项目可以不使用vue-router
+    > 说明: 本项目可以**不**使用vue-router
 
 1. 运行项目
 
@@ -54,14 +54,14 @@ tags: [vue]
     $ sudo npm run dev
     ```
 1. 完善项目
-    1. 安装 sass插件, 支持 scss [^1] [^2]
+    - 安装 sass插件, 支持 scss [^1] [^2]
 
     ```bash
     $ sudo cnpm install node-sass --save-dev
     $ sudo cnpm install sass-loader --save-dev
     ```
 
-    2. 引入localstorage 本地存储.
+    - 引入localstorage 本地存储.
 
     ```javascript
     // 引入 本地存储方法
@@ -69,7 +69,7 @@ tags: [vue]
     import Vue from 'vue'
     Vue.use(store);
     ```
-    3. 监控TODO items变化,并存储
+    - 监控TODO items变化,并存储
 
     ```javascript
     watch:{
@@ -89,13 +89,13 @@ tags: [vue]
 > 项目源码: [vue2-todolist](https://github.com/itaken/vue2-todolist)
 
 ---
-更多阅读
+### 更多阅读
 - [vue.js入门基础](http://www.imooc.com/video/12305)
 - [通过todoMVC来学vue.js的使用](http://www.jianshu.com/p/82778a67ea57#)
 - [PURE css](https://purecss.io)
 
 ---
-索引
+### 索引
 
 [^1]: [How to use "scss" in *.vue?](https://github.com/vuejs/vue-loader/issues/363)
 [^2]: [Advanced Loader Configuration](https://vue-loader.vuejs.org/en/configurations/advanced.html)

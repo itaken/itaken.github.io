@@ -3,6 +3,7 @@ layout: post
 
 title: "php curl ssrf攻击"
 date: 2017-04-12 22:44:01 +0800
+modified: 2017-07-24 16:47:48 +0800
 image: true
 
 categories: php
@@ -13,7 +14,8 @@ tags: [php, ssrf, curl, 网络安全]
 >SSRF(Server-Side Request Forgery:服务器端请求伪造) 是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。
 >一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。
 
-三个使用`curl`进行`ssrf`的示例 [^2]
+### 三个使用`curl`进行`ssrf`的示例 [^2]
+
 ```bash
 # 利用file协议查看文件
 curl -v 'file:///etc/passwd'
@@ -40,19 +42,19 @@ $url = $_GET['url'];
 curl($url);
 ```
 
-### file
+### **file**
 
 执行 `http://localhost/example.php?url=file:///etc/passwd`, 结果如下,打印文件内容
 
 ![passwd info]({{ site.url }}/assets/images/201704/12-01.png)
 
-### dict
+### **dict**
 
 执行 `http://localhost/example.php?url=dict://127.0.0.1:22`, 结果如下, 现实端口信息
 
 ![dict info]({{ site.url }}/assets/images/201704/12-02.png)
 
-### gopher
+### **gopher**
 
 >Gopher是一个互联网上使用的分布型的文件搜集获取网络协议。 [^3]
 
@@ -123,6 +125,7 @@ Listening on [0.0.0.0] (family 0, port 2333)
 >gopher协议使用方法：gopher://ip:port/_payload
 
 **gopher转换规则** 如下：
+
 - 如果`第一个字符`是 **>** 或者 **<** 那么丢弃该行字符串，表示请求和返回的时间。
 - 如果`前3个字符`是+OK 那么`丢弃`该行字符串，表示返回的字符串。
 - 将`\r`字符串替换成`%0d%0a`
@@ -145,19 +148,16 @@ Listening on [0.0.0.0] (family 0, port 2333)
 >原文: [JoyChou - SSRF in PHP](http://joychou.org/index.php/web/phpssrf.html)
 
 ---
-更多阅读
+### 更多阅读
 - [SSRF](https://hxer.github.io/WebSecurity/ssrf.html)
 - [ssrf proxy](https://bcoles.github.io/ssrf_proxy/)
 - [Server Side Request Forgery (SSRF)](http://niiconsulting.com/checkmate/2015/04/server-side-request-forgery-ssrf/)
 - [What is the Server Side Request Forgery Vulnerability & How to Prevent It?](https://www.netsparker.com/blog/web-security/server-side-request-forgery-vulnerability-ssrf/)
 - [利用 gopher 协议拓展攻击面](https://ricterz.me/posts/%E5%88%A9%E7%94%A8%20gopher%20%E5%8D%8F%E8%AE%AE%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB%E9%9D%A2)
-
----
-2017-07-24 新增
 - [SSRF漏洞的利用与学习](http://uknowsec.cn/posts/notes/SSRF%E6%BC%8F%E6%B4%9E%E7%9A%84%E5%88%A9%E7%94%A8%E4%B8%8E%E5%AD%A6%E4%B9%A0.html)
 
 ---
-索引
+### 索引
 
 [^1]: [SSRF](https://hxer.github.io/WebSecurity/ssrf.html)
 [^2]: [JoyChou - SSRF in PHP](http://joychou.org/index.php/web/phpssrf.html)

@@ -26,6 +26,6 @@ tags: [ubuntu, vue, jquery]
 1. 在项目JavaScript中直接 使用 `$` 即可调用jquery.
 
 ---
-更多阅读
+### 更多阅读
 - [webpack引入jquery多种方法探究](https://segmentfault.com/a/1190000007249293)
 - [VUE引入jquery以后，调用方法，提示'$' is not defined。](https://segmentfault.com/q/1010000007350626)

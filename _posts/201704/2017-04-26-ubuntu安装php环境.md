@@ -1,11 +1,11 @@
 ---
 layout: post
 
-title: "ubuntu 安装PHP 7.0环境"
+title: "ubuntu 安装PHP 7.0环境 (LAMP环境配置)"
 date: 2017-04-26 19:01:41 +0800
 
 categories: php
-tags: [ubuntu, php]
+tags: [ubuntu, php, lamp, apache, mysql]
 ---
 
 1. 安装 `apache`
@@ -51,6 +51,6 @@ tags: [ubuntu, php]
     ```
 
 ---
-更多阅读
+### 更多阅读
 - [Ubuntu Server 16.04.x (Xenial Xerus) 安装 LEMP / LNMP 教程](https://segmentfault.com/a/1190000009330496)
 - [ubuntu下安装Apache+PHP+Mysql](http://www.cnblogs.com/lynch_world/archive/2012/01/06/2314717.html)

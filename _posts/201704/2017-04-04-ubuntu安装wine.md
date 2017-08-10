@@ -52,7 +52,7 @@ tags: [ubuntu, wine]
     ```
 
 ---
-索引
+### 索引
 
 [^1]: [How to install and configure Wine?](http://askubuntu.com/questions/316025/how-to-install-and-configure-wine)
 [^2]: [Installation of Wine 2.0 on Ubuntu, Linux Mint and Debian](http://www.tecmint.com/install-wine-on-ubuntu-and-linux-mint/)

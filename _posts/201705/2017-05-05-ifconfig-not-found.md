@@ -8,7 +8,8 @@ categories: post
 tags: [ubuntu, ipconfig]
 ---
 
-## 问题描述
+<mark>问题描述</mark>
+
 >使用`ifconfig`查看网络信息,结果返回`command not found`
 
 ```bash
@@ -19,7 +20,7 @@ $ echo $PATH                                                            127 ↵
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/snap/bin
 ```
 
-## 解决方法
+<mark>解决方法</mark>
 
 1. 使用 `ip a`
 
@@ -53,6 +54,6 @@ $ echo $PATH                                                            127 ↵
     ```
 
 ---
-更多阅读
+### 更多阅读
 - [ifconfig command not found](https://unix.stackexchange.com/questions/145447/ifconfig-command-not-found)
 - [ifconfig command not found](http://stackoverflow.com/questions/24839810/ifconfig-command-not-found)
