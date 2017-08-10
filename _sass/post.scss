@@ -89,40 +89,50 @@ article{
 }
 // 日志内容
 .post-content{
+    padding: 0 15px;
     h1{
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 600;
-        color: #000;
+        color: #00888c;
         margin: 1px 0px;
-        padding: 0px;
+        padding: 6px 0;
+        &:hover{
+            text-decoration: underline;
+            color: #6800c7;
+        }
     }
     h2{
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 500;
-        color: #171717;
+        color: #bd1b1b;
         margin: 1px 0px;
-        padding: 0px;
+        padding: 5px 0;
+        &:hover{
+            text-decoration: underline;
+            font-weight: 600;
+            color: #ff8c00;
+        }
     }
     h3{
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 400;
         color: #272727;
         margin: 1px 0px;
-        padding: 0px;
+        padding: 4px 0;
     }
     h4{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         color: #2b2b2b;
         margin: 0px;
-        padding: 0px;
+        padding: 3px 0;
     }
     h5{
         font-size: 18px;
         font-weight: 400;
         color: #353535;
         margin: 0px;
-        padding: 0px;
+        padding: 2px 0;
     }
     h6{
         font-size: 16px;
@@ -182,13 +192,17 @@ article{
         }
         // 二级引用
         blockquote{
-            margin: 2px 0px;
+            margin: 5px 0px;
             font-size: 16px;
-            background-color: #d1ffdd;;
+            background-color: #d1ffdd;
+            border-left: 8px solid #83e49c;
             // 文字内容
             p{
                 color: #868686;
                 font-weight: 600;
+            }
+            &:before{
+                content: "";
             }
         }
         // 列表
