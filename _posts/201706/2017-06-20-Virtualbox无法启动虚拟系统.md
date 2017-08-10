@@ -8,12 +8,14 @@ image: true
 categories: post
 tags: [ubuntu, virtualbox]
 ---
-## 问题描述
+
+<mark>问题描述</mark>
+
 今天更新了virtualbox, 导致安装在虚拟机的系统无法打开, 提示**Kernel driver not installed (rc=-1908)** 错误
 
 ![virtual error]({{ site.url }}/assets/images/201706/20-01.png)
 
-## 解决方法
+<mark>解决方法</mark>
 
 重新安装 **virtualbox-dkms** 即可.
 
@@ -24,6 +26,6 @@ $ sudo apt-get install virtualbox-dkms
 ```
 
 ---
-更多阅读
+### 更多阅读
 - [How to fix Virtualbox error “Kernel driver not installed (rc=-1908)” on Ubuntu](http://www.binarytides.com/fix-vbox-kernel-driver-error/)
 - [VBox on 14.04: Kernel driver not installed (rc=-1908) \[duplicate\]](https://askubuntu.com/questions/498900/vbox-on-14-04-kernel-driver-not-installed-rc-1908)
