@@ -1,12 +1,20 @@
 ---
 layout: post
 
-title: "使用Python爬取jekyll文档内容"
+title: "使用Python爬取jekyll文档"
 date: 2017-02-19 17:20:05 +0800
 
 categories: python
 tags: [python, 爬虫]
 ---
+
+>本人环境配置
+```
+Ubuntu: 16.10
+Python: 3.5.2+
+wkhtmltopdf: 0.12.4 (with patched qt)
+```
+
 1. 获取页面URL列表 [^1]
 
     ```python
@@ -58,23 +66,13 @@ tags: [python, 爬虫]
         pdfkit.from_file(file_path, "./data/demo.pdf", options=options)
     ```
 
-> 完整代码 :
->> [jekyll-document-to-pdf](https://github.com/itaken/python-example/tree/master/jekyll-document-to-pdf)
+> 完整代码 : [jekyll-document-to-pdf](https://github.com/itaken/python-example/tree/master/jekyll-document-to-pdf)
 
 ---
-运行环境
-
-```
-Ubuntu: 16.10
-Python: 3.5.2+
-wkhtmltopdf: 0.12.4 (with patched qt)
-```
-
----
-更多阅读
+### 更多阅读
 - [beautifulsoup文档](http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/index.html?highlight=new_tag)
 
 ---
-索引
+### 索引
 
 [^1]: [jekyll_spider_demo.py](https://github.com/itaken/python-example/blob/master/jekyll-document-to-pdf/jekyll_spider_demo.py)

@@ -3,6 +3,7 @@ layout: post
 
 title: "github关联本地创建的git库"
 date: 2017-02-19 13:51:08 +0800
+image: true
 
 categories: post
 tags: [github, git]
@@ -16,7 +17,7 @@ tags: [github, git]
     $ git init
     ```
 
-1. 添加改动文件 (添加所有文件)
+1. 添加改动文件 (或者添加**所有文件**)
     ```bash
     $ git add .
     ```
@@ -38,20 +39,20 @@ tags: [github, git]
     ```
 
 1. 在 github上创建 代码库
-    
+
     ![创建代码库]({{ site.url }}/assets/images/201702/19-01.png)
 
-1. 关联本地库
+1. 关联本地库 (本地代码库添加远程地址)
     ```bash
     $ git remote add origin https://github.com/itaken/jekyll-document-to-pdf.git
     ```
 
-1. 提交, 完毕.
+1. push提交, 即可同步到github中.
     ```bash
     $ git push -u origin master
     ```
     ![提交代码]({{ site.url }}/assets/images/201702/19-02.png)
 
 ---
-更多阅读
+### 更多阅读
 - [添加远程库](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000)

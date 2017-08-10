@@ -7,7 +7,7 @@ date: 2017-02-21 17:03:57 +0800
 categories: post
 tags: [markdown, github]
 ---
-### markdown ###
+# markdown
 
 1. [mastering-markdown](https://guides.github.com/features/mastering-markdown/)
 
@@ -48,7 +48,7 @@ tags: [markdown, github]
 1. [代码高亮](https://help.github.com/articles/creating-and-highlighting-code-blocks/)
 
     ```markdown
-    ```ruby
+    \```ruby
     require 'redcarpet'
     markdown = Redcarpet.new("Hello World!")
     puts markdown.to_html
@@ -61,33 +61,31 @@ tags: [markdown, github]
     puts markdown.to_html
     ```
 
-1. [languages.yml ](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
-
 ---
-### kramdown ###
+# kramdown
 
 - [kramdown Syntax](https://kramdown.gettalong.org/syntax.html)
 
-```markdown
-Hello        {#id}
------
+    ```markdown
+    Hello        {#id}
+    -----
 
-# Hello      {#id}
+    # Hello      {#id}
 
-# Hello #    {#id}
-```
+    # Hello #    {#id}
+    ```
 
-Hello        {#id}
------
+    Hello        {#id}
+    -----
 
-# Hello      {#id}
+    # Hello      {#id}
 
-# Hello #    {#id}
+    # Hello #    {#id}
 
 - [Example of how to embed a Gist on GitHub Pages using Jekyll.](https://gist.github.com/benbalter/5555251)
 
-```markdown
-{\% gist 5555251 gist.md \%}
-```
+    ```markdown
+    {\% gist 5555251 gist.md \%}
+    ```
 
-{% gist 5555251 gist.md %}
+    {% gist 5555251 gist.md %}

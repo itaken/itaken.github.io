@@ -3,12 +3,22 @@ layout: post
 
 title: "使用jekyll搭建自己的blog"
 date: 2017-02-15 10:47:38 +0800
+image: true
 
 categories: post
 tags: jekyll
 ---
+
+>本人环境配置
+```
+Ubuntu: 16.10
+ruby: 2.3.1p112
+gem: 2.6.7
+jekyll: 3.4.0
+```
+
 1. 安装 gem [^1]
-    >一般安装`ruby`, 就会自动安装了gem
+    >一般安装`ruby`, 就会自动安装了**gem**
 
     ```bash
     $ sudo apt install ruby
@@ -50,32 +60,22 @@ tags: jekyll
     $ sudo gem install jekyll bundler
     ```
 
-1. 创建blog
+1. 使用**jekyll**创建blog
     ```bash
     $ jekyll new myblog
     ```
 
-1. 开始博客之旅
+1. `jekyll serve`, 开始你的博客之旅
     ```bash
     $ cd myblog
     $ bundle exec jekyll serve
     ```
 
-    >打开: [http://127.0.0.1:4000/](http://127.0.0.1:4000/) ,效果如下:
-
+    >打开 [http://127.0.0.1:4000/](http://127.0.0.1:4000/) ,可以看到如下效果:
     ![jekyll blog]({{ site.url }}/assets/images/201702/15-01.png)
 
 ---
-运行环境
-```
-Ubuntu: 16.10
-ruby: 2.3.1p112
-gem: 2.6.7
-jekyll: 3.4.0
-```
-
----
-索引
+## 索引
 
 [^1]: [https://rubygems.org/](https://rubygems.org/)
 [^2]: [unable-to-install-gem-failed-to-build-gem-native-extension-cannot-load-such](http://stackoverflow.com/questions/13767725/unable-to-install-gem-failed-to-build-gem-native-extension-cannot-load-such)
