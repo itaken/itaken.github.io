@@ -94,15 +94,19 @@ footer{
         width: 70%;
         margin: 20px auto 0 auto;
     }
+    // 访客 图标
     .fonter-viewer-flags{
         float: left;
+        margin: 10px 0 20px 0;
     }
+    // 用户信息
     .footer-author-info{
         float: right;
         display: block;
-        margin: 0;
+        margin: 10px 0 20px 0;
         padding: 0;
         user-select: none;
+        // 头像
         .footer-avatar{
             float: right;
             margin-right: 10px;
@@ -112,6 +116,7 @@ footer{
                 width: 60px;
             }
         }
+        // 信息
         .footer-info{
             margin-right: 10px;
             float: right;
