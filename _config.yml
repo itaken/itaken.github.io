@@ -4,7 +4,7 @@ keyword: "itaken, 博客, 个人网站, 互联网, 前端, 后端, PHP, vue"
 description: "记笔记,记笔记,记笔记"
 baseurl: "" # the subpath of your site, e.g. /blog
 logo: assets/images/logo.jpg
-url: "https://itaken.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://itaken.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 tag_url: "/dish/tags.html"
 
 # 个人信息
