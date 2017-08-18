@@ -6,7 +6,7 @@ date: 2017-02-15 10:47:38 +0800
 image: true
 
 categories: post
-tags: jekyll
+tags: [jekyll, blog]
 ---
 
 >本人环境配置

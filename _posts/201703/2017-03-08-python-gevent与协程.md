@@ -5,7 +5,7 @@ title: "Python的协程与gevent"
 date: 2017-03-08 15:21:46 +0800
 
 categories: python
-tags: [python, gevent]
+tags: [python, 多线程]
 ---
 
 

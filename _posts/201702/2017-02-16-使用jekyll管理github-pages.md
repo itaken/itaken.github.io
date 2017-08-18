@@ -5,7 +5,7 @@ title: "使用jekyll来管理你的github pages"
 date: 2017-02-16 10:20:01 +0800
 
 categories: post
-tags: [github, jekyll]
+tags: [github, jekyll, blog]
 ---
 
 >本人环境配置

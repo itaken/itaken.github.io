@@ -5,7 +5,7 @@ title: "ubuntu 17.04 ifconfig command not found"
 date: 2017-05-05 16:22:04 +0800
 
 categories: post
-tags: [ubuntu, ipconfig]
+tags: [ubuntu, shell, 问题集]
 ---
 
 <mark>问题描述</mark>

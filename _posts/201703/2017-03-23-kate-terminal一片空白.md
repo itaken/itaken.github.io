@@ -6,7 +6,7 @@ date: 2017-03-23 10:03:21 +0800
 image: true
 
 categories: post
-tags: [kate, IDE]
+tags: [terminal, 问题集]
 ---
 
 <mark>问题描述</mark>

@@ -5,7 +5,7 @@ title: "ubuntu 安装PHP 7.0环境 (LAMP环境配置)"
 date: 2017-04-26 19:01:41 +0800
 
 categories: php
-tags: [ubuntu, php, lamp, apache, mysql]
+tags: [ubuntu, php, apache, mysql]
 ---
 
 1. 安装 `apache`
