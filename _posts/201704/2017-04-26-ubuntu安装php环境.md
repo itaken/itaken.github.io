@@ -3,6 +3,7 @@ layout: post
 
 title: "ubuntu 安装PHP 7.0环境 (LAMP环境配置)"
 date: 2017-04-26 19:01:41 +0800
+modified: 2017-06-24 21:55:15 +0800
 
 categories: php
 tags: [ubuntu, php, apache, mysql]
@@ -43,6 +44,7 @@ tags: [ubuntu, php, apache, mysql]
     $ sudo apt-get install phpmyadmin
     ```
     **web server** 建议使用 `apache2`。
+    设置超链接 `sudo ln -s /usr/share/phpmyadmin /var/www/html`。
     在浏览器中打开`http://localhost/phpmyadmin` 进行数据库管理。
 
 1. 设置项目目录权限
