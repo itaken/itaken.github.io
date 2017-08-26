@@ -1,6 +1,6 @@
 # 站点基本信息
-title: itaken's pages
-keyword: "itaken, 博客, 个人网站, 互联网, 前端, 后端, PHP, vue"
+title: Itaken's Pages
+keyword: "itaken, github pages, github, 博客, 个人网站, 互联网, 前端, 后端, PHP, vue, hexo, mysql, golang, html"
 description: "记笔记,记笔记,记笔记"
 baseurl: "" # the subpath of your site, e.g. /blog
 logo: assets/images/logo.jpg
@@ -15,7 +15,7 @@ github_avatar: https://avatars3.githubusercontent.com/u/2723658?v=3&s=120
 # Build settings
 timezone: Asia/Shanghai
 encoding: utf-8
-highlighter: rouge
+# highlighter: rouge
 
 # Markdown settings
 markdown: kramdown

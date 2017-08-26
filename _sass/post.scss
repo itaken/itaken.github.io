@@ -237,6 +237,8 @@ article{
     // 文字内容
     & > p{
         text-indent: 2em;  // 首行缩进
+        overflow: hidden;
+        text-overflow: ellipsis;  // 溢出显示省略号
         & > mark{
             display: block;
             font-size: 1.3em;
@@ -258,6 +260,10 @@ article{
         font-size: 16px;
         user-select: none;
         cursor: default;
+        word-wrap: break-word;  // 文本换行
+        white-space: inherit;
+        word-spacing: normal;  // 文字间隔
+        letter-spacing: normal; // 文字间隔
         a{
             cursor: pointer;
             &:hover{
