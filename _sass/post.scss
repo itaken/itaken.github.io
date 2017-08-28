@@ -94,32 +94,36 @@ article{
     h1{
         font-size: 24px;
         font-weight: 600;
-        color: #00888c;
+        color: #099;
         margin: 1px 0px;
         padding: 6px 0;
         &:hover{
             text-decoration: underline;
-            color: #6800c7;
+            color: #008000; // #6800c7;
         }
     }
     h2{
         font-size: 22px;
         font-weight: 500;
-        color: #bd1b1b;
+        color: #00decf; // #bd1b1b;
         margin: 1px 0px;
         padding: 5px 0;
         &:hover{
             text-decoration: underline;
             font-weight: 600;
-            color: #ff8c00;
+            color: #00ffb3; // #ff8c00;
         }
     }
     h3{
         font-size: 20px;
         font-weight: 400;
-        color: #272727;
+        color: #15c;
         margin: 1px 0px;
         padding: 4px 0;
+        &:hover{
+            text-decoration: underline;
+            color: #0000cc;
+        }
     }
     h4{
         font-size: 18px;
@@ -239,6 +243,7 @@ article{
         text-indent: 2em;  // 首行缩进
         overflow: hidden;
         text-overflow: ellipsis;  // 溢出显示省略号
+        color: #7d7d7d;
         & > mark{
             display: block;
             font-size: 1.3em;
