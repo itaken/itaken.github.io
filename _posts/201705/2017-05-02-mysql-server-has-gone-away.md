@@ -5,7 +5,7 @@ title: "MySQL server has gone away"
 date: 2017-05-02 11:39:35 +0800
 
 categories: post
-tags: [mysql, ]
+tags: [mysql, 问题集]
 ---
 
 <mark>问题描述</mark>

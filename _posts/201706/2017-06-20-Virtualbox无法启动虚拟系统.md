@@ -6,7 +6,7 @@ date: 2017-06-20 15:43:17 +0800
 image: true
 
 categories: post
-tags: [ubuntu, virtualbox]
+tags: [ubuntu, virtualbox, 问题集]
 ---
 
 <mark>问题描述</mark>

@@ -5,7 +5,7 @@ title: "ubuntu 16.04 无法启动mongodb"
 date: 2017-03-02 11:14:07 +0800
 
 categories: post
-tags: [linux,ubuntu, mongodb]
+tags: [linux,ubuntu, mongodb, 问题集]
 ---
 
 <mark>问题描述</mark>

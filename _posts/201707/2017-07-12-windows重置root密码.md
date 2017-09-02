@@ -5,7 +5,7 @@ title: "windows 重置MySQL root密码"
 date: 2017-07-12 14:29:56 +0800
 
 categories: post
-tags: [windows, mysql]
+tags: [windows, mysql, 问题集]
 ---
 
 <mark>问题描述</mark>

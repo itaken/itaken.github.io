@@ -5,7 +5,7 @@ title: "jekyll server 无法启动"
 date: 2017-07-07 11:06:08 +0800
 
 categories: post
-tags: [ubuntu, jekyll]
+tags: [ubuntu, jekyll, 问题集]
 ---
 
 <mark>问题描述</mark>
