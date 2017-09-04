@@ -3,6 +3,7 @@ layout: post
 
 title: "ubuntu 使用gogs搭建本地git服务器"
 date: 2017-09-03 20:31:10 +0800
+image: true
 
 categories: post
 tags: [ubuntu, git]
@@ -38,7 +39,7 @@ $ ./gogs web
 ```
 ![gogs web server]({{ site.url }}/assets/images/201709/03-02.png)
 
-1. 手动创建 `gogs`数据库, 创建`gogs`用户
+1. 手动创建 `gogs`数据库. 创建`gogs`用户(建议), 或者使用`root`用户配置 **gogs**
 ```bash
 $ mysql -u root -p
 > create user 'gogs'@'localhost' identified by '密码';
