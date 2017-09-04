@@ -83,7 +83,63 @@ body{
     .posts{
         margin: 0 auto;
         width: 70%;
+        max-width: 990px;
         overflow: hidden;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+    .main-container{
+        margin-top: 45px;
+        .posts{
+            width: 95%;
+            padding: 0;
+        }
+    }
+}
+@media (max-width: 767px){
+    // 头部
+    .navbar{
+        background: #1d9d74;
+        box-shadow: 0px -1px 4px 4px #9e9e9c;
+        .navbar-header{
+            clear: both;
+            text-align: center;
+            margin-top: 3px;
+            width: 100%;
+        }
+        .navbar-collapse{
+            display: none;
+        }
+    }
+    .main-container{
+        margin-top: 45px;
+        // 内容主体
+        .posts{
+            width: 100%;
+            padding: 0;
+            time{
+                width: 40px;
+            }
+            .time-special {
+                background: #1d9d74;
+            }
+        }
+        // 主页
+        section{
+            .post-title{
+                height: 31px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        // 文章页
+        article{
+            border: 0;
+            box-shadow: none;
+            img{
+                max-width: 94%;
+            }
+        }
     }
 }
 // footer
