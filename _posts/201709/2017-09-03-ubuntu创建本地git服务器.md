@@ -50,8 +50,9 @@ $ mysql -u root -p
 
 1. 打开 `http://0.0.0.0:3000`, 完成配置即可看到git服务页面.
 
-![web]({{ site.url }}/assets/images/201709/03-01.png)
+    控制面板页面:
 
+    ![web]({{ site.url }}/assets/images/201709/03-01.png)
 
 ---
 ### 更多阅读
