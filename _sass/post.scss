@@ -16,6 +16,9 @@ article{
     background: #fffdfd;
     padding: 10px;
     box-shadow: 0px 0px 11px 0px #ccc;
+    &:hover{
+        box-shadow: 0px 0px 11px 0px #888888;
+    }
     a{
         text-decoration: none;
     }
@@ -41,21 +44,23 @@ article{
         border-left: 10px solid #5f9ea0;
         // 标题名
         .post-title{
-            color: #1d9d74;
             border-bottom: 1px solid #5f9ea0;
             padding: 0 0 8px 3px;
             margin: 0;
-            font-size: 2.2em;
-            &:hover{
-                color: #1a0dab;
-                // color: #551a8b;
+            a{
+                color: #1d9d74;
+                font-size: 1.5em;
+                &:hover{
+                    color: #1a0dab;
+                    // color: #551a8b;
+                }
             }
         }
         // 时间
         .post-meta{
             float: right;
             display: block;
-            margin: 2px 0;
+            margin: 2px 6px 2px 0;
             color: #5f9ea0;
             .post-author{
                 background: #5f9ea0;
@@ -257,7 +262,7 @@ article{
             margin: 6px 0;
             padding: 3px 0;
             &::before, &::after {
-                content: " —— ";
+                content: " ※ ";
                 font-family: Arial;
             }
         }
@@ -360,6 +365,7 @@ article{
     }
     // div 下的table样式
     & > table{
+        border-collapse: collapse;   // 单元格间距
         thead{
             user-select: none;
             background: #f1f9ff;
@@ -375,6 +381,16 @@ article{
             border: 1px solid #c6cede;
             border-collapse: collapse;
             padding: 7px;
+            margin: 0;
+        }
+        th{
+            user-select: none;
+            color: #333;
+            font-weight: 600;
+        }
+        td{
+            color: #666;
+            user-select: all;
         }
     }
 }
@@ -383,7 +399,7 @@ article{
     display: inline-block;
     width: 100%;
     font-size: 28px;
-    margin-top: 40px;
+    margin: 30px auto 20px auto;
     .post-nav{
         width: 180px;
         margin: 0 auto;

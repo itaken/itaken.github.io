@@ -20,9 +20,9 @@ $browser-minimum-versions:("ie":"8");
 body{
     margin: 0;
     padding: 0;
-    // font-family: 'Microsoft YaHei','Verdana', 'SimSun';
     font-family: 'lucida grande','lucida sans unicode',lucida,helvetica,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif,'Verdana', 'SimSun';
     background: #fffefa;
+    min-width: 412px;   // 最小尺寸
 }
 // common
 .hide{
@@ -35,30 +35,43 @@ body{
     position: fixed;
     width: 100%;
     display: block;
-    height: 33px;
+    height: 36px;
     background: #5f9ea0;
     margin: 0;
-    padding: 2px 20px 4px 20px;
+    // padding: 2px 20px 4px 20px;
     box-shadow: 1px 1px 1px 1px #ccc;
     top: 0;
     left: 0;
     right: 0;
+    .container-fluid{
+        margin: 0 auto;
+        padding: 0;
+        width: 95%;
+        max-width: 1280px;
+        display: block;
+    }
     a{
         color: #FFF;
+        cursor: pointer;
+        &:hover{
+            color: #ff0000;
+        }
     }
     .navbar-header{
         float: left;
+        margin-top: 3px;
         a{
             font-size: 24px;
         }
     }
     .navbar-collapse{
-        margin: 8px 40px 0 0;
+        margin: 4px 40px 0 0;
+        float: right;
         ul{
             float: right;
             list-style-type: none;
             padding: 0;
-            margin: 0;
+            margin: 4px 0 0 0;
             li{
                 float: left;
                 margin-left: 15px;
@@ -69,12 +82,12 @@ body{
                     padding: 1px 4px;
                     text-decoration: none;
                     font-size: 10px;
+                    &:hover{
+                        color: #ff0000;
+                    }
                 }
             }
         }
-    }
-    .navbar-toggle{
-        display: none;
     }
 }
 // article
@@ -87,61 +100,6 @@ body{
         overflow: hidden;
     }
 }
-@media (min-width: 768px) and (max-width: 990px) {
-    .main-container{
-        margin-top: 45px;
-        .posts{
-            width: 95%;
-            padding: 0;
-        }
-    }
-}
-@media (max-width: 767px){
-    // 头部
-    .navbar{
-        background: #1d9d74;
-        box-shadow: 0px -1px 4px 4px #9e9e9c;
-        .navbar-header{
-            clear: both;
-            text-align: center;
-            margin-top: 3px;
-            width: 100%;
-        }
-        .navbar-collapse{
-            display: none;
-        }
-    }
-    .main-container{
-        margin-top: 45px;
-        // 内容主体
-        .posts{
-            width: 100%;
-            padding: 0;
-            time{
-                width: 40px;
-            }
-            .time-special {
-                background: #1d9d74;
-            }
-        }
-        // 主页
-        section{
-            .post-title{
-                height: 31px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-        // 文章页
-        article{
-            border: 0;
-            box-shadow: none;
-            img{
-                max-width: 94%;
-            }
-        }
-    }
-}
 // footer
 footer{
     display: block;
@@ -150,7 +108,9 @@ footer{
     clear: both;
     .site-footer{
         width: 70%;
-        margin: 20px auto 0 auto;
+        margin: 10px auto 0 auto;
+        clear: both;
+        display: block;
     }
     // 访客 图标
     .fonter-viewer-flags{
@@ -162,6 +122,7 @@ footer{
         position: relative;
         bottom: 0;
         width: 50%;
+        max-width: 700px;
         margin: 0 auto;
     }
     // 用户信息
@@ -201,6 +162,73 @@ footer{
                     cursor: help;
                 }
             }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+    .main-container{
+        margin-top: 45px;
+        .posts{
+            width: 95%;
+            padding: 0;
+        }
+    }
+    footer{
+        .search{
+            width: 95%;
+        }
+    }
+}
+@media (max-width: 767px){
+    // 头部
+    .navbar{
+        background: #1d9d74;
+        box-shadow: 0px -1px 4px 4px #9e9e9c;
+        .navbar-header{
+            clear: both;
+            text-align: center;
+            margin-top: 3px;
+            width: 100%;
+        }
+        .navbar-collapse{
+            display: none;
+        }
+    }
+    .main-container{
+        margin-top: 45px;
+        // 内容主体
+        .posts{
+            width: 100%;
+            padding: 0;
+            time{
+                width: 40px;
+            }
+            .time-special {
+                background: #1d9d74;
+            }
+        }
+        // 主页
+        section{
+            // 文章标题
+            .post-title{
+                height: 31px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 10px 0;
+            }
+        }
+        // 文章页
+        article{
+            border: 0;
+            box-shadow: none;
+            img{
+                max-width: 94%;
+            }
+        }
+    }
+    footer{
+        .search{
+            width: 100%;
         }
     }
 }
