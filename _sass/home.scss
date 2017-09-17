@@ -1,7 +1,9 @@
 // 内容
 section{
     a{
-        text-decoration: none;
+        text-decoration: underline dashed;
+        text-decoration-skip: ink;
+        text-decoration-color: #b3b3b3;
     }
     .post-bg{
         width: 100%;
@@ -22,20 +24,23 @@ section{
         }
     }
     .post-header{
-        border-bottom: 1px solid #d8d8d8;
+        // border-bottom: 1px solid #d8d8d8;
         margin: 0;
         padding: 0;
     }
     .time-special{
-        background: #5f9ea0;
-        color: #d5e7f3;
+        background: #a8ddb5;
+        color: #f7fcf0;
         border-radius: 2px;
+         .time-day{
+             color: #F7F7F7;
+         }
     }
     time{
         float: left;
         width: 90px;
         display: block;
-        color: #959595;
+        color: #a8ddb5;
         user-select: none;
         margin: 0 15px 1px 0;
         cursor: default;
@@ -44,17 +49,20 @@ section{
         }
         .time-day{
             font-size: 2.5em;
-            color: #7fffd4;
+            color: #7bccc4;
             padding: 0 3px;
         }
     }
     .post-title{
-        font-size: 1.4em;
-        padding-top: 12px;
-        color: #1d9d74;
+        font-size: 1.3em;
+        padding: 15px 0 5px 0;
+        color: #2b8cbe;
+        margin: 0px 0 5px 0;
+        font-weight: 600;
+        cursor: pointer;
         &:hover{
-            color: #1a0dab;
-            // color: #551a8b;
+            color: #7bccc4;
+            text-decoration: underline;
         }
     }
 }
@@ -77,21 +85,20 @@ section{
         border-radius: 8px;
         li{
             float: left;
-            margin: 0 5px;
-            background: #5f9ea0;
+            margin: 0 2px;
+            background: #0868ac;
             color: #fff;
-            padding: 2px 7px;
+            padding: 2px 10px;
             font-size: 22px;
             cursor: pointer;
             a{
-                color: #fff;
+                color: #FFF;
                 &:hover{
                     color: #f00;
-                    font-weight: 600;
                 }
             }
             .current-page{
-                color: #8ffef1;
+                color: #a8ddb5;
                 cursor: not-allowed;
             }
         }

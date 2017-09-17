@@ -1,6 +1,8 @@
 // POST 页面样式
 @charset "utf-8";
 
+$header-title-color: #2b8cbe;
+
 // 代码样式
 %code{
     color: #ef53d4;
@@ -41,18 +43,18 @@ article{
         cursor: default;
         display: block;
         margin: 50px 0 40px 0;
-        border-left: 10px solid #5f9ea0;
+        border-left: 10px solid #a8ddb5;
         // 标题名
         .post-title{
             border-bottom: 1px solid #5f9ea0;
             padding: 0 0 8px 3px;
             margin: 0;
+            color: $header-title-color;
             a{
-                color: #1d9d74;
+                color: $header-title-color;
                 font-size: 1.5em;
                 &:hover{
-                    color: #1a0dab;
-                    // color: #551a8b;
+                    color: #7bccc4;
                 }
             }
         }
@@ -61,7 +63,7 @@ article{
             float: right;
             display: block;
             margin: 2px 6px 2px 0;
-            color: #5f9ea0;
+            color: $header-title-color;
             .post-author{
                 background: #5f9ea0;
                 color: #fff;
@@ -75,7 +77,7 @@ article{
             margin: 5px 1px;
             padding-left: 0;
             li{
-                background-color: #37bed4;
+                background-color: $header-title-color;
                 float: left;
                 padding: 1px 5px 2px 5px;
                 border-radius: 8px;
@@ -87,8 +89,7 @@ article{
                 &:hover{
                     background-color: #fffdf3;
                     a{
-                        color: #37bed4;
-                        font-weight: 700;
+                        color: $header-title-color;
                     }
                 }
             }
@@ -99,57 +100,63 @@ article{
 .post-content{
     padding: 0 15px;
     h1{
-        font-size: 24px;
-        font-weight: 600;
-        color: #099;
+        font-size: 26px;
+        font-weight: 700;
+        color: #171717;
         margin: 1px 0px;
-        padding: 6px 0;
+        padding: 8px 0 4px 0;
+        text-decoration: underline double;
+        text-decoration-skip: ink;
+        text-decoration-color: #969696;
         &:hover{
             text-decoration: underline;
-            color: #008000; // #6800c7;
+            color: #050505;
+            background: #e9f2f9;
         }
     }
     h2{
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 500;
-        color: #00decf; // #bd1b1b;
+        color: #242424;
         margin: 1px 0px;
-        padding: 5px 0;
+        padding: 6px 0 4px 0;
+        text-decoration: underline dashed;
+        text-decoration-skip: ink;
+        text-decoration-color: #969696;
         &:hover{
             text-decoration: underline;
-            font-weight: 600;
-            color: #00ffb3; // #ff8c00;
+            color: #171717;
         }
     }
     h3{
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 400;
-        color: #15c;
+        color: #545454;
         margin: 1px 0px;
-        padding: 4px 0;
+        padding: 4px 0 3px 0;
         &:hover{
             text-decoration: underline;
-            color: #0000cc;
+            color: #3B3B3B;
         }
     }
     h4{
         font-size: 18px;
         font-weight: 400;
-        color: #2b2b2b;
+        color: #666666;
         margin: 0px;
         padding: 3px 0;
     }
     h5{
         font-size: 18px;
         font-weight: 400;
-        color: #353535;
+        color: #7A7A7A;
         margin: 0px;
         padding: 2px 0;
     }
     h6{
         font-size: 16px;
         font-weight: 400;
-        color: #3c3c3c;
+        color: #7A7A7A;
         margin: 0px;
         padding: 0px;
     }
@@ -163,7 +170,7 @@ article{
     // 引用区块
     blockquote{
         font-family: 'Microsoft YaHei','Verdana', 'SimSun';
-        background-color: #eafff3;
+        background-color: #f5f9fd;
         padding: 10px;
         font-size: 16px;
         color: #868686;
@@ -184,6 +191,7 @@ article{
             user-select: text;
             font-style: normal;
             letter-spacing: normal;
+            color: #333;
         }
         // 标题
         h2{
@@ -197,16 +205,16 @@ article{
         // 滑过变色
         &:hover{
             // box-shadow: 1px 1px 0px 1px #a5d6bb;
-            background: #d1ffdd;
+            background: #eafff3;
             blockquote{
-                background-color: #a3e4ae; // #eeeeff;
+                background-color: #f7fcf0; // #eeeeff;
             }
         }
         // 二级引用
         blockquote{
             margin: 5px 0px;
             font-size: 16px;
-            background-color: #d1ffdd;
+            background-color: #eafff3;
             border-left: 8px solid #83e49c;
             // 文字内容
             p{
@@ -221,7 +229,7 @@ article{
         ol,ul{
             margin: 5px 0px 5px 25px;
             li{
-                color: #5f9ea0;
+                color: #4e4e4e;
                 border: none;
                 a{
                     cursor: pointer;
@@ -250,12 +258,11 @@ article{
         text-indent: 2em;  // 首行缩进
         overflow: hidden;
         text-overflow: ellipsis;  // 溢出显示省略号
-        color: #7d7d7d;
         & > mark{
             display: block;
             font-size: 1.3em;
             color: #fffdf3;
-            background-color: #5f9ea0;
+            background-color: #7bccc4;
             text-align: center;
             font-weight: 600;
             cursor: help;
@@ -272,6 +279,7 @@ article{
         font-size: 16px;
         user-select: none;
         cursor: default;
+        color: #1d1d1d;
         word-wrap: break-word;  // 文本换行
         white-space: inherit;
         word-spacing: normal;  // 文字间隔
@@ -337,8 +345,7 @@ article{
         margin: 0;
         padding: 0 0 0 17px;
         li{
-            // color: #341452;
-            color: #4b7598;
+            color: #424242;
             margin: 2px 0 3px 0;
             p{
                 padding: 0;
@@ -348,8 +355,9 @@ article{
                 border-bottom: 1px solid #d4d4d4;
                 padding: 1px 3px 2px 2px;
                 text-decoration: none;
+                color: $header-title-color;
                 &:hover{
-                    color: #099;
+                    color: #7bccc4;
                     font-weight: 600;
                 }
             }
@@ -404,11 +412,11 @@ article{
         width: 180px;
         margin: 0 auto;
         div{
-            background-color: #5f9ea0;
+            background-color: #0868ac;;
             float: left;
             width: 50%;
             &:hover{
-                background-color: #1d9d74;
+                background-color: #7bccc4;;
                 a{
                     // color: #ff9800;
                     text-shadow: 0px 0px 2px #00BCD4;

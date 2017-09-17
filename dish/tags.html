@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Itaken's Tags"
+title: "Blog's Tags"
 
 showTitle: on
 ---
@@ -13,7 +13,7 @@ showTitle: on
   <hr/>
   <div class="tags-items-section">
     {% for tag in site.tags %}
-    <h2 id="{{ tag[0] | slugify }}"><i class="fa fa-hashtag" aria-hidden="true"></i>&nbsp;{{ tag[0] }}</h2>
+    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
     <ul class="tags-items-posts">
       {% for post in tag[1] limit:8 %}
       <li>

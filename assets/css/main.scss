@@ -35,8 +35,8 @@ body{
     position: fixed;
     width: 100%;
     display: block;
-    height: 36px;
-    background: #5f9ea0;
+    height: 40px;
+    background: #0868ac;
     margin: 0;
     // padding: 2px 20px 4px 20px;
     box-shadow: 1px 1px 1px 1px #ccc;
@@ -54,18 +54,18 @@ body{
         color: #FFF;
         cursor: pointer;
         &:hover{
-            color: #ff0000;
+            color: #fea;
         }
     }
     .navbar-header{
         float: left;
-        margin-top: 3px;
+        margin-top: 10px;
         a{
             font-size: 24px;
         }
     }
     .navbar-collapse{
-        margin: 4px 40px 0 0;
+        margin: 8px 0px 0 0;
         float: right;
         ul{
             float: right;
@@ -77,13 +77,13 @@ body{
                 margin-left: 15px;
                 .rss-link{
                     background: #fff;
-                    color: #5f9ea0;
+                    color: #242424;
                     border-radius: 5px;
                     padding: 1px 4px;
                     text-decoration: none;
                     font-size: 10px;
                     &:hover{
-                        color: #ff0000;
+                        color: #0868ac;
                     }
                 }
             }
@@ -148,7 +148,7 @@ footer{
             float: right;
             .footer-info-description{
                 font-size: 16px;
-                color: #f3d9d9;
+                color: #e0f3db;
                 margin: 5px 0;
                 cursor: default;
             }
@@ -157,9 +157,9 @@ footer{
                 float: right;
                 font-size: 20px;
                 a{
-                    color: #5f9ea0;
-                    font-weight: 700;
-                    cursor: help;
+                    color: #0868ac;
+                    font-weight: 500;
+                    cursor: alias;
                 }
             }
         }

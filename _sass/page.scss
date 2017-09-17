@@ -2,9 +2,9 @@
 
 
 // 标签样式
-$list-a-bg-color: #099;
+$list-a-bg-color: #2b8cbe;
 $list-a-text-color: #fff;
-$section-a-text-color: #009999;
+$section-a-text-color: #2b8cbe;
 
 .tags-items-list{
     user-select:none;
@@ -37,8 +37,15 @@ $section-a-text-color: #009999;
     h2{
         cursor: default;
         font-weight: 700;
+        color: #0868ac;
+        text-decoration: underline dashed;
+        text-decoration-skip: ink;
+        text-decoration-color: $section-a-text-color;
         &::before, &::after {
-            content: "";
+            content: " # ";
+        }
+        &:hover{
+            color: $section-a-text-color;
         }
     }
     ul.tags-items-posts{
