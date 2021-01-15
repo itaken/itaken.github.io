@@ -100,7 +100,8 @@ theme: hexo-theme-matery
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  user: itaken
   type: 'git'
   repo: https://github.com/itaken/itaken.github.io.git
   branch: pages
+  name: itaken
+  email: regelhh@gmail.com
