@@ -1,5 +1,5 @@
 ---
-title: "Cannot install pyaudio, gcc error"
+title: "python库安装错误:Cannot install pyaudio, gcc error"
 date: 2018-05-27 23:13:34 +0800
 
 categories: 一个问题

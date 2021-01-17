@@ -35,20 +35,20 @@ phabricator/ $ git clone https://github.com/phacility/phabricator.git
 ```
 <VirtualHost *:80>
     ServerAdmin regelhh@gmail.com
-    ServerName v.local
-    DocumentRoot /var/www/html/phabricator/phabricator/webroot
+    ServerName phabricator.local
+    DocumentRoot /paht/to/phabricator/phabricator/webroot
     RewriteEngine on
     RewriteRule ^/rsrc/(.*)     -                       [L,QSA]
     RewriteRule ^/favicon.ico   -                       [L,QSA]
     RewriteRule ^(.*)$          /index.php?__path__=$1  [B,L,QSA]
-    <Directory "/var/www/html/phabricator/phabricator/webroot">
+    <Directory "/paht/to/phabricator/phabricator/webroot">
         Order allow,deny
         Allow from all
     </Directory>
 </VirtualHost>
 ```
 
-配置完毕后, 重启apache, 访问 `http://v.local` 如果能够访问即添加成功.
+配置完毕后, 重启apache, 访问 `http://phabricator.local` 如果能够访问即添加成功.
 
 * 导入数据到数据库, 可以直接使用 内置的方法实现.
 
@@ -61,7 +61,7 @@ phabricator/ $ ./bin/storage upgrade
 
 ![bin/config](/assets/images/201711/10-02.png)
 
-访问 `http://v.local` 即可看到注册页面, 第一个注册的用户就是 **admin**, 如下图是登陆成功后的管理员面板
+访问 `http://phabricator.local` 即可看到注册页面, 第一个注册的用户就是 **admin**, 如下图是登陆成功后的管理员面板
 
 ![主面板](/assets/images/201711/10-03.png)
 

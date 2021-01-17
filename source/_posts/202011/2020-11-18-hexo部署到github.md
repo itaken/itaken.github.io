@@ -1,5 +1,5 @@
 ---
-title: "hexo blo部署到github"
+title: "hexo blog部署到github"
 date: 2020-11-18 21:41:17 +0800
 img: /assets/images/202011/18-01.png
 
@@ -25,7 +25,16 @@ deploy:
   repo: https://github.com/itaken/itaken.github.io.git
   branch: pages
 ```
-![deploy](/assets/images/202011/18-01.png)
+
+![deploy配置](/assets/images/202011/18-01.png)
+
+也可以配置deploy账号：
+
+```
+deploy:
+  name: itaken
+  email: regelhh@gmail.com
+```
 
 ## 本地git与github账号绑定
 
