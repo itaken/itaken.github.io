@@ -420,32 +420,55 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>查看别名列表</p>
-<pre><code>user@DESKTOP-K146JU9 path/to/world         
-&gt; git config --get-regexp alias                          
-alias.ck checkout                                        
-alias.br branch                                          
-alias.cm commit                                          
-alias.st status                                          
-alias.pl pull                                            
-alias.p push                                             
-alias.m merge                                            
-alias.s stash                                            
-alias.r stash apply                                      </code></pre>
+<pre><code>user@DESKTOP-K146JU9 path/to/world
+&gt; git config --get-regexp alias
+alias.st status
+alias.ck checkout
+alias.br branch
+alias.alias config --global --list
+alias.pl pull
+alias.p push
+alias.del restore --staged
+alias.brv branch --v
+alias.lp log -p
+alias.bd branch -D
+alias.ls log --stat
+alias.logg log --graph --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)&#39; --abbrev-commit --date=relative --show-signature
+alias.ma merge --abort
+alias.m merge --no-ff
+alias.sst status
+alias.cg config --global
+alias.crm reset HEAD~1
+alias.rb rebase -i HEAD~1
+alias.maa reset --merge
+alias.ca commit --amend</code></pre>
 <p>修改别名</p>
-<pre><code>user@DESKTOP-K146JU9 path/to/world         
-&gt; git config --global alias.cm &quot;commit -am&quot;              
+<pre><code>user@DESKTOP-K146JU9 path/to/world
+&gt; git config --global alias.cm &quot;commit -am&quot;
 
-user@DESKTOP-K146JU9 path/to/world         
-&gt; git config --get-regexp alias                          
-alias.ck checkout                                        
-alias.br branch                                          
-alias.cm commit -am                                      
-alias.st status                                          
-alias.pl pull                                            
-alias.p push                                             
-alias.m merge                                            
-alias.s stash                                            
-alias.r stash apply                                      </code></pre>
+user@DESKTOP-K146JU9 path/to/world
+&gt; git config --get-regexp alias
+alias.st status
+alias.ck checkout
+alias.br branch
+alias.cm commit -am
+alias.alias config --global --list
+alias.pl pull
+alias.p push
+alias.del restore --staged
+alias.brv branch --v
+alias.lp log -p
+alias.bd branch -D
+alias.ls log --stat
+alias.logg log --graph --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)&#39; --abbrev-commit --date=relative --show-signature
+alias.ma merge --abort
+alias.m merge --no-ff
+alias.sst status
+alias.cg config --global
+alias.crm reset HEAD~1
+alias.rb rebase -i HEAD~1
+alias.maa reset --merge
+alias.ca commit --amend</code></pre>
 <hr>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/7066325/list-git-aliases">List Git aliases</a></li>

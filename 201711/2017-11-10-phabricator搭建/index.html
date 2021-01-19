@@ -441,18 +441,18 @@ phabricator/ $ <span class="token function">git</span> clone https://github.com/
 </ul>
 <pre><code>&lt;VirtualHost *:80&gt;
     ServerAdmin regelhh@gmail.com
-    ServerName v.local
-    DocumentRoot /var/www/html/phabricator/phabricator/webroot
+    ServerName phabricator.local
+    DocumentRoot /paht/to/phabricator/phabricator/webroot
     RewriteEngine on
     RewriteRule ^/rsrc/(.*)     -                       [L,QSA]
     RewriteRule ^/favicon.ico   -                       [L,QSA]
     RewriteRule ^(.*)$          /index.php?__path__=$1  [B,L,QSA]
-    &lt;Directory &quot;/var/www/html/phabricator/phabricator/webroot&quot;&gt;
+    &lt;Directory &quot;/paht/to/phabricator/phabricator/webroot&quot;&gt;
         Order allow,deny
         Allow from all
     &lt;/Directory&gt;
 &lt;/VirtualHost&gt;</code></pre>
-<p>配置完毕后, 重启apache, 访问 <code>http://v.local</code> 如果能够访问即添加成功.</p>
+<p>配置完毕后, 重启apache, 访问 <code>http://phabricator.local</code> 如果能够访问即添加成功.</p>
 <ul>
 <li>导入数据到数据库, 可以直接使用 内置的方法实现.</li>
 </ul>
@@ -460,7 +460,7 @@ phabricator/ $ <span class="token function">git</span> clone https://github.com/
 phabricator/ $ ./bin/storage upgrade</code></pre>
 <p>在 <code>./bin/config</code> 可以设置很多系统配置,  例如: <strong>mysql.host</strong> 设置mysql<strong>主机</strong>地址, <strong>mysql.user</strong> 设置mysql用户名,默认是<strong>root</strong>, <strong>mysql.pass</strong> 设置mysql密码,默认是<strong>空</strong></p>
 <p><img src="/assets/images/201711/10-02.png" alt="bin/config"></p>
-<p>访问 <code>http://v.local</code> 即可看到注册页面, 第一个注册的用户就是 <strong>admin</strong>, 如下图是登陆成功后的管理员面板</p>
+<p>访问 <code>http://phabricator.local</code> 即可看到注册页面, 第一个注册的用户就是 <strong>admin</strong>, 如下图是登陆成功后的管理员面板</p>
 <p><img src="/assets/images/201711/10-03.png" alt="主面板"></p>
 <ul>
 <li><strong>注意: 建议修改 <code>repository</code> 存放路径, 默认路径是 <code>/var/repo</code> 中</strong>, 但是在 <code>/var</code> 目录下创建文件需要 <strong>root</strong> 权限, 该系统无法自动创建, 需要手动添加目录, 并修改权限.</li>
@@ -803,9 +803,9 @@ phabricator/ $ <span class="token function">ps</span> aux <span class="token ope
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="ModuleNotFoundError: No module named &#39;win32api&#39;">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="windows下: ModuleNotFoundError: No module named &#39;win32api&#39;">
                         
-                        <span class="card-title">ModuleNotFoundError: No module named &#39;win32api&#39;</span>
+                        <span class="card-title">windows下: ModuleNotFoundError: No module named &#39;win32api&#39;</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

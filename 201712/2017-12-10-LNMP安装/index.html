@@ -378,12 +378,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/mysql/">
-                                <span class="chip bg-color">mysql</span>
-                            </a>
-                        
                             <a href="/tags/ubuntu/">
                                 <span class="chip bg-color">ubuntu</span>
+                            </a>
+                        
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
                             </a>
                         
                             <a href="/tags/nginx/">
@@ -440,32 +440,27 @@ root      8860  0.0  0.0 135800  1508 ?        Ss   22:19   0:00 nginx: master p
 </li>
 <li><p>修改ng配置, 在<strong>index</strong>中添加<code>index.php</code>, 开启 php解析的注释</p>
 <pre><code>$ sudo vim /etc/nginx/sites-available/default
-</code></pre>
+server &#123;
+ ...
+ root /var/www/html;
+   # Add index.php to the list if you are using PHP
+   index index.php index.html index.htm index.nginx-debian.html;
+ ...
+ location ~ \.php$ &#123;
+     include snippets/fastcgi-php.conf;
+     # With php-fpm (or other unix sockets):
+     fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+     # With php-cgi (or other tcp sockets):
+     # fastcgi_pass 127.0.0.1:9000;
+ &#125;
+ ...
+&#125;</code></pre>
+<p>重启nginx, <code>$ sudo service nginx restart</code></p>
 </li>
-</ol>
-<p>server {<br>    …<br>    root /var/www/html;</p>
-<pre><code># Add index.php to the list if you are using PHP
-index index.php index.html index.htm index.nginx-debian.html;
-...
-
-location ~ \.php$ &#123;
-    include snippets/fastcgi-php.conf;
-
-    # With php-fpm (or other unix sockets):
-    fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
-    # With php-cgi (or other tcp sockets):
-    # fastcgi_pass 127.0.0.1:9000;
-&#125;
-...</code></pre>
-<p>}</p>
-<pre><code>重启nginx, `$ sudo service nginx restart`
-
-1. 在`/var/www/html`中,创建`test.php`测试文件,打开`http://localhost/test.php`,查看是否设置成功.
-```php
-&lt;?php
-
-echo phpinfo();</code></pre>
-<ol>
+<li><p>在<code>/var/www/html</code>中,创建<code>test.php</code>测试文件,打开<code>http://localhost/test.php</code>,查看是否设置成功.</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">echo</span> <span class="token function">phpinfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
 <li><p>安装<code>mysql</code>, 设置用户密码, <strong>注意:命令行屏幕注意不要缩的太小,否则无法设置root密码</strong></p>
 <pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> apt <span class="token function">install</span> mysql-client-5.7 mysql-server-5.7</code></pre>
 </li>
@@ -541,12 +536,12 @@ echo phpinfo();</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/mysql/">
-                                    <span class="chip bg-color">mysql</span>
-                                </a>
-                            
                                 <a href="/tags/ubuntu/">
                                     <span class="chip bg-color">ubuntu</span>
+                                </a>
+                            
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
                                 </a>
                             
                                 <a href="/tags/nginx/">

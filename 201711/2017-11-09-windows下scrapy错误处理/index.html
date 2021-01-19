@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ModuleNotFoundError: No module named &#39;win32api&#39;, ITAKEN GITHUB PAGES">
+    <meta name="keywords" content="windows下: ModuleNotFoundError: No module named &#39;win32api&#39;, ITAKEN GITHUB PAGES">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ModuleNotFoundError: No module named &#39;win32api&#39; | ITAKEN GITHUB PAGES</title>
+    <title>windows下: ModuleNotFoundError: No module named &#39;win32api&#39; | ITAKEN GITHUB PAGES</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -256,12 +256,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ModuleNotFoundError: No module named &#39;win32api&#39;</h1>
+                    <h1 class="description center-align post-title">windows下: ModuleNotFoundError: No module named &#39;win32api&#39;</h1>
                 </div>
             </div>
         </div>
@@ -424,7 +424,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><mark>问题描述</mark></p>
-<pre class=" language-bash"><code class="language-bash">PS D:\python\movie-demo<span class="token operator">></span> python -m scrapy runspider proxies.py
+<pre class=" language-bash"><code class="language-bash">PS D:\python\project<span class="token operator">></span> python -m scrapy runspider proxies.py
 2017-11-09 11:25:18 <span class="token punctuation">[</span>scrapy.utils.log<span class="token punctuation">]</span> INFO: Scrapy 1.4.0 started <span class="token punctuation">(</span>bot: scrapybot<span class="token punctuation">)</span>
 2017-11-09 11:25:18 <span class="token punctuation">[</span>scrapy.utils.log<span class="token punctuation">]</span> INFO: Overridden settings: <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'SPIDER_LOADER_WARN_ONLY': True&amp;#125;</span>
 2017-11-09 11:25:18 <span class="token punctuation">[</span>scrapy.middleware<span class="token punctuation">]</span> INFO: Enabled extensions:
@@ -436,24 +436,24 @@ Unhandled error <span class="token keyword">in</span> Deferred:
 
 2017-11-09 11:25:18 <span class="token punctuation">[</span>twisted<span class="token punctuation">]</span> CRITICAL:
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\twisted\internet\defer.py"</span>, line 1386, <span class="token keyword">in</span> _inlineCallback
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\twisted\internet\defer.py"</span>, line 1386, <span class="token keyword">in</span> _inlineCallback
 s
     result <span class="token operator">=</span> g.send<span class="token punctuation">(</span>result<span class="token punctuation">)</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\crawler.py"</span>, line 77, <span class="token keyword">in</span> crawl
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\crawler.py"</span>, line 77, <span class="token keyword">in</span> crawl
     self.engine <span class="token operator">=</span> self._create_engine<span class="token punctuation">(</span><span class="token punctuation">)</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\crawler.py"</span>, line 102, <span class="token keyword">in</span> _create_engine
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\crawler.py"</span>, line 102, <span class="token keyword">in</span> _create_engine
     <span class="token keyword">return</span> ExecutionEngine<span class="token punctuation">(</span>self, lambda _: self.stop<span class="token punctuation">(</span><span class="token punctuation">))</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\engine.py"</span>, line 69, <span class="token keyword">in</span> __init__
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\core\engine.py"</span>, line 69, <span class="token keyword">in</span> __init__
     self.downloader <span class="token operator">=</span> downloader_cls<span class="token punctuation">(</span>crawler<span class="token punctuation">)</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\__init__.py"</span>, line 88, <span class="token keyword">in</span> __init__
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\core\downloader\__init__.py"</span>, line 88, <span class="token keyword">in</span> __init__
     self.middleware <span class="token operator">=</span> DownloaderMiddlewareManager.from_crawler<span class="token punctuation">(</span>crawler<span class="token punctuation">)</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\middleware.py"</span>, line 58, <span class="token keyword">in</span> from_crawler
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\middleware.py"</span>, line 58, <span class="token keyword">in</span> from_crawler
     <span class="token keyword">return</span> cls.from_settings<span class="token punctuation">(</span>crawler.settings, crawler<span class="token punctuation">)</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\middleware.py"</span>, line 34, <span class="token keyword">in</span> from_settings
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\middleware.py"</span>, line 34, <span class="token keyword">in</span> from_settings
     mwcls <span class="token operator">=</span> load_object<span class="token punctuation">(</span>clspath<span class="token punctuation">)</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\misc.py"</span>, line 44, <span class="token keyword">in</span> load_object
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\utils\misc.py"</span>, line 44, <span class="token keyword">in</span> load_object
     mod <span class="token operator">=</span> import_module<span class="token punctuation">(</span>module<span class="token punctuation">)</span>
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py"</span>, line 126, <span class="token keyword">in</span> import_module
+  File <span class="token string">"C:\path\to\Python\Python36\lib\importlib\__init__.py"</span>, line 126, <span class="token keyword">in</span> import_module
     <span class="token keyword">return</span> _bootstrap._gcd_import<span class="token punctuation">(</span>name<span class="token punctuation">[</span>level:<span class="token punctuation">]</span>, package, level<span class="token punctuation">)</span>
   File <span class="token string">"&lt;frozen importlib._bootstrap>"</span>, line 994, <span class="token keyword">in</span> _gcd_import
   File <span class="token string">"&lt;frozen importlib._bootstrap>"</span>, line 971, <span class="token keyword">in</span> _find_and_load
@@ -461,20 +461,20 @@ s
   File <span class="token string">"&lt;frozen importlib._bootstrap>"</span>, line 665, <span class="token keyword">in</span> _load_unlocked
   File <span class="token string">"&lt;frozen importlib._bootstrap_external>"</span>, line 678, <span class="token keyword">in</span> exec_module
   File <span class="token string">"&lt;frozen importlib._bootstrap>"</span>, line 219, <span class="token keyword">in</span> _call_with_frames_removed
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\downloadermiddlewares\retry.py"</span>, line 20, <span class="token keyword">in</span> <span class="token operator">&lt;</span>modu
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\scrapy\downloadermiddlewares\retry.py"</span>, line 20, <span class="token keyword">in</span> <span class="token operator">&lt;</span>modu
 le<span class="token operator">></span>
     from twisted.web.client <span class="token function">import</span> ResponseFailed
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\twisted\web\client.py"</span>, line 42, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\twisted\web\client.py"</span>, line 42, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
     from twisted.internet.endpoints <span class="token function">import</span> HostnameEndpoint, wrapClientTLS
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\twisted\internet\endpoints.py"</span>, line 41, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\twisted\internet\endpoints.py"</span>, line 41, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
     from twisted.internet.stdio <span class="token function">import</span> StandardIO, PipeAddress
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\twisted\internet\stdio.py"</span>, line 30, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\twisted\internet\stdio.py"</span>, line 30, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
     from twisted.internet <span class="token function">import</span> _win32stdio
-  File <span class="token string">"C:\Users\user\AppData\Local\Programs\Python\Python36\lib\site-packages\twisted\internet\_win32stdio.py"</span>, line 9, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+  File <span class="token string">"C:\path\to\Python\Python36\lib\site-packages\twisted\internet\_win32stdio.py"</span>, line 9, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
     <span class="token function">import</span> win32api
 ModuleNotFoundError: No module named <span class="token string">'win32api'</span></code></pre>
 <p><mark>解决方法</mark></p>
-<pre class=" language-bash"><code class="language-bash">PS D:\python\movie-demo<span class="token operator">></span> python -m pip <span class="token function">install</span> pypiwin32
+<pre class=" language-bash"><code class="language-bash">PS D:\python\project<span class="token operator">></span> python -m pip <span class="token function">install</span> pypiwin32
 Collecting pypiwin32
   Downloading pypiwin32-220-cp36-none-win_amd64.whl <span class="token punctuation">(</span>9.0MB<span class="token punctuation">)</span>
     100% <span class="token operator">|</span>████████████████████████████████<span class="token operator">|</span> 9.0MB 96kB/s
@@ -809,12 +809,12 @@ Successfully installed pypiwin32-220</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
-                        <span class="chip bg-color">问题集</span>
-                    </a>
-                    
                     <a href="/tags/php/">
                         <span class="chip bg-color">php</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
                     </a>
                     
                 </div>

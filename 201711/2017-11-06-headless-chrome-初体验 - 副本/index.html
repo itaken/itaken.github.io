@@ -444,13 +444,12 @@ chrome 60</code></pre>
 <span class="token triple-quoted-string string">'''
 python 页面截图
 '''</span>
-
 <span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
 <span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>chrome<span class="token punctuation">.</span>options <span class="token keyword">import</span> Options
 
 WINDOW_SIZE <span class="token operator">=</span> <span class="token string">"1920,1048"</span>  <span class="token comment" spellcheck="true"># 窗体大小</span>
-CHROME_PATH <span class="token operator">=</span> r<span class="token string">"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"</span>  <span class="token comment" spellcheck="true"># chrome 路径</span>
-CHROMEDRIVER_PATH <span class="token operator">=</span> r<span class="token string">"C:\chromedriver_win32\chromedriver.exe"</span> <span class="token comment" spellcheck="true"># driver 路径  </span>
+CHROME_PATH <span class="token operator">=</span> r<span class="token string">"C:\path\to\Google\Chrome\Application\chrome.exe"</span>  <span class="token comment" spellcheck="true"># chrome 路径</span>
+CHROMEDRIVER_PATH <span class="token operator">=</span> r<span class="token string">"C:\chromedriver_win32\chromedriver.exe"</span> <span class="token comment" spellcheck="true"># driver 路径</span>
 
 chrome_options <span class="token operator">=</span> Options<span class="token punctuation">(</span><span class="token punctuation">)</span>
 chrome_options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>
@@ -462,15 +461,13 @@ chrome_options<span class="token punctuation">.</span>binary_location <span clas
 '''</span>
 <span class="token keyword">def</span> <span class="token function">take_shot</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">"screenshot.png"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     chrome_driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>
-        executable_path<span class="token operator">=</span>CHROMEDRIVER_PATH<span class="token punctuation">,</span> 
+        executable_path<span class="token operator">=</span>CHROMEDRIVER_PATH<span class="token punctuation">,</span>
         chrome_options<span class="token operator">=</span>chrome_options
     <span class="token punctuation">)</span>
-
     chrome_driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
     chrome_driver<span class="token punctuation">.</span>save_screenshot<span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 保存快照</span>
     <span class="token comment" spellcheck="true"># print(chrome_driver.current_url)  # 当前 url</span>
     chrome_driver<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
 
 <span class="token triple-quoted-string string">'''
 主函数
@@ -751,12 +748,12 @@ chrome_options<span class="token punctuation">.</span>binary_location <span clas
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
-                        <span class="chip bg-color">问题集</span>
-                    </a>
-                    
                     <a href="/tags/php/">
                         <span class="chip bg-color">php</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
                     </a>
                     
                 </div>
