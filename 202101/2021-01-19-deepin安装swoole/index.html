@@ -452,7 +452,8 @@ configure: patching config.h.in
 configure: creating ./config.status
 config.status: creating config.h
 config.status: executing libtool commands</code></pre>
-<h2 id="执行构建-这个过程会执行在Makefile文件中定义的一系列任务"><a href="#执行构建-这个过程会执行在Makefile文件中定义的一系列任务" class="headerlink" title="执行构建,这个过程会执行在Makefile文件中定义的一系列任务"></a>执行构建,这个过程会执行在Makefile文件中定义的一系列任务</h2><blockquote>
+<h2 id="执行构建"><a href="#执行构建" class="headerlink" title="执行构建"></a>执行构建</h2><p>这个过程会执行在Makefile文件中定义的一系列任务</p>
+<blockquote>
 <p>如果<code>make</code>执行失败,可以尝试使用<code>make -j 4</code>执行构建</p>
 </blockquote>
 <pre><code>swoole-src-4.6.1$ make
@@ -479,10 +480,12 @@ more information, such as the ld(1) and ld.so(8) manual pages.
 \----------------------------------------------------------------------
 Build complete.
 Don&#39;t forget to run &#39;make test&#39;.</code></pre>
-<h2 id="安装-将可执行文件复制到最终路径"><a href="#安装-将可执行文件复制到最终路径" class="headerlink" title="安装, 将可执行文件复制到最终路径"></a>安装, 将可执行文件复制到最终路径</h2><pre><code>swoole-src-4.6.1$ sudo make install
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>将可执行文件复制到最终路径</p>
+<pre><code>swoole-src-4.6.1$ sudo make install
 Installing shared extensions:     /usr/lib/php/20190902/
 Installing header files:          /usr/include/php/20190902/</code></pre>
-<h2 id="修改配置-查看phpinfo-php-ini-文件路径"><a href="#修改配置-查看phpinfo-php-ini-文件路径" class="headerlink" title="修改配置, 查看phpinfo, php.ini 文件路径."></a>修改配置, 查看<code>phpinfo</code>, <code>php.ini</code> 文件路径.</h2><blockquote>
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>查看<code>phpinfo</code>, <code>php.ini</code> 文件路径.</p>
+<blockquote>
 <p>在<code>/etc/php/7.4/mods-available</code>新建文件<code>php.ini</code>, 写入<code>extension=swoole.so</code></p>
 </blockquote>
 <pre><code>mods-available$ cat swoole.ini
@@ -756,17 +759,17 @@ See `config.log&#39; for more details</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/202101/2021-01-19-deepin%E5%AE%89%E8%A3%85swoole/">
+                <a href="/202101/2021-01-21-%E5%A4%84%E7%90%86linux%E5%AE%89%E8%A3%85%E9%94%99%E8%AF%AF/">
                     <div class="card-image">
                         
-                        <img src="/assets/images/202101/19-01.png" class="responsive-img" alt="deppin中php安装swoole拓展">
                         
-                        <span class="card-title">deppin中php安装swoole拓展</span>
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="请尝试不指明软件包的名字来运行“apt --fix-broken install”">
+                        
+                        <span class="card-title">请尝试不指明软件包的名字来运行“apt --fix-broken install”</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -776,27 +779,26 @@ See `config.log&#39; for more details</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
-                                    开发日常
+                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
+                                    一个问题
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/php/">
-                        <span class="chip bg-color">php</span>
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
                     </a>
                     
                     <a href="/tags/linux/">
@@ -818,9 +820,9 @@ See `config.log&#39; for more details</code></pre>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="修改deepin消息提醒">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="屏蔽deepin消息提醒">
                         
-                        <span class="card-title">修改deepin消息提醒</span>
+                        <span class="card-title">屏蔽deepin消息提醒</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
