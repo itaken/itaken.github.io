@@ -20,7 +20,7 @@ sudo apt install g++    # ./configure
 ```
 
 # 开始安装
-## 下载`swoole`源码
+## 下载`swoole`源码, 或者下载`release`包
 
 ```
 git clone https://github.com/swoole/swoole-src.git
@@ -57,7 +57,8 @@ config.status: creating config.h
 config.status: executing libtool commands
 ```
 
-## 执行构建,这个过程会执行在Makefile文件中定义的一系列任务
+## 执行构建
+这个过程会执行在Makefile文件中定义的一系列任务
 >如果`make`执行失败,可以尝试使用`make -j 4`执行构建
 
 ```
@@ -87,7 +88,8 @@ Build complete.
 Don't forget to run 'make test'.
 ```
 
-## 安装, 将可执行文件复制到最终路径
+## 安装
+将可执行文件复制到最终路径
 
 ```
 swoole-src-4.6.1$ sudo make install
@@ -95,7 +97,8 @@ Installing shared extensions:     /usr/lib/php/20190902/
 Installing header files:          /usr/include/php/20190902/
 ```
 
-## 修改配置, 查看`phpinfo`, `php.ini` 文件路径.
+## 修改配置
+查看`phpinfo`, `php.ini` 文件路径.
 
 >在`/etc/php/7.4/mods-available`新建文件`php.ini`, 写入`extension=swoole.so`
 ```
