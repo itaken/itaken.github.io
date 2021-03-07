@@ -102,6 +102,6 @@ theme: hexo-theme-matery
 deploy:
   type: 'git'
   repo: https://github.com/itaken/itaken.github.io.git
-  branch: pages
+  branch: gh-pages
   name: itaken
   email: regelhh@gmail.com
