@@ -6,7 +6,9 @@ categories: 一个问题
 tags: [git, ssh, 问题集]
 ---
 <mark>问题描述</mark>
+
 换了电脑,导入的原来系统的ssh整个文件夹,拉取项目提示权限问题...
+
 ```bash
 itaken@itaken-PC:~$ git clone ssh://git@git-company.local/my-project.git
 正克隆到 'my-project'...
@@ -17,12 +19,17 @@ fatal: 无法读取远程仓库。
 ```
 
 <mark>解决方法</mark>
+
 ## 修改`ssh`目录权限
+
 ```bash
 itaken@itaken-PC:~$ chmod 700 .ssh/
-itaken@itaken-PC:~$ cd .ssh/
-itaken@itaken-PC:~/.ssh$ cd ..
 itaken@itaken-PC:~$ chmod 600 .ssh/*
+```
+
+查看权限
+
+```
 itaken@itaken-PC:~$ la | grep ssh
 drwx------  2 itaken itaken  4096 11月 22 21:58 .ssh
 itaken@itaken-PC:~$ cd .ssh/
@@ -35,6 +42,7 @@ itaken@itaken-PC:~/.ssh$ ll
 ```
 
 如果不修改文件权限,会提示权限太开放了.
+
 ```bash
 itaken@itaken-PC:~$ ssh-add ~/.ssh/itaken
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -46,6 +54,7 @@ This private key will be ignored.
 ```
 
 ## `ssh-add`添加私钥
+
 ```bash
 itaken@itaken-PC:~$ ssh-add ~/.ssh/itaken
 Enter passphrase for /home/itaken/.ssh/itaken:
