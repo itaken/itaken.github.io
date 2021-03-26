@@ -427,7 +427,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><mark>问题描述</mark><br>换了电脑,导入的原来系统的ssh整个文件夹,拉取项目提示权限问题…</p>
+                <p><mark>问题描述</mark></p>
+<p>换了电脑,导入的原来系统的ssh整个文件夹,拉取项目提示权限问题…</p>
 <pre class=" language-bash"><code class="language-bash">itaken@itaken-PC:~$ <span class="token function">git</span> clone ssh://git@git-company.local/my-project.git
 正克隆到 <span class="token string">'my-project'</span><span class="token punctuation">..</span>.
 sign_and_send_pubkey: signing failed: agent refused operation
@@ -436,12 +437,11 @@ fatal: 无法读取远程仓库。
 请确认您有正确的访问权限并且仓库存在。</code></pre>
 <p><mark>解决方法</mark></p>
 <h2 id="修改ssh目录权限"><a href="#修改ssh目录权限" class="headerlink" title="修改ssh目录权限"></a>修改<code>ssh</code>目录权限</h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-PC:~$ <span class="token function">chmod</span> 700 .ssh/
-itaken@itaken-PC:~$ <span class="token function">cd</span> .ssh/
-itaken@itaken-PC:~/.ssh$ <span class="token function">cd</span> <span class="token punctuation">..</span>
-itaken@itaken-PC:~$ <span class="token function">chmod</span> 600 .ssh/*
-itaken@itaken-PC:~$ la <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">ssh</span>
+itaken@itaken-PC:~$ <span class="token function">chmod</span> 600 .ssh/*</code></pre>
+<p>查看权限</p>
+<pre><code>itaken@itaken-PC:~$ la | grep ssh
 drwx------  2 itaken itaken  4096 11月 22 21:58 .ssh
-itaken@itaken-PC:~$ <span class="token function">cd</span> .ssh/
+itaken@itaken-PC:~$ cd .ssh/
 itaken@itaken-PC:~/.ssh$ ll
 总用量 24
 -rw------- 1 itaken itaken 1766 4月  18  2020 itaken
