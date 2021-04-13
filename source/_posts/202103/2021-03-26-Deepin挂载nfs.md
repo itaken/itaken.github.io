@@ -83,6 +83,15 @@ itaken@itaken-home:~$ sudo mount -t nfs 192.168.1.13:/volume1 /path/to/公共的
 mount.nfs: access denied by server while mounting 192.168.1.13:/volume1
 ```
 
+3. 在`/etc/fstab`文件中添加配置,开机自动加载
+
+```
+itaken@itaken-home:~$ sudo vim /etc/fstab
+# nfs
+192.168.1.13:/volume1/公共的   /path/to/公共的 nfs     rw      0       1
+192.168.1.13:/volume1/video    /path/to/video  nfs     rw      0       1
+```
+
 ---
 ## 参考文档
 - [ubuntu通过NFS挂载文件](https://blog.csdn.net/qq_40511918/article/details/105651998)
