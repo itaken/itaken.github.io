@@ -12,7 +12,8 @@ tags: [git, gitlab, 问题集]
 使用docker 本地安装 gitlab, 准备自定义host.
 
 `docker-compose.yml`文件如下:
-```
+
+```yml
 version: '3'
 services:
   web:
