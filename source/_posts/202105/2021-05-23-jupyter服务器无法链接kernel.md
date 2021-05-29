@@ -190,3 +190,6 @@ itaken@itaken-home:~$ /usr/local/bin/python3 /path/to/user/.local/bin/jupyter no
 - [tornado 6.0 breaks notebook #4439](https://github.com/jupyter/notebook/issues/4439)
 - [jupyter代码自动补全插件、安装后出现警告“Config option `template_path` not recognized by `LenvsLatexExporter`”的解决方案](https://blog.csdn.net/DTFT_/article/details/111242118)
 - [jupyterLab打开后出现Config option `template_path` not recognized by `ExporterCollapsibleHeadings`相关问题](https://blog.csdn.net/outsider2019/article/details/109274996)
+- [更换Jupyter Notebook内核Python版本](https://blog.csdn.net/gdkyxy2013/article/details/88539171)
+- [更换Jupyter Notebook 内核Python版本，解决 环境中安装的库 ，notebook 找不到问题](https://blog.csdn.net/sinat_28442665/article/details/87289933)
+- [Kernel won't start, throws "Permissions assignment failed for secure file" error](https://www.gitmemory.com/issue/jupyter/notebook/5058/599240280)
