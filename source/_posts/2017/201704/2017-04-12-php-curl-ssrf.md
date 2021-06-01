@@ -5,7 +5,7 @@ modified: 2017-07-24 16:47:48 +0800
 img: /assets/images/201704/12-01.png
 
 categories: 转载验证
-tags: [php, ssrf, curl, 网络安全]
+tags: [php, curl, 网络安全, 转载]
 ---
 
 ## 什么是 SSRF  [^1]
