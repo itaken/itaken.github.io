@@ -176,8 +176,8 @@ itaken@itaken-home:~$ /usr/local/bin/python3 /path/to/user/.local/bin/jupyter no
 [I 18:21:59.242 NotebookApp] Jupyter Notebook 6.4.0 is running at:
 [I 18:21:59.243 NotebookApp] http://192.168.1.3:8888/
 [I 18:21:59.243 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[I 18:22:03.375 NotebookApp] 302 GET /tree? (192.168.31.30) 3.270000ms
-[I 18:22:07.239 NotebookApp] 302 POST /login?next=%2Ftree%3F (192.168.31.30) 343.300000ms
+[I 18:22:03.375 NotebookApp] 302 GET /tree? (192.168.1.3) 3.270000ms
+[I 18:22:07.239 NotebookApp] 302 POST /login?next=%2Ftree%3F (192.168.1.3) 343.300000ms
 [I 18:22:21.358 NotebookApp] Kernel started: 3b1b3a9d-3673-1111-a012-986f2b95166c, name: python3
 ...
 ```
