@@ -256,8 +256,12 @@ cite {
 }
 
 mark {
-    background-color: #fcf8e3;
-    padding: .2em;
+    background-color: #42b983;
+    padding: .2em .4em;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 500;
+    box-shadow: 3px 3px 8px #a2a2a2;
 }
 
 .card {
@@ -2000,9 +2004,10 @@ footer .copy-right {
 }
 
 .center-caption {
-    color: #525f7f;
+    color: #5b6c7d;
     padding: 5px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 12px;
 }
 
 .lg-sub-html .center-caption {
