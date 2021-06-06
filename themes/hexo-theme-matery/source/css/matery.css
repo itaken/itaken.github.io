@@ -1232,6 +1232,17 @@ article .article-tags .chip {
     word-wrap: break-word;
 }
 
+#articleContent h2 a[rel="noopener"] {
+    /* color: #fff !important; */
+    font-size: .1rem;
+    position: relative;
+    top: -5px;
+    border: 1px dotted #42b983;
+    border-radius: 2px;
+    /* background-color: #42b983; */
+    user-select: none;
+}
+
 #articleContent .img-item {
     text-align: center;
 }
@@ -1264,7 +1275,8 @@ article .article-tags .chip {
 }
 
 #articleContent ul li {
-    list-style-type: disc;
+    /* list-style-type: disc; */
+    list-style-type: decimal-leading-zero;
 }
 
 #articleContent ul ul li {
