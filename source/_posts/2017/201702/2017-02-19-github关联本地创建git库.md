@@ -7,51 +7,52 @@ categories: 开发日常
 tags: [github, git]
 ---
 
-1. 本地创建项目文件夹, 例如: **jekyll-document-to-pdf**
+## 本地创建项目文件夹
+例如: **jekyll-document-to-pdf**
 
-1. 初始化 git 库
-    ```bash
-    $ cd jekyll-document-to-pdf
-    $ git init
-    ```
+## 初始化`git`仓库
+```bash
+$ cd jekyll-document-to-pdf
+$ git init
+```
 
-1. 添加改动文件 (或者添加**所有文件**)
-    ```bash
-    $ git add .
-    ```
+## 添加改动文件 (或者添加*所有文件*)
+```bash
+$ git add .
+```
 
-1. 本地提交 git代码库
-    ```bash
-    $ git commit -m "初次提交"
-    $ git push origin master
-    ```
+## 本地提交 git代码库
+```bash
+$ git commit -m "初次提交"
+$ git push origin master
+```
 
-    > 如果没有**关联远程库**, 直接**push**, 则会报错
+> 如果没有**关联远程库**, 直接**push**, 则会报错
 
-    ```bash
-    fatal: 'origin' does not appear to be a git repository
-    fatal: Could not read from remote repository.
+```bash
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
 
-    Please make sure you have the correct access rights
-    and the repository exists.
-    ```
+Please make sure you have the correct access rights
+and the repository exists.
+```
 
-1. 在 github上创建 代码库
+## 在 `github`上创建 代码库
 
-    ![创建代码库](/assets/images/201702/19-01.png)
+![创建代码库](/assets/images/201702/19-01.png)
 
-1. 关联本地库 (本地代码库添加远程地址)
-    ```bash
-    $ git remote add origin https://github.com/itaken/jekyll-document-to-pdf.git
-    ```
+## **关联**本地库 (本地代码库添加远程地址)
+```bash
+$ git remote add origin https://github.com/itaken/jekyll-document-to-pdf.git
+```
 
-1. push提交, 即可同步到github中.
-    ```bash
-    $ git push -u origin master
-    ```
-    ![提交代码](/assets/images/201702/19-02.png)
+## push推送, 即可同步到github中.
+```bash
+$ git push -u origin master
+```
+![提交代码](/assets/images/201702/19-02.png)
 
-    >如果远程新建了文件,可以使用`git fetch origin`,同步自己的修改, 然后`git pull origin master`拉取远程文件, 最后提交.
+>如果远程新建了文件,可以使用`git fetch origin`,同步自己的修改, 然后`git pull origin master`拉取远程文件, 最后提交.
 
 ---
 ## 参考文档
