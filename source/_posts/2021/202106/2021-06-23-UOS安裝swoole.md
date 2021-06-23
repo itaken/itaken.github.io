@@ -9,7 +9,7 @@ tags: [deepin, uos, php, laravel, swoole]
 项目使用了swoole，需要安装swoole扩展。
 
 ```bash
-itaken@itaken:/path/to/project$ php bin/laravels start
+itaken@itaken-home:/path/to/project$ php bin/laravels start
  _                               _  _____
 | |                             | |/ ____|                                                  
 | |     __ _ _ __ __ ___   _____| | (___                                                    
@@ -42,7 +42,7 @@ Stack trace:
 ## 下载源代码
 
 ```bash
-itaken@itaken:~/Downloads$ git clone https://github.com/swoole/swoole-src.git && \
+itaken@itaken-home:~/Downloads$ git clone https://github.com/swoole/swoole-src.git && \
 > cd swoole-src && \
 > git checkout v4.6.x
 正克隆到 'swoole-src'...
@@ -59,13 +59,13 @@ remote: Total 85502 (delta 733), reused 964 (delta 632), pack-reused 84355
 ## 编译`phpize`
 
 ```bash
-itaken@itaken:~/Downloads/swoole-src$ phpize
+itaken@itaken-home:~/Downloads/swoole-src$ phpize
 Configuring for:
 PHP Api Version:         20180731
 Zend Module Api No:      20180731
 Zend Extension Api No:   320180731
 
-itaken@itaken:~/Downloads/swoole-src$ ./configure
+itaken@itaken-home:~/Downloads/swoole-src$ ./configure
 checking for grep that handles long lines and -e... /usr/bin/grep
 checking for egrep... /usr/bin/grep -E
 checking for a sed that does not truncate output... /usr/bin/sed
@@ -81,10 +81,10 @@ config.status: executing libtool commands
 ## `make && make install`
 
 ```bash
-itaken@itaken:~/Downloads/swoole-src$ make
+itaken@itaken-home:~/Downloads/swoole-src$ make
 /bin/bash /home/willike/Downloads/swoole-src/libtool --mode=compile g++  -DENABLE_PHP_SWOOLE -I. -I/home/willike/Downloads/swoole-src -DPHP_ATOM_INC -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/main -I/home/willike/Downloads/swoole-src -I/usr/include/php/20180731 -I/usr/include/php/20180731/main -I/usr/include/php/20180731/TSRM -I/usr/include/php/20180731/Zend -I/usr/include/php/20180731/ext -I/usr/include/php/20180731/ext/date/lib -I/home/willike/Downloads/swoole-src -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/ext-src -I/home/willike/Downloads/swoole-src/thirdparty/hiredis  -DHAVE_CONFIG_H  -g -O2 -Wall -Wno-unused-function -Wno-deprecated -Wno-deprecated-declarations -std=c++11   -c /home/willike/Downloads/swoole-src/ext-src/php_swoole.cc -o ext-src/php_swoole.lo
 
-itaken@itaken:~/Downloads/swoole-src$ sudo make install
+itaken@itaken-home:~/Downloads/swoole-src$ sudo make install
 /bin/bash /home/willike/Downloads/swoole-src/libtool --mode=install cp ./swoole.la /home/willike/Downloads/swoole-src/modules
 libtool: install: cp ./.libs/swoole.so /home/willike/Downloads/swoole-src/modules/swoole.so
 libtool: install: cp ./.libs/swoole.lai /home/willike/Downloads/swoole-src/modules/swoole.la
@@ -114,7 +114,7 @@ Installing header files:          /usr/include/php/20180731/
 ## 创建`swoole.ini`文件
 
 ```
-itaken@itaken:~$ php -i
+itaken@itaken-home:~$ php -i
 phpinfo()
 PHP Version => 7.3.19-1+eagle
 
@@ -129,17 +129,17 @@ Additional .ini files parsed => /etc/php/7.3/cli/conf.d/10-mysqlnd.ini,
 /etc/php/7.3/cli/conf.d/10-opcache.ini,
 /etc/php/7.3/cli/conf.d/10-pdo.ini,
 ...
-itaken@itaken:/usr/lib/php/20180731$ cd /etc/php/7.3/mods-available/
-itaken@itaken:/etc/php/7.3/mods-available$ ll
+itaken@itaken-home:/usr/lib/php/20180731$ cd /etc/php/7.3/mods-available/
+itaken@itaken-home:/etc/php/7.3/mods-available$ ll
 总用量 136K
 -rw-r--r-- 1 root root 72 11月 18  2020 bcmath.ini
 ...
 -rw-r--r-- 1 root root 66 11月 18  2020 xsl.ini
 -rw-r--r-- 1 root root 66 11月 18  2020 zip.ini
 
-itaken@itaken:/etc/php/7.3/mods-available$ sudo cp zip.ini swoole.ini
+itaken@itaken-home:/etc/php/7.3/mods-available$ sudo cp zip.ini swoole.ini
 
-itaken@itaken:/etc/php/7.3/mods-available$ cat swoole.ini
+itaken@itaken-home:/etc/php/7.3/mods-available$ cat swoole.ini
 ; configuration for swoole module
 ; priority=20
 extension=swoole.so
@@ -148,22 +148,22 @@ extension=swoole.so
 ## 创建软链
 
 ```bash
-itaken@itaken:/etc/php/7.3/cli/conf.d$ sudo ln -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini
+itaken@itaken-home:/etc/php/7.3/cli/conf.d$ sudo ln -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini
 
-itaken@itaken:/etc/php/7.3/fpm/conf.d$ sudo ln -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini
+itaken@itaken-home:/etc/php/7.3/fpm/conf.d$ sudo ln -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini
 ```
 
 ## 重启`php-fpm`
 
 ```bash
-itaken@itaken:~$ sudo service php7.3-fpm restart
+itaken@itaken-home:~$ sudo service php7.3-fpm restart
 ```
 
 ## 启动项目
 
 ```
-itaken@itaken:/path/to/project$ php bin/laravels start
-_                               _  _____
+itaken@itaken-home:/path/to/project$ php bin/laravels start
+ _                               _  _____
 | |                             | |/ ____|                                                  
 | |     __ _ _ __ __ ___   _____| | (___                                                    
 | |    / _` | '__/ _` \ \ / / _ \ |\___ \                                                   
