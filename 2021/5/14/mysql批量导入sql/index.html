@@ -704,7 +704,7 @@ Bye</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/5/21/git%E6%9D%BE%E6%95%A3%E5%AF%B9%E8%B1%A1%E5%B7%B2%E9%A1%BA%E5%9D%8F/">
+                <a href="/2021/5/21/git%E6%9D%BE%E6%95%A3%E5%AF%B9%E8%B1%A1%E5%B7%B2%E6%8D%9F%E5%9D%8F/">
                     <div class="card-image">
                         
                         
@@ -866,7 +866,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -878,7 +878,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

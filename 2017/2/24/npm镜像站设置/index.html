@@ -443,7 +443,7 @@ $ <span class="token function">npm</span> <span class="token function">install</
 <p> 需要 <strong>nodejs-legacy</strong> 支持，可以使用 <code>$ sudo apt install nodejs-legacy</code> 安装。</p>
 <pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org</code></pre>
 </li>
-<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/Pana/nrm"><code>nrm</code></a> (<strong>推荐</strong>)</p>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/Pana/nrm">nrm</a> (<strong>推荐</strong>)</p>
 </li>
 </ol>
 <pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g nrm
@@ -884,7 +884,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -896,7 +896,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

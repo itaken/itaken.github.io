@@ -378,12 +378,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
-                            </a>
-                        
                             <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
                                 <span class="chip bg-color">问题集</span>
+                            </a>
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
@@ -615,12 +615,12 @@ itaken@itaken-home:~$ sudo apt install docker-compose
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
-                                </a>
-                            
                                 <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
                                     <span class="chip bg-color">问题集</span>
+                                </a>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -955,7 +955,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -967,7 +967,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

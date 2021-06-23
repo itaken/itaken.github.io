@@ -423,8 +423,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="存储密码-使用-phpass-1-库来哈希和比较密码"><a href="#存储密码-使用-phpass-1-库来哈希和比较密码" class="headerlink" title="存储密码, 使用 phpass ^1 库来哈希和比较密码"></a>存储密码, 使用 <code>phpass</code> <a target="_blank" rel="noopener" href="http://www.openwall.com/phpass/">^1</a> 库来哈希和比较密码</h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-<span class="token comment" spellcheck="true">// Include phpass 库</span>
+                <h2 id="存储密码-使用-phpass-1-库来哈希和比较密码"><a href="#存储密码-使用-phpass-1-库来哈希和比较密码" class="headerlink" title="存储密码, 使用 phpass ^1 库来哈希和比较密码"></a>存储密码, 使用 <code>phpass</code> <a target="_blank" rel="noopener" href="http://www.openwall.com/phpass/">^1</a> 库来哈希和比较密码</h2><pre class=" language-php"><code class="language-php"><span class="token comment" spellcheck="true">// Include phpass 库</span>
 <span class="token keyword">require_once</span><span class="token punctuation">(</span><span class="token string">'phpass-03/PasswordHash.php'</span><span class="token punctuation">)</span>
 
 <span class="token comment" spellcheck="true">// 初始化散列器为不可移植(这样更安全)</span>
@@ -442,8 +441,7 @@
 <blockquote>
 <p>phpass 在 HashPassword() 函数中已经对你的密码“加盐”了，这意味着你不需要自己“加盐”。</p>
 </blockquote>
-<h2 id="PHP-与-MySQL-使用-PDO-及其预处理语句功能。"><a href="#PHP-与-MySQL-使用-PDO-及其预处理语句功能。" class="headerlink" title="PHP 与 MySQL, 使用 PDO 及其预处理语句功能。"></a>PHP 与 <strong>MySQL</strong>, 使用 <code>PDO</code> 及其预处理语句功能。</h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-<span class="token keyword">try</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+<h2 id="PHP-与-MySQL-使用-PDO-及其预处理语句功能。"><a href="#PHP-与-MySQL-使用-PDO-及其预处理语句功能。" class="headerlink" title="PHP 与 MySQL, 使用 PDO 及其预处理语句功能。"></a>PHP 与 <strong>MySQL</strong>, 使用 <code>PDO</code> 及其预处理语句功能。</h2><pre class=" language-php"><code class="language-php"><span class="token keyword">try</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
     <span class="token comment" spellcheck="true">// 新建一个数据库连接</span>
     <span class="token comment" spellcheck="true">// You'll probably want to replace hostname with localhost in the first parameter.</span>
     <span class="token comment" spellcheck="true">// The PDO options we pass do the following:</span>
@@ -508,7 +506,7 @@
 <h2 id="从性能角度来看单引号和双引号-其实并不重要。"><a href="#从性能角度来看单引号和双引号-其实并不重要。" class="headerlink" title="从性能角度来看单引号和双引号, 其实并不重要。"></a>从性能角度来看单引号和双引号, <strong>其实并不重要</strong>。</h2><blockquote>
 <p>单引号字符串不会被解析，因此放入字符串的任何东西都会以原样显示。 双引号字符串会被解析，字符串中的任何 PHP 变量都会被求值。</p>
 </blockquote>
-<h2 id="define-vs-const"><a href="#define-vs-const" class="headerlink" title="define() vs. const"></a>define() vs. const</h2><blockquote>
+<h2 id="define-vs-const"><a href="#define-vs-const" class="headerlink" title="define() vs. const"></a>define() <code>vs.</code> const</h2><blockquote>
 <p>使用 <code>define()</code>，除非考虑到可读性、类常量、或关注微优化</p>
 </blockquote>
 <ul>
@@ -569,7 +567,7 @@
 <span class="token function">filter_var</span><span class="token punctuation">(</span><span class="token string">'sauron@mordor'</span><span class="token punctuation">,</span> <span class="token constant">FILTER_VALIDATE_EMAIL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// Returns boolean false! This is *not* a valid email address.</span></code></pre>
 <h2 id="净化-HTML-输入和输出"><a href="#净化-HTML-输入和输出" class="headerlink" title="净化 HTML 输入和输出"></a>净化 HTML 输入和输出</h2><ul>
-<li>对于简单的数据净化，使用 <code>htmlentities()</code> 函数, 复杂的数据净化则使用 <a target="_blank" rel="noopener" href="http://htmlpurifier.org/"><code>HTML Purifier</code> 库</a></li>
+<li>对于简单的数据净化，使用 <code>htmlentities()</code> 函数, 复杂的数据净化则使用 <a target="_blank" rel="noopener" href="http://htmlpurifier.org/">HTML Purifier 库</a></li>
 <li>你可能会找到建议你使用 strip_tags() 函数的观点。 虽然 strip_tags() 从技术上来说是安全的，但如果输入的不合法的 HTML（比如， 没有结束标签），它就成了一个「愚蠢」的函数，可能会去除比你期望的更多的内容。</li>
 <li>如果你的 web 应用仅需要完全地转义（因此可以无害地呈现，但不是完全去除） HTML， 则使用 PHP 的内建 htmlentities() 函数。</li>
 </ul>
@@ -1137,7 +1135,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -1149,7 +1147,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

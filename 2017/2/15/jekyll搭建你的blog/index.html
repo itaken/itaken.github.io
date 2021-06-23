@@ -423,16 +423,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code>Ubuntu: 16.10
+                <pre><code>开发环境
+Ubuntu: 16.10
 ruby: 2.3.1p112
 gem: 2.6.7
 jekyll: 3.4.0</code></pre>
-<h2 id="安装-gem-1"><a href="#安装-gem-1" class="headerlink" title="安装 gem ^1"></a>安装 gem <a target="_blank" rel="noopener" href="https://rubygems.org/">^1</a></h2><blockquote>
-<p>一般安装<code>ruby</code>, 就会自动安装了gem</p>
+<blockquote>
+<p>Jekyll 是一个简单的免费的Blog生成工具。jekyll只是一个生成静态网页的工具，不需要数据库支持。但是<code>jekyll</code>可以免费部署在<code>Github</code>上，而且可以绑定自己的域名。</p>
 </blockquote>
+<h2 id="安装-gem-1"><a href="#安装-gem-1" class="headerlink" title="安装 gem ^1"></a>安装 gem <a target="_blank" rel="noopener" href="https://rubygems.org/">^1</a></h2><p><strong>一般安装<code>ruby</code>, 就会自动安装了gem, 如果没有则手动安装即可。</strong></p>
 <pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> apt <span class="token function">install</span> ruby
 $ <span class="token function">sudo</span> gem update --system  <span class="token comment" spellcheck="true"># 更新gem</span></code></pre>
 <h2 id="安装-ffi"><a href="#安装-ffi" class="headerlink" title="安装 ffi"></a>安装 <code>ffi</code></h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> gem <span class="token function">install</span> ffi</code></pre>
+<blockquote>
+<p>如果安装时提示如下错误: <code>ERROR: Failed to build gem native extension.</code></p>
+</blockquote>
 <pre class=" language-bash"><code class="language-bash">Building native extensions.  This could take a while<span class="token punctuation">..</span>.
 ERROR:  Error installing ffi:
     ERROR: Failed to build gem native extension.
@@ -447,12 +452,12 @@ Gem files will remain installed <span class="token keyword">in</span> /var/lib/g
 Results logged to /var/lib/gems/2.3.0/extensions/x86_64-linux/2.3.0/ffi-1.9.17/gem_make.out</code></pre>
 <p>解决方案如下: <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/13767725/unable-to-install-gem-failed-to-build-gem-native-extension-cannot-load-such">^2</a></p>
 <pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ruby-dev
-$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">make</span>  <span class="token comment" spellcheck="true"># 如果还不成功, 执行如下语句</span></code></pre>
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">make</span>  <span class="token comment" spellcheck="true"># 如果还不成功, 执行这句</span></code></pre>
 <h2 id="安装-minima-主题样式"><a href="#安装-minima-主题样式" class="headerlink" title="安装 minima 主题样式"></a>安装 <code>minima</code> 主题样式</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> gem <span class="token function">install</span> minima</code></pre>
 <h2 id="使用-gem-安装-jekyll"><a href="#使用-gem-安装-jekyll" class="headerlink" title="使用 gem 安装 jekyll"></a>使用 gem 安装 <code>jekyll</code></h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> gem <span class="token function">install</span> jekyll bundler</code></pre>
 <h2 id="创建blog"><a href="#创建blog" class="headerlink" title="创建blog"></a>创建blog</h2><pre class=" language-bash"><code class="language-bash">$ jekyll new myblog</code></pre>
 <h2 id="开始博客之旅"><a href="#开始博客之旅" class="headerlink" title="开始博客之旅"></a>开始博客之旅</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> myblog
-$ bundle <span class="token function">exec</span> jekyll serve</code></pre>
+$ bundle <span class="token function">exec</span> jekyll serve <span class="token comment" spellcheck="true"># 或者直接执行 jekyll serve</span></code></pre>
 <blockquote>
 <p>打开: <a target="_blank" rel="noopener" href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a> ,效果如下:</p>
 </blockquote>
@@ -743,6 +748,10 @@ $ bundle <span class="token function">exec</span> jekyll serve</code></pre>
                         <span class="chip bg-color">github</span>
                     </a>
                     
+                    <a href="/tags/blog/">
+                        <span class="chip bg-color">blog</span>
+                    </a>
+                    
                     <a href="/tags/jekyll/">
                         <span class="chip bg-color">jekyll</span>
                     </a>
@@ -761,9 +770,9 @@ $ bundle <span class="token function">exec</span> jekyll serve</code></pre>
                 <a href="/2017/2/14/%E5%9C%A8git%E4%B8%8A%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog/">
                     <div class="card-image">
                         
-                        <img src="/assets/images/201702/14-01.png" class="responsive-img" alt="建立自己的github pages吧!">
+                        <img src="/assets/images/201702/14-01.png" class="responsive-img" alt="建立自己的Github Pages吧!">
                         
-                        <span class="card-title">建立自己的github pages吧!</span>
+                        <span class="card-title">建立自己的Github Pages吧!</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -862,7 +871,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -874,7 +883,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

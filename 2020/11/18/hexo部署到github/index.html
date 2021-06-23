@@ -725,13 +725,13 @@ hexo g -d</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/11/22/git-signing-failed/">
+                <a href="/2020/11/20/PHP%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83%E4%B8%8Ecode-review/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="sign_and_send_pubkey: signing failed: agent refused operation">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="PHP开发规范和code review">
                         
-                        <span class="card-title">sign_and_send_pubkey: signing failed: agent refused operation</span>
+                        <span class="card-title">PHP开发规范和code review</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -742,14 +742,14 @@ hexo g -d</code></pre>
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-20
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
-                                    一个问题
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD%E9%AA%8C%E8%AF%81/" class="post-category">
+                                    转载验证
                                 </a>
                             
                             
@@ -759,16 +759,12 @@ hexo g -d</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
-                        <span class="chip bg-color">问题集</span>
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
                     </a>
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                    <a href="/tags/ssh/">
-                        <span class="chip bg-color">ssh</span>
+                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                        <span class="chip bg-color">转载</span>
                     </a>
                     
                 </div>
@@ -887,7 +883,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -899,7 +895,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

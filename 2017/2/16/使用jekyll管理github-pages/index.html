@@ -382,6 +382,10 @@
                                 <span class="chip bg-color">github</span>
                             </a>
                         
+                            <a href="/tags/blog/">
+                                <span class="chip bg-color">blog</span>
+                            </a>
+                        
                             <a href="/tags/jekyll/">
                                 <span class="chip bg-color">jekyll</span>
                             </a>
@@ -423,37 +427,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li><p>将 github pages <strong>clone</strong> 到本地</p>
-<pre class=" language-shell"><code class="language-shell">$ git clone https://github.com/itaken/itaken.github.io.git</code></pre>
-</li>
-<li><p>进入你本地的github pages目录</p>
-<pre class=" language-shell"><code class="language-shell">$ jekyll new .</code></pre>
+                <pre><code>开发环境
+Ubuntu: 16.10
+git: 2.9.3</code></pre>
+<h2 id="将-github-pages项目-clone-到本地"><a href="#将-github-pages项目-clone-到本地" class="headerlink" title="将 github pages项目 clone 到本地"></a>将 <code>github pages</code>项目 <strong>clone</strong> 到本地</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> clone https://github.com/itaken/itaken.github.io.git</code></pre>
+<h2 id="进入你本地的github-pages目录"><a href="#进入你本地的github-pages目录" class="headerlink" title="进入你本地的github pages目录"></a>进入你本地的github pages目录</h2><pre class=" language-bash"><code class="language-bash">$ jekyll new <span class="token keyword">.</span></code></pre>
 <blockquote>
-<p>报错, 提示文件夹不为空:</p>
+<p>如果<strong>报错</strong>, 提示<strong>文件夹不为空</strong>: <code>Conflict: /path/to/itaken.github.io exists and is not empty.</code><br>可以使用<code>--force</code>, 强制新建一个jekyll项目</p>
 </blockquote>
-<pre><code>  Conflict: /path/to/itaken.github.io exists and is not empty.</code></pre>
-<p> 使用<code>--force</code>, 强制新建一个jekyll项目</p>
 <pre class=" language-bash"><code class="language-bash">$ jekyll new <span class="token keyword">.</span> --force</code></pre>
-</li>
-<li><p>开启jekyll服务 <a target="_blank" rel="noopener" href="https://jekyllrb.com/docs/usage/">^1</a></p>
-<pre class=" language-shell"><code class="language-shell">$ jekyll serve</code></pre>
+<h2 id="开启jekyll服务-1"><a href="#开启jekyll服务-1" class="headerlink" title="开启jekyll服务 ^1"></a>开启jekyll服务 <a target="_blank" rel="noopener" href="https://jekyllrb.com/docs/usage/">^1</a></h2><pre class=" language-bash"><code class="language-bash">$ jekyll serve</code></pre>
 <blockquote>
 <p>打开: <a target="_blank" rel="noopener" href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a></p>
 </blockquote>
-</li>
-<li><p>开始书写你的blog</p>
-</li>
-<li><p>提交到 git</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> add <span class="token keyword">.</span>
+<h2 id="开始书写你的blog"><a href="#开始书写你的blog" class="headerlink" title="开始书写你的blog"></a>开始书写你的blog</h2><h2 id="提交到-github"><a href="#提交到-github" class="headerlink" title="提交到 github"></a>提交到 github</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> add <span class="token keyword">.</span>
 $ <span class="token function">git</span> commit -m <span class="token string">"提交信息"</span>
 $ <span class="token function">git</span> push origin master</code></pre>
-</li>
-</ol>
-<hr>
-<p>运行环境</p>
-<pre><code>Ubuntu: 16.10
-git: 2.9.3</code></pre>
 <hr>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
 <li><a target="_blank" rel="noopener" href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">jekyll quick start</a></li>
@@ -526,6 +515,10 @@ git: 2.9.3</code></pre>
                             
                                 <a href="/tags/github/">
                                     <span class="chip bg-color">github</span>
+                                </a>
+                            
+                                <a href="/tags/blog/">
+                                    <span class="chip bg-color">blog</span>
                                 </a>
                             
                                 <a href="/tags/jekyll/">
@@ -737,12 +730,12 @@ git: 2.9.3</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络安全</span>
-                    </a>
-                    
                     <a href="/tags/mysql/">
                         <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -860,7 +853,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -872,7 +865,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

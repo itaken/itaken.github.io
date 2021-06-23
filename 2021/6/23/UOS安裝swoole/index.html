@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="git pull断电,提示松散对象已损坏, ITAKEN GITHUB PAGES">
+    <meta name="keywords" content="UOS 安裝 swoole, ITAKEN GITHUB PAGES">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git pull断电,提示松散对象已损坏 | ITAKEN GITHUB PAGES</title>
+    <title>UOS 安裝 swoole | ITAKEN GITHUB PAGES</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -261,7 +261,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git pull断电,提示松散对象已损坏</h1>
+                    <h1 class="description center-align post-title">UOS 安裝 swoole</h1>
                 </div>
             </div>
         </div>
@@ -378,12 +378,24 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
-                                <span class="chip bg-color">问题集</span>
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
                             </a>
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
+                            <a href="/tags/deepin/">
+                                <span class="chip bg-color">deepin</span>
+                            </a>
+                        
+                            <a href="/tags/uos/">
+                                <span class="chip bg-color">uos</span>
+                            </a>
+                        
+                            <a href="/tags/laravel/">
+                                <span class="chip bg-color">laravel</span>
+                            </a>
+                        
+                            <a href="/tags/swoole/">
+                                <span class="chip bg-color">swoole</span>
                             </a>
                         
                     </div>
@@ -394,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
-                                一个问题
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                开发日常
                             </a>
                         
                     </div>
@@ -407,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-21
+                    2021-06-23
                 </div>
                 
 
@@ -423,19 +435,158 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><mark>问题描述</mark></p>
-<pre><code>itaken@itaken-home:~/path/to/project$ git status
-error: 对象文件 .git/objects/ba/c013919d838f7213880dxxxx670329927c8a1e
-error: 对象文件 .git/objects/ba/869aeb889bcc13e079fbxxxx2605a69dd283d6
-fatal: 松散对象 d8472d182b537e7xxxxx612ec795d08c6242a8(.git/objects/ba/xxxx) 已损坏</code></pre>
-<p><mark>解决方案</mark></p>
-<p>进入工作目录, 执行以下命令修复即可(根据仓库大小与commit次数,执行时间有所不同).</p>
-<pre><code>find .git/objects/ -size 0 -exec rm -f &#123;&#125; \;
-git fetch origin</code></pre>
+                <p>项目使用了swoole，需要安装swoole扩展。</p>
+<pre class=" language-bash"><code class="language-bash">itaken@itaken-home:/path/to/project$ php bin/laravels start
+ _                               _  _____
+<span class="token operator">|</span> <span class="token operator">|</span>                             <span class="token operator">|</span> <span class="token operator">|</span>/ ____<span class="token operator">|</span>                                                  
+<span class="token operator">|</span> <span class="token operator">|</span>     __ _ _ __ __ ___   _____<span class="token operator">|</span> <span class="token operator">|</span> <span class="token punctuation">(</span>___                                                    
+<span class="token operator">|</span> <span class="token operator">|</span>    / _` <span class="token operator">|</span> <span class="token string">'__/ _` \ \ / / _ \ |\___ \                                                   
+| |___| (_| | | | (_| |\ V /  __/ |____) |                                                  
+|______\__,_|_|  \__,_| \_/ \___|_|_____/                                                   
+
+Speed up your Laravel/Lumen
+>>> Components
+
+In LaravelSCommand.php line 104:
+
+  Call to undefined function Hhxsv5\LaravelS\Illuminate\swoole_version()  
+
+[2021-06-21 10:47:58] [TRACE] Swoole is running, press Ctrl+C to quit.
+PHP Warning:  Use of undefined constant SWOOLE_SOCK_UNIX_STREAM - assumed '</span>SWOOLE_SOCK_UNIX_STREAM<span class="token string">' (this will throw an Error in a future version of PHP) in /path/to/project/vendor/hhxsv5/laravel-s/src/Swoole/Server.php on line 48
+PHP Fatal error:  Uncaught Error: Class '</span>Swoole\Http\Server' not found <span class="token keyword">in</span> /path/to/project/vendor/hhxsv5/laravel-s/src/Swoole/Server.php:62
+Stack trace:
+<span class="token comment" spellcheck="true">#0 /path/to/project/vendor/hhxsv5/laravel-s/src/LaravelS.php(57): Hhxsv5\LaravelS\Swoole\Server->__construct(Array)</span>
+<span class="token comment" spellcheck="true">#1 /path/to/project/vendor/hhxsv5/laravel-s/src/Console/Portal.php(132): Hhxsv5\LaravelS\LaravelS->__construct(Array, Array)</span>
+<span class="token comment" spellcheck="true">#2 /path/to/project/vendor/hhxsv5/laravel-s/src/Console/Portal.php(56): Hhxsv5\LaravelS\Console\Portal->start()</span>
+<span class="token comment" spellcheck="true">#3 /path/to/project/vendor/symfony/console/Command/Command.php(255): Hhxsv5\LaravelS\Console\Portal->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))</span>
+<span class="token comment" spellcheck="true">#4 /path/to/project/bin/laravels(12): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))</span>
+<span class="token comment" spellcheck="true">#5 &amp;#123;main in /path/to/project/vendor/hhxsv5/laravel-s/src/Swoole/Server.php on line 62</span>
+<span class="token punctuation">..</span>.</code></pre>
+<blockquote>
+<p>前置条件，需要安装<code>sudo apt-get install gcc build-essential</code></p>
+</blockquote>
+<h2 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~/Downloads$ <span class="token function">git</span> clone https://github.com/swoole/swoole-src.git <span class="token operator">&amp;&amp;</span> \
+<span class="token operator">></span> <span class="token function">cd</span> swoole-src <span class="token operator">&amp;&amp;</span> \
+<span class="token operator">></span> <span class="token function">git</span> checkout v4.6.x
+正克隆到 <span class="token string">'swoole-src'</span><span class="token punctuation">..</span>.
+remote: Enumerating objects: 85502, done.
+remote: Counting objects: 100% <span class="token punctuation">(</span>1147/1147<span class="token punctuation">)</span>, done.
+remote: Compressing objects: 100% <span class="token punctuation">(</span>510/510<span class="token punctuation">)</span>, done.
+remote: Total 85502 <span class="token punctuation">(</span>delta 733<span class="token punctuation">)</span>, reused 964 <span class="token punctuation">(</span>delta 632<span class="token punctuation">)</span>, pack-reused 84355
+接收对象中: 100% <span class="token punctuation">(</span>85502/85502<span class="token punctuation">)</span>, 45.10 MiB <span class="token operator">|</span> 216.00 KiB/s, 完成.
+处理 delta 中: 100% <span class="token punctuation">(</span>65056/65056<span class="token punctuation">)</span>, 完成.
+分支 <span class="token string">'v4.6.x'</span> 设置为跟踪来自 <span class="token string">'origin'</span> 的远程分支 <span class="token string">'v4.6.x'</span>。
+切换到一个新分支 <span class="token string">'v4.6.x'</span></code></pre>
+<h2 id="编译phpize"><a href="#编译phpize" class="headerlink" title="编译phpize"></a>编译<code>phpize</code></h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~/Downloads/swoole-src$ phpize
+Configuring for:
+PHP Api Version:         20180731
+Zend Module Api No:      20180731
+Zend Extension Api No:   320180731
+
+itaken@itaken-home:~/Downloads/swoole-src$ ./configure
+checking <span class="token keyword">for</span> <span class="token function">grep</span> that handles long lines and -e<span class="token punctuation">..</span>. /usr/bin/grep
+checking <span class="token keyword">for</span> egrep<span class="token punctuation">..</span>. /usr/bin/grep -E
+checking <span class="token keyword">for</span> a <span class="token function">sed</span> that does not truncate output<span class="token punctuation">..</span>. /usr/bin/sed
+<span class="token punctuation">..</span>.
+checking whether the g++ linker <span class="token punctuation">(</span>/usr/bin/ld -m elf_x86_64<span class="token punctuation">)</span> supports shared libraries<span class="token punctuation">..</span>. <span class="token function">yes</span>
+checking dynamic linker characteristics<span class="token punctuation">..</span>. <span class="token punctuation">(</span>cached<span class="token punctuation">)</span> GNU/Linux ld.so
+checking how to hardcode library paths into programs<span class="token punctuation">..</span>. immediate
+configure: creating ./config.status
+config.status: creating config.h
+config.status: executing libtool commands</code></pre>
+<h2 id="make-amp-amp-make-install"><a href="#make-amp-amp-make-install" class="headerlink" title="make &amp;&amp; make install"></a><code>make &amp;&amp; make install</code></h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~/Downloads/swoole-src$ <span class="token function">make</span>
+/bin/bash /home/willike/Downloads/swoole-src/libtool --mode<span class="token operator">=</span>compile g++  -DENABLE_PHP_SWOOLE -I. -I/home/willike/Downloads/swoole-src -DPHP_ATOM_INC -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/main -I/home/willike/Downloads/swoole-src -I/usr/include/php/20180731 -I/usr/include/php/20180731/main -I/usr/include/php/20180731/TSRM -I/usr/include/php/20180731/Zend -I/usr/include/php/20180731/ext -I/usr/include/php/20180731/ext/date/lib -I/home/willike/Downloads/swoole-src -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/ext-src -I/home/willike/Downloads/swoole-src/thirdparty/hiredis  -DHAVE_CONFIG_H  -g -O2 -Wall -Wno-unused-function -Wno-deprecated -Wno-deprecated-declarations -std<span class="token operator">=</span>c++11   -c /home/willike/Downloads/swoole-src/ext-src/php_swoole.cc -o ext-src/php_swoole.lo
+
+itaken@itaken-home:~/Downloads/swoole-src$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+/bin/bash /home/willike/Downloads/swoole-src/libtool --mode<span class="token operator">=</span>install <span class="token function">cp</span> ./swoole.la /home/willike/Downloads/swoole-src/modules
+libtool: install: <span class="token function">cp</span> ./.libs/swoole.so /home/willike/Downloads/swoole-src/modules/swoole.so
+libtool: install: <span class="token function">cp</span> ./.libs/swoole.lai /home/willike/Downloads/swoole-src/modules/swoole.la
+libtool: finish: PATH<span class="token operator">=</span><span class="token string">"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin"</span> ldconfig -n /home/willike/Downloads/swoole-src/modules
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/willike/Downloads/swoole-src/modules
+
+If you ever happen to want to <span class="token function">link</span> against installed libraries
+<span class="token keyword">in</span> a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the <span class="token string">'-LLIBDIR'</span>
+flag during linking and <span class="token keyword">do</span> at least one of the following:
+   - add LIBDIR to the <span class="token string">'LD_LIBRARY_PATH'</span> environment variable
+     during execution
+   - add LIBDIR to the <span class="token string">'LD_RUN_PATH'</span> environment variable
+     during linking
+   - use the <span class="token string">'-Wl,-rpath -Wl,LIBDIR'</span> linker flag
+   - have your system administrator add LIBDIR to <span class="token string">'/etc/ld.so.conf'</span>
+
+See any operating system documentation about shared libraries <span class="token keyword">for</span>
+<span class="token function">more</span> information, such as the ld<span class="token punctuation">(</span>1<span class="token punctuation">)</span> and ld.so<span class="token punctuation">(</span>8<span class="token punctuation">)</span> manual pages.
+----------------------------------------------------------------------
+Installing shared extensions:     /usr/lib/php/20180731/
+Installing header files:          /usr/include/php/20180731/</code></pre>
+<h2 id="创建swoole-ini文件"><a href="#创建swoole-ini文件" class="headerlink" title="创建swoole.ini文件"></a>创建<code>swoole.ini</code>文件</h2><pre><code>itaken@itaken-home:~$ php -i
+phpinfo()
+PHP Version =&gt; 7.3.19-1+eagle
+
+System =&gt; Linux willike-PC 5.7.7-amd64-desktop #3000 SMP Fri Dec 18 19:38:48 CST 2020 x86_64
+Build Date =&gt; Nov 18 2020 07:21:12
+Server API =&gt; Command Line Interface
+Virtual Directory Support =&gt; disabled
+Configuration File (php.ini) Path =&gt; /etc/php/7.3/cli
+Loaded Configuration File =&gt; /etc/php/7.3/cli/php.ini
+Scan this dir for additional .ini files =&gt; /etc/php/7.3/cli/conf.d
+Additional .ini files parsed =&gt; /etc/php/7.3/cli/conf.d/10-mysqlnd.ini,
+/etc/php/7.3/cli/conf.d/10-opcache.ini,
+/etc/php/7.3/cli/conf.d/10-pdo.ini,
+...
+itaken@itaken-home:/usr/lib/php/20180731$ cd /etc/php/7.3/mods-available/
+itaken@itaken-home:/etc/php/7.3/mods-available$ ll
+总用量 136K
+-rw-r--r-- 1 root root 72 11月 18  2020 bcmath.ini
+...
+-rw-r--r-- 1 root root 66 11月 18  2020 xsl.ini
+-rw-r--r-- 1 root root 66 11月 18  2020 zip.ini
+
+itaken@itaken-home:/etc/php/7.3/mods-available$ sudo cp zip.ini swoole.ini
+
+itaken@itaken-home:/etc/php/7.3/mods-available$ cat swoole.ini
+; configuration for swoole module
+; priority=20
+extension=swoole.so</code></pre>
+<h2 id="创建软链"><a href="#创建软链" class="headerlink" title="创建软链"></a>创建软链</h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:/etc/php/7.3/cli/conf.d$ <span class="token function">sudo</span> <span class="token function">ln</span> -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini
+
+itaken@itaken-home:/etc/php/7.3/fpm/conf.d$ <span class="token function">sudo</span> <span class="token function">ln</span> -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini</code></pre>
+<h2 id="重启php-fpm"><a href="#重启php-fpm" class="headerlink" title="重启php-fpm"></a>重启<code>php-fpm</code></h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~$ <span class="token function">sudo</span> <span class="token function">service</span> php7.3-fpm restart</code></pre>
+<h2 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h2><pre><code>itaken@itaken-home:/path/to/project$ php bin/laravels start
+ _                               _  _____
+| |                             | |/ ____|                                                  
+| |     __ _ _ __ __ ___   _____| | (___                                                    
+| |    / _` | &#39;__/ _` \ \ / / _ \ |\___ \                                                   
+| |___| (_| | | | (_| |\ V /  __/ |____) |                                                  
+|______\__,_|_|  \__,_| \_/ \___|_|_____/                                                   
+
+Speed up your Laravel/Lumen
+&gt;&gt;&gt; Components
++----------------------+-------------------------------------------+
+| Component            | Version                                   |
++----------------------+-------------------------------------------+
+| PHP                  | 7.3.19-1+eagle                            |
+| Swoole               | 4.6.8-dev                                 |
+| LaravelS             | 3.4.4                                     |
+| Laravel Framework [] | Lumen (5.8.12) (Laravel Components 5.8.*) |
++----------------------+-------------------------------------------+
+&gt;&gt;&gt; Protocols
++-----------+--------+-------------------+--------------+
+| Protocol  | Status | Handler           | Listen At    |
++-----------+--------+-------------------+--------------+
+| Main HTTP | On     | Laravel Framework | 0.0.0.0:5200 |
++-----------+--------+-------------------+--------------+
+&gt;&gt;&gt; Feedback: https://github.com/hhxsv5/laravel-s
+[2021-06-21 11:20:20] [TRACE] Swoole is running, press Ctrl+C to quit.
+...</code></pre>
 <hr>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/4254389/git-corrupt-loose-object">Git: “Corrupt loose object”</a></li>
-<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/ask/74033">如何在git中将损坏的松散对象修复为提交？</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.swoole.co.uk/docs/get-started/installation">How to Install Swoole</a></li>
+<li><a target="_blank" rel="noopener" href="https://wiki.swoole.com/#/environment">安装 Swoole</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/77813702">configure、 make、 make install 背后的原理</a></li>
 </ul>
 
             </div>
@@ -462,7 +613,7 @@ git fetch origin</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://itaken.github.io/2021/5/21/git%E6%9D%BE%E6%95%A3%E5%AF%B9%E8%B1%A1%E5%B7%B2%E9%A1%BA%E5%9D%8F/">https://itaken.github.io/2021/5/21/git%E6%9D%BE%E6%95%A3%E5%AF%B9%E8%B1%A1%E5%B7%B2%E9%A1%BA%E5%9D%8F/</a>
+                    <a href="https://itaken.github.io/2021/6/23/UOS%E5%AE%89%E8%A3%9Dswoole/">https://itaken.github.io/2021/6/23/UOS%E5%AE%89%E8%A3%9Dswoole/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -500,12 +651,24 @@ git fetch origin</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
-                                    <span class="chip bg-color">问题集</span>
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
                                 </a>
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
+                                <a href="/tags/deepin/">
+                                    <span class="chip bg-color">deepin</span>
+                                </a>
+                            
+                                <a href="/tags/uos/">
+                                    <span class="chip bg-color">uos</span>
+                                </a>
+                            
+                                <a href="/tags/laravel/">
+                                    <span class="chip bg-color">laravel</span>
+                                </a>
+                            
+                                <a href="/tags/swoole/">
+                                    <span class="chip bg-color">swoole</span>
                                 </a>
                             
                         </div>
@@ -681,13 +844,13 @@ git fetch origin</code></pre>
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2021/5/21/git%E6%9D%BE%E6%95%A3%E5%AF%B9%E8%B1%A1%E5%B7%B2%E9%A1%BA%E5%9D%8F/">
+                <a href="/2021/6/23/UOS%E5%AE%89%E8%A3%9Dswoole/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="git pull断电,提示松散对象已损坏">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="UOS 安裝 swoole">
                         
-                        <span class="card-title">git pull断电,提示松散对象已损坏</span>
+                        <span class="card-title">UOS 安裝 swoole</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -698,14 +861,14 @@ git fetch origin</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
-                                    一个问题
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    开发日常
                                 </a>
                             
                             
@@ -716,12 +879,24 @@ git fetch origin</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
-                        <span class="chip bg-color">问题集</span>
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
                     </a>
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
+                    <a href="/tags/deepin/">
+                        <span class="chip bg-color">deepin</span>
+                    </a>
+                    
+                    <a href="/tags/uos/">
+                        <span class="chip bg-color">uos</span>
+                    </a>
+                    
+                    <a href="/tags/laravel/">
+                        <span class="chip bg-color">laravel</span>
+                    </a>
+                    
+                    <a href="/tags/swoole/">
+                        <span class="chip bg-color">swoole</span>
                     </a>
                     
                 </div>
@@ -735,13 +910,13 @@ git fetch origin</code></pre>
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/5/14/mysql%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5sql/">
+                <a href="/2021/6/20/ext4%E6%97%A0%E6%B3%95%E6%8C%82%E8%BD%BD/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL导入SQL文件,批量导入SQL语句">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="ext4无法挂载：bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.">
                         
-                        <span class="card-title">MySQL导入SQL文件,批量导入SQL语句</span>
+                        <span class="card-title">ext4无法挂载：bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -752,7 +927,7 @@ git fetch origin</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
                             </span>
                         <span class="publish-author">
                             
@@ -769,16 +944,16 @@ git fetch origin</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mysql/">
-                        <span class="chip bg-color">mysql</span>
-                    </a>
-                    
                     <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
                         <span class="chip bg-color">问题集</span>
                     </a>
                     
-                    <a href="/tags/mariadb/">
-                        <span class="chip bg-color">mariadb</span>
+                    <a href="/tags/deepin/">
+                        <span class="chip bg-color">deepin</span>
+                    </a>
+                    
+                    <a href="/tags/uos/">
+                        <span class="chip bg-color">uos</span>
                     </a>
                     
                 </div>
@@ -844,7 +1019,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -856,7 +1031,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

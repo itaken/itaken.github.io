@@ -423,18 +423,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li><p>本地创建项目文件夹, 例如: <strong>jekyll-document-to-pdf</strong></p>
-</li>
-<li><p>初始化 git 库</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> jekyll-document-to-pdf
+                <h2 id="本地创建项目文件夹"><a href="#本地创建项目文件夹" class="headerlink" title="本地创建项目文件夹"></a>本地创建项目文件夹</h2><p>例如: <strong>jekyll-document-to-pdf</strong></p>
+<h2 id="初始化git仓库"><a href="#初始化git仓库" class="headerlink" title="初始化git仓库"></a>初始化<code>git</code>仓库</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> jekyll-document-to-pdf
 $ <span class="token function">git</span> init</code></pre>
-</li>
-<li><p>添加改动文件 (或者添加<strong>所有文件</strong>)</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> add <span class="token keyword">.</span></code></pre>
-</li>
-<li><p>本地提交 git代码库</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> commit -m <span class="token string">"初次提交"</span>
+<h2 id="添加改动文件-或者添加所有文件"><a href="#添加改动文件-或者添加所有文件" class="headerlink" title="添加改动文件 (或者添加所有文件)"></a>添加改动文件 (或者添加<em>所有文件</em>)</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> add <span class="token keyword">.</span></code></pre>
+<h2 id="本地提交-git代码库"><a href="#本地提交-git代码库" class="headerlink" title="本地提交 git代码库"></a>本地提交 git代码库</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> commit -m <span class="token string">"初次提交"</span>
 $ <span class="token function">git</span> push origin master</code></pre>
 <blockquote>
 <p>如果没有<strong>关联远程库</strong>, 直接<strong>push</strong>, 则会报错</p>
@@ -444,21 +437,13 @@ fatal: Could not <span class="token function">read</span> from remote repository
 
 Please <span class="token function">make</span> sure you have the correct access rights
 and the repository exists.</code></pre>
-</li>
-<li><p>在 github上创建 代码库</p>
-<p> <img src="/assets/images/201702/19-01.png" alt="创建代码库"></p>
-</li>
-<li><p>关联本地库 (本地代码库添加远程地址)</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> remote add origin https://github.com/itaken/jekyll-document-to-pdf.git</code></pre>
-</li>
-<li><p>push提交, 即可同步到github中.</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> push -u origin master</code></pre>
-<p> <img src="/assets/images/201702/19-02.png" alt="提交代码"></p>
+<h2 id="在-github上创建-代码库"><a href="#在-github上创建-代码库" class="headerlink" title="在 github上创建 代码库"></a>在 <code>github</code>上创建 代码库</h2><p><img src="/assets/images/201702/19-01.png" alt="创建代码库"></p>
+<h2 id="关联本地库-本地代码库添加远程地址"><a href="#关联本地库-本地代码库添加远程地址" class="headerlink" title="关联本地库 (本地代码库添加远程地址)"></a><strong>关联</strong>本地库 (本地代码库添加远程地址)</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> remote add origin https://github.com/itaken/jekyll-document-to-pdf.git</code></pre>
+<h2 id="push推送-即可同步到github中"><a href="#push推送-即可同步到github中" class="headerlink" title="push推送, 即可同步到github中."></a>push推送, 即可同步到github中.</h2><pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> push -u origin master</code></pre>
+<p><img src="/assets/images/201702/19-02.png" alt="提交代码"></p>
 <blockquote>
 <p>如果远程新建了文件,可以使用<code>git fetch origin</code>,同步自己的修改, 然后<code>git pull origin master</code>拉取远程文件, 最后提交.</p>
 </blockquote>
-</li>
-</ol>
 <hr>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
 <li><a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000">添加远程库</a></li>
@@ -869,7 +854,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -881,7 +866,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="建立自己的github pages吧!, ITAKEN GITHUB PAGES">
+    <meta name="keywords" content="建立自己的Github Pages吧!, ITAKEN GITHUB PAGES">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>建立自己的github pages吧! | ITAKEN GITHUB PAGES</title>
+    <title>建立自己的Github Pages吧! | ITAKEN GITHUB PAGES</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -261,7 +261,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">建立自己的github pages吧!</h1>
+                    <h1 class="description center-align post-title">建立自己的Github Pages吧!</h1>
                 </div>
             </div>
         </div>
@@ -427,19 +427,15 @@
 <p>首先, 必须拥有一个<code>github</code>账号.</p>
 </blockquote>
 <ol>
-<li><p>打开 <a target="_blank" rel="noopener" href="https://github.com/new">https://github.com/new</a> , 新建项目.</p>
-</li>
-<li><p>在<code>Repository name</code>中填写 [username].github.io, 例如: <code>itaken.github.io</code></p>
-</li>
-<li><p>查看是否设置成功,</p>
-<p> 打开 <a target="_blank" rel="noopener" href="https://github.com/itaken/[username].github.io/settings">https://github.com/itaken/[username].github.io/settings</a>.</p>
-<p> <a target="_blank" rel="noopener" href="https://github.com/itaken/itaken.github.io/settings">https://github.com/itaken/itaken.github.io/settings</a></p>
-<p><img src="/assets/images/201702/14-01.png" alt="查看配置"></p>
-</li>
-<li><p>打开 <a href="https://itaken.github.io/">https://itaken.github.io/</a> ,可以访问就表示成功</p>
-<p> <img src="/assets/images/201702/14-02.png" alt="创建成功"></p>
-</li>
+<li>打开 <a target="_blank" rel="noopener" href="https://github.com/new">https://github.com/new</a> , 新建项目.</li>
+<li>在<code>Repository name</code>中填写 <strong>[username].github.io</strong>, 例如: <code>itaken.github.io</code></li>
+<li>查看是否设置成功,<br>打开 <code>https://github.com/itaken/[username].github.io/settings</code>.<br><a target="_blank" rel="noopener" href="https://github.com/itaken/itaken.github.io/settings">https://github.com/itaken/itaken.github.io/settings</a><br><img src="/assets/images/201702/14-01.png" alt="查看配置"></li>
+<li>打开 <a href="https://itaken.github.io/">https://itaken.github.io/</a> ,可以访问就表示成功<br><img src="/assets/images/201702/14-02.png" alt="创建成功"></li>
 </ol>
+<hr>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://pages.github.com/">Websites for you and your projects.</a></li>
+</ul>
 
             </div>
             <hr/>
@@ -769,6 +765,10 @@
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/blog/">
+                        <span class="chip bg-color">blog</span>
+                    </a>
+                    
                     <a href="/tags/hexo/">
                         <span class="chip bg-color">hexo</span>
                     </a>
@@ -836,7 +836,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -848,7 +848,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

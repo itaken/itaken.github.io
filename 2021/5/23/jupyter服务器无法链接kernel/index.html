@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PHP代码分析/code review工具, ITAKEN GITHUB PAGES">
+    <meta name="keywords" content="jupyter可以启动,但是无法连接kernel的解决方案, ITAKEN GITHUB PAGES">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>PHP代码分析/code review工具 | ITAKEN GITHUB PAGES</title>
+    <title>jupyter可以启动,但是无法连接kernel的解决方案 | ITAKEN GITHUB PAGES</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -256,12 +256,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/assets/images/202105/23-01.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">PHP代码分析/code review工具</h1>
+                    <h1 class="description center-align post-title">jupyter可以启动,但是无法连接kernel的解决方案</h1>
                 </div>
             </div>
         </div>
@@ -378,8 +378,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/php/">
-                                <span class="chip bg-color">php</span>
+                            <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                                <span class="chip bg-color">问题集</span>
+                            </a>
+                        
+                            <a href="/tags/jupyter/">
+                                <span class="chip bg-color">jupyter</span>
                             </a>
                         
                     </div>
@@ -390,8 +394,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
-                                开发日常
+                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
+                                一个问题
                             </a>
                         
                     </div>
@@ -403,7 +407,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-01-01
+                    2021-05-23
                 </div>
                 
 
@@ -419,12 +423,151 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>整理一下以前的资料,统一放在<code>2019</code>中</p>
+                <p><mark>问题描述</mark></p>
+<p>使用<code>pip</code>安装<strong>jupyter</strong>,可以打开web,但是无法连接kernel,无法使用.</p>
+<p>错误示例:</p>
+<pre><code>Traceback (most recent call last):
+  File &quot;/path/to/user/.local/lib/python3.8/site-packages/tornado/web.py&quot;, line 1704, in _execute
+    result = await result
+  File &quot;/path/to/user/.local/lib/python3.8/site-packages/tornado/gen.py&quot;, line 769, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  ....
+  File &quot;/path/to/user/.local/lib/python3.8/site-packages/jupyter_core/paths.py&quot;, line 471, in secure_write
+    raise RuntimeError(&quot;Permissions assignment failed for secure file: &#39;&#123;file&#125;&#39;.&quot;
+RuntimeError: Permissions assignment failed for secure file: &#39;/path/to/user/.local/share/jupyter/runtime/kernel-3538cdde-8a9a-4766-bc48-9b3c32a30dd2.json&#39;. Got &#39;0o677&#39; instead of &#39;0o0600&#39;.</code></pre>
+<p><img src="/assets/images/202105/23-01.png" alt="jupyter无法运行"></p>
+<p>查看<code>tornado</code>,发现是<strong>6.1</strong>的版本, 依据网络上查到的<strong>降低</strong>tornado版本, 但是没有效果!</p>
+<pre><code>itaken@itaken-home:~$ pip list | grep torna
+tornado                           6.1
+itaken@itaken-home:~$ pip list | grep note
+notebook                          6.4.0</code></pre>
+<p><code>pip install tornado==5.1.1</code>提示<code>notebook 6.4.0 requires tornado&gt;=6.1</code>, 无法降低版本:</p>
+<pre><code>itaken@itaken-home:~$ pip install tornado==5.1.1
+Defaulting to user installation because normal site-packages is not writeable
+Collecting tornado==5.1.1
+  Downloading tornado-5.1.1.tar.gz (516 kB)
+     |████████████████████████████████| 516 kB 1.2 MB/s
+...
+      Successfully uninstalled tornado-6.1
+ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+notebook 6.4.0 requires tornado&gt;=6.1, but you have tornado 5.1.1 which is incompatible.
+jupyter-server 1.6.4 requires tornado&gt;=6.1.0, but you have tornado 5.1.1 which is incompatible.
+Successfully installed tornado-6.1</code></pre>
+<p>即使强制降低了<code>tornado</code>版本,也是无法启动<code>notebook</code>:</p>
+<pre><code>itaken@itaken-home:~$ /usr/local/bin/python3 /path/to/user/.local/bin/jupyter notebook --notebook-dir=&quot;/path/to/user/jupyter-data&quot; --allow-root
+Traceback (most recent call last):
+  File &quot;/path/to/user/.local/bin/jupyter-notebook&quot;, line 5, in &lt;module&gt;
+    from notebook.notebookapp import main
+  File &quot;/path/to/user/.local/lib/python3.8/site-packages/notebook/notebookapp.py&quot;, line 58, in &lt;module&gt;
+    raise ImportError(_(&quot;The Jupyter Notebook requires tornado &gt;= 5.0, but you have %s&quot;) % tornado.version)
+ImportError: The Jupyter Notebook requires tornado &gt;= 5.0, but you have 4.5.3</code></pre>
+<pre><code>itaken@itaken-home:~$ /usr/local/bin/python3 /path/to/user/.local/bin/jupyter notebook --notebook-dir=&quot;/path/to/user/jupyter-data&quot; --allow-root
+[W 15:26:27.188 NotebookApp] Config option `runtime_dir` not recognized by `NotebookApp`.  Did you mean `notebook_dir`?
+[W 15:26:29.170 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+...
+[I 15:26:34.131 NotebookApp] 302 GET / (127.0.0.1) 2.110000ms
+[W 15:26:41.407 NotebookApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 15:26:41.466 NotebookApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+...</code></pre>
+<blockquote>
+<p>问题: 因为安装了多个版本tornado, 重新安装<code>tornado 6.1</code>,在安装jupyter其他库,提示<code>No such file or directory</code>错误:</p>
 </blockquote>
+<pre><code>itaken@itaken-home:~$ pip install jupyter_contrib_nbextensions
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: jupyter_contrib_nbextensions in ./.local/lib/python3.8/site-packages (0.5.1)
+...
+Requirement already satisfied: ptyprocess in ./.local/lib/python3.8/site-packages (from terminado&gt;=0.8.3-&gt;notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (0.7.0)
+ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: &#39;/path/to/user/.local/lib/python3.8/site-packages/tornado-6.1.dist-info/METADATA&#39;</code></pre>
+<p>直接使用<code>pip uninstall tornado</code>,<code>pip install tornado</code>重新安装失败, 需要<code>rm -rf /path/to/user/.local/lib/python3.8/site-packages/tornado-6.1.dist-info</code> 删除整个<code>tornado-6.1.dist-info</code>目录,然后在重新安装即可.</p>
+<pre><code>itaken@itaken-home:~$ pip uninstall tornado
+Found existing installation: tornado 6.1
+ERROR: Exception:
+Traceback (most recent call last):
+  File &quot;/path/to/user/.local/lib/python3.8/site-packages/pip/_internal/cli/base_command.py&quot;, line 180, in _main
+    status = self.run(options, args)
+  ...
+    with open(path, &#39;rb&#39;) as stream:
+FileNotFoundError: [Errno 2] No such file or directory: &#39;/path/to/user/.local/lib/python3.8/site-packages/tornado-6.1.dist-info/RECORD&#39;
+itaken@itaken-home:~$ pip install tornado
+Defaulting to user installation because normal site-packages is not writeable
+Collecting tornado
+  Using cached tornado-6.1-cp38-cp38-manylinux2010_x86_64.whl (427 kB)
+...
+Installing collected packages: tornado
+Successfully installed tornado-6.1</code></pre>
+<p><mark>解决方案</mark></p>
+<p>实际的解决方案是,降低<code>nbconvert</code>的版本, 直接使用 <code>pip install nbconvert==5.6.1</code> 即可.</p>
+<pre><code>itaken@itaken-home:~$ pip list | grep nbc
+nbclassic                         0.2.7
+nbclient                          0.5.3
+nbconvert                         6.0.7</code></pre>
+<pre><code>itaken@itaken-home:~$ pip install nbconvert==5.6.1
+Defaulting to user installation because normal site-packages is not writeable
+Collecting nbconvert==5.6.1
+  Downloading nbconvert-5.6.1-py2.py3-none-any.whl (455 kB)
+     |████████████████████████████████| 455 kB 1.1 MB/s
+Requirement already satisfied: defusedxml in ./.local/lib/python3.8/site-packages (from nbconvert==5.6.1) (0.7.1)
+...
+Requirement already satisfied: pyparsing&gt;=2.0.2 in ./.local/lib/python3.8/site-packages (from packaging-&gt;bleach-&gt;nbconvert==5.6.1) (2.4.7)
+Installing collected packages: nbconvert
+  Attempting uninstall: nbconvert
+    Found existing installation: nbconvert 6.0.7
+    Uninstalling nbconvert-6.0.7:
+      Successfully uninstalled nbconvert-6.0.7
+ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+notebook 6.4.0 requires tornado&gt;=6.1, which is not installed.
+jupyter-server 1.6.4 requires tornado&gt;=6.1.0, which is not installed.
+jupyter-nbextensions-configurator 0.4.1 requires tornado, which is not installed.
+jupyter-contrib-nbextensions 0.5.1 requires tornado, which is not installed.
+jupyter-contrib-core 0.3.3 requires tornado, which is not installed.
+Successfully installed nbconvert-5.6.1
+
+itaken@itaken-home:~$ pip list | grep nbc
+nbclassic                         0.2.7
+nbclient                          0.5.3
+nbconvert                         5.6.1
+itaken@itaken-home:~$ pip list | grep tor
+async-generator                   1.10
+decorator                         5.0.9
+jupyter-nbextensions-configurator 0.4.1
+tornado                           6.1</code></pre>
+<p>安装notebook拓展插件<code>nbextension</code>:</p>
+<pre><code>itaken@itaken-home:~$ jupyter contrib nbextension install --user
+[I 18:21:01 InstallContribNbextensionsApp] jupyter contrib nbextension install --user
+[I 18:21:01 InstallContribNbextensionsApp] Installing jupyter_contrib_nbextensions nbextension files to jupyter data directory
+...
+[I 18:21:02 InstallContribNbextensionsApp] - Validating: OK
+[I 18:21:02 InstallContribNbextensionsApp] Installing jupyter_contrib_nbextensions items to config in /path/to/user/.jupyter
+Enabling: jupyter_nbextensions_configurator
+- Writing config: /path/to/user/.jupyter
+    - Validating...
+      jupyter_nbextensions_configurator 0.4.1 OK
+Enabling notebook nbextension nbextensions_configurator/config_menu/main...
+Enabling tree nbextension nbextensions_configurator/tree_tab/main...</code></pre>
+<p>启动<strong>notebook</strong>,开始python之旅吧!</p>
+<pre><code>itaken@itaken-home:~$ /usr/local/bin/python3 /path/to/user/.local/bin/jupyter notebook --notebook-dir=&quot;/path/to/user/jupyter-data&quot; --allow-root --no-browser
+[W 18:21:59.064 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 18:21:59.239 NotebookApp] [jupyter_nbextensions_configurator] enabled 0.4.1
+[I 18:21:59.242 NotebookApp] Serving notebooks from local directory: /path/to/user/jupyter-data
+[I 18:21:59.242 NotebookApp] Jupyter Notebook 6.4.0 is running at:
+[I 18:21:59.243 NotebookApp] http://192.168.1.3:8888/
+[I 18:21:59.243 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 18:22:03.375 NotebookApp] 302 GET /tree? (192.168.1.3) 3.270000ms
+[I 18:22:07.239 NotebookApp] 302 POST /login?next=%2Ftree%3F (192.168.1.3) 343.300000ms
+[I 18:22:21.358 NotebookApp] Kernel started: 3b1b3a9d-3673-1111-a012-986f2b95166c, name: python3
+...</code></pre>
 <hr>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://pdepend.org/">PHP Depend</a><br><a target="_blank" rel="noopener" href="http://program-transformation.org/PHP/PhpSatReleases">PHP-sat</a><br><a target="_blank" rel="noopener" href="https://github.com/troelskn/php-tracer-weaver/tree/master">php-tracer-weaver</a><br><a target="_blank" rel="noopener" href="http://pear.php.net/package/PHP_Parser">PHP_Parser</a><br><a target="_blank" rel="noopener" href="http://www.graphviz.org/">Graphviz is open source graph visualization software</a><br><a target="_blank" rel="noopener" href="https://phpmd.org/">PHPMD - PHP Mess Detector</a><br><a target="_blank" rel="noopener" href="https://pmd.github.io/">PMD</a><br><a target="_blank" rel="noopener" href="https://github.com/pmd/pmd">An extensible cross-language static code analyzer.</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/378959/is-there-a-static-code-analyzer-like-lint-for-php-files">Is there a static code analyzer [like Lint] for PHP files?</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/4035736/regexp-to-detect-call-time-pass-by-references-in-php-source-code">Regexp to detect call time pass by references in PHP source code</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/4156157/tool-for-php-code-analysis">Tool for PHP code analysis</a><br><a target="_blank" rel="noopener" href="https://github.com/Qafoo/QualityAnalyzer">Qafoo Quality Analyzer</a></p>
-<p><a target="_blank" rel="noopener" href="https://coolshell.cn/articles/1218.html">简单实用的CODE REVIEW工具</a><br><a target="_blank" rel="noopener" href="http://crew-cr.github.io/Crew/">Code review tool for Git projects.</a><br><a target="_blank" rel="noopener" href="https://github.com/Qafoo/review/tree/7af74f48fa703b3a8b177d93349efc50e26fc5cf">Qafoo/review</a><br><a target="_blank" rel="noopener" href="https://bitnami.com/stack/reviewboard-plus-powerpack">Review Board + Power Pack</a><br><a target="_blank" rel="noopener" href="https://github.com/reviewboard/reviewboard">reviewboard</a><br><a target="_blank" rel="noopener" href="https://github.com/softwaremill/codebrag">codebrag</a><br><a target="_blank" rel="noopener" href="https://github.com/google/git-appraise">Distributed code review system for Git repos</a><br><a target="_blank" rel="noopener" href="https://github.com/FabriceSalvaire/CodeReview">CodeReview is a Git GUI tool to perform code review </a><br><a target="_blank" rel="noopener" href="https://github.com/haya14busa/reviewdog">reviewdog - A code review dog who keeps your codebase healthy</a><br><a target="_blank" rel="noopener" href="https://github.com/360EntSecGroup-Skylar/goreporter">A Golang tool that does static analysis, unit testing, code review and generate code quality report.</a><br><a target="_blank" rel="noopener" href="https://github.com/phacility/phabricator">Open software engineering platform and fun adventure game</a><br><a target="_blank" rel="noopener" href="https://github.com/qhwa/fdlint">fdlint - 让前端code review更轻松</a><br><a target="_blank" rel="noopener" href="https://github.com/prontolabs/pronto">Pronto</a><br><a target="_blank" rel="noopener" href="https://github.com/danger/danger">danger/danger</a></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/jupyter/notebook/issues/2664">juipiter notebook server “connecting to kernel” problem #2664</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/damin1909/p/12691147.html">本地创建的jupyter notebook 无法连接本地环境（即不能运行代码）</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/54963043/jupyter-notebook-no-connection-to-server-because-websocket-connection-fails">Jupyter notebook: No connection to server because websocket connection fails</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/jupyter/notebook/issues/4439">tornado 6.0 breaks notebook #4439</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/DTFT_/article/details/111242118">jupyter代码自动补全插件、安装后出现警告“Config option <code>template_path</code> not recognized by <code>LenvsLatexExporter</code>”的解决方案</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/outsider2019/article/details/109274996">jupyterLab打开后出现Config option <code>template_path</code> not recognized by <code>ExporterCollapsibleHeadings</code>相关问题</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/gdkyxy2013/article/details/88539171">更换Jupyter Notebook内核Python版本</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_28442665/article/details/87289933">更换Jupyter Notebook 内核Python版本，解决 环境中安装的库 ，notebook 找不到问题</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.gitmemory.com/issue/jupyter/notebook/5058/599240280">Kernel won’t start, throws “Permissions assignment failed for secure file” error</a></li>
+</ul>
 
             </div>
             <hr/>
@@ -450,7 +593,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://itaken.github.io/2020/1/1/php%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E7%9A%84%E5%B7%A5%E5%85%B7/">https://itaken.github.io/2020/1/1/php%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E7%9A%84%E5%B7%A5%E5%85%B7/</a>
+                    <a href="https://itaken.github.io/2021/5/23/jupyter%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E9%93%BE%E6%8E%A5kernel/">https://itaken.github.io/2021/5/23/jupyter%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E9%93%BE%E6%8E%A5kernel/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -488,8 +631,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/php/">
-                                    <span class="chip bg-color">php</span>
+                                <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                                    <span class="chip bg-color">问题集</span>
+                                </a>
+                            
+                                <a href="/tags/jupyter/">
+                                    <span class="chip bg-color">jupyter</span>
                                 </a>
                             
                         </div>
@@ -664,12 +811,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/11/17/dig%E9%80%9Aping%E4%B8%8D%E9%80%9A/">
+                <a href="/2021/5/29/%E4%BD%BF%E7%94%A8ssh-key%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81/">
                     <div class="card-image">
                         
-                        <img src="/assets/images/202011/17-01.png" class="responsive-img" alt="域名dig通,但是ping不通">
+                        <img src="/assets/images/202105/29-01.png" class="responsive-img" alt="github使用ssh key提交代码">
                         
-                        <span class="card-title">域名dig通,但是ping不通</span>
+                        <span class="card-title">github使用ssh key提交代码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -680,14 +827,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-29
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
-                                    一个问题
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    开发日常
                                 </a>
                             
                             
@@ -697,12 +844,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
-                        <span class="chip bg-color">问题集</span>
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
-                    <a href="/tags/ping/">
-                        <span class="chip bg-color">ping</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -716,13 +863,12 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/5/29/git%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">
+                <a href="/2021/5/21/%E4%BF%AE%E6%94%B9gitlab%E7%9A%84host/">
                     <div class="card-image">
                         
+                        <img src="/assets/images/202105/21-01.png" class="responsive-img" alt="修改docker gitlab的host">
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="git 中文显示乱码处理">
-                        
-                        <span class="card-title">git 中文显示乱码处理</span>
+                        <span class="card-title">修改docker gitlab的host</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -733,7 +879,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-05-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
                             </span>
                         <span class="publish-author">
                             
@@ -756,6 +902,10 @@
                     
                     <a href="/tags/git/">
                         <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/gitlab/">
+                        <span class="chip bg-color">gitlab</span>
                     </a>
                     
                 </div>
@@ -821,7 +971,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -833,7 +983,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

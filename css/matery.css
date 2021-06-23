@@ -151,6 +151,10 @@ code {
 }
 
 h2 code {
+    font-size: 1.8rem;
+}
+
+h3 code {
     font-size: 1.6rem;
 }
 
@@ -256,8 +260,19 @@ cite {
 }
 
 mark {
-    background-color: #fcf8e3;
-    padding: .2em;
+    background-color: #ffffff;
+    padding: .2em .4em .2em 0;
+    color: #42b983;
+    font-size: 1.25rem;
+    font-weight: 600;
+    /* box-shadow: 3px 3px 8px #a2a2a2; */
+    margin: 30px 0 20px 0;
+    display: block;
+    border-bottom: 1px dashed #a2a2a2;
+    width: 100%;
+    text-align: left;
+    cursor: default;
+    user-select: none;
 }
 
 .card {
@@ -1217,6 +1232,17 @@ article .article-tags .chip {
     word-wrap: break-word;
 }
 
+#articleContent h2 a[rel="noopener"] {
+    /* color: #fff !important; */
+    font-size: .1rem;
+    position: relative;
+    top: -5px;
+    border: 1px dotted #42b983;
+    border-radius: 2px;
+    /* background-color: #42b983; */
+    user-select: none;
+}
+
 #articleContent .img-item {
     text-align: center;
 }
@@ -1249,7 +1275,8 @@ article .article-tags .chip {
 }
 
 #articleContent ul li {
-    list-style-type: disc;
+    /* list-style-type: disc; */
+    list-style-type: decimal-leading-zero;
 }
 
 #articleContent ul ul li {
@@ -2000,9 +2027,10 @@ footer .copy-right {
 }
 
 .center-caption {
-    color: #525f7f;
+    color: #5b6c7d;
     padding: 5px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 12px;
 }
 
 .lg-sub-html .center-caption {

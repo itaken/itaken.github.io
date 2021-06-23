@@ -423,15 +423,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>本人环境配置</p>
-</blockquote>
-<pre><code>Ubuntu: 16.10
+                <pre><code>开发环境配置
+Ubuntu: 16.10
 Python: 3.5.2+
 wkhtmltopdf: 0.12.4 (with patched qt)</code></pre>
-<ol>
-<li><p>获取页面URL列表 <a target="_blank" rel="noopener" href="https://github.com/itaken/python-example/blob/master/jekyll-document-to-pdf/jekyll_spider_demo.py">^1</a></p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_url_list</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<h2 id="获取页面URL列表-1"><a href="#获取页面URL列表-1" class="headerlink" title="获取页面URL列表 ^1"></a>获取页面URL列表 <a target="_blank" rel="noopener" href="https://github.com/itaken/python-example/blob/master/jekyll-document-to-pdf/jekyll_spider_demo.py">^1</a></h2><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_url_list</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">:</span>
     response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
     <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">!=</span> <span class="token number">200</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span>
@@ -444,9 +440,7 @@ wkhtmltopdf: 0.12.4 (with patched qt)</code></pre>
         urls<span class="token punctuation">.</span>append<span class="token punctuation">(</span>a_url<span class="token punctuation">)</span>
 
     <span class="token keyword">return</span> urls</code></pre>
-</li>
-<li><p>解析页面, 保存成html文件</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">parse_url_to_html</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<h2 id="解析页面-保存成html文件"><a href="#解析页面-保存成html文件" class="headerlink" title="解析页面, 保存成html文件"></a>解析页面, 保存成html文件</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">parse_url_to_html</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">:</span>
     response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
     <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">!=</span> <span class="token number">200</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span>
@@ -460,9 +454,7 @@ wkhtmltopdf: 0.12.4 (with patched qt)</code></pre>
         f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>bytes<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">"utf_8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># string转byte</span>
 
     <span class="token keyword">return</span> file_path</code></pre>
-</li>
-<li><p>将html文件保存为pdf</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">save_pdf</span><span class="token punctuation">(</span>file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<h2 id="将html文件保存为pdf"><a href="#将html文件保存为pdf" class="headerlink" title="将html文件保存为pdf"></a>将html文件保存为<code>pdf</code></h2><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">save_pdf</span><span class="token punctuation">(</span>file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
     options <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
         <span class="token string">'page-size'</span><span class="token punctuation">:</span> <span class="token string">'Letter'</span><span class="token punctuation">,</span>
         <span class="token string">'encoding'</span><span class="token punctuation">:</span> <span class="token string">"UTF-8"</span><span class="token punctuation">,</span>
@@ -471,8 +463,6 @@ wkhtmltopdf: 0.12.4 (with patched qt)</code></pre>
         <span class="token punctuation">]</span>
     <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
     pdfkit<span class="token punctuation">.</span>from_file<span class="token punctuation">(</span>file_path<span class="token punctuation">,</span> <span class="token string">"./data/demo.pdf"</span><span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span></code></pre>
-</li>
-</ol>
 <blockquote>
 <p>完整代码 : <a target="_blank" rel="noopener" href="https://github.com/itaken/python-example/tree/master/jekyll-document-to-pdf">jekyll-document-to-pdf</a></p>
 </blockquote>
@@ -881,7 +871,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -893,7 +883,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

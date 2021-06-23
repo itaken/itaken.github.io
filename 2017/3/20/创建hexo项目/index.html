@@ -378,16 +378,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
                             <a href="/tags/blog/">
                                 <span class="chip bg-color">blog</span>
                             </a>
                         
                             <a href="/tags/nodejs/">
                                 <span class="chip bg-color">nodejs</span>
+                            </a>
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
                     </div>
@@ -609,16 +609,16 @@ $ cnpm <span class="token function">install</span> hexo --save                  
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
                                 <a href="/tags/blog/">
                                     <span class="chip bg-color">blog</span>
                                 </a>
                             
                                 <a href="/tags/nodejs/">
                                     <span class="chip bg-color">nodejs</span>
+                                </a>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
                         </div>
@@ -835,6 +835,10 @@ $ cnpm <span class="token function">install</span> hexo --save                  
                         <span class="chip bg-color">网络安全</span>
                     </a>
                     
+                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                        <span class="chip bg-color">转载</span>
+                    </a>
+                    
                     <a href="/tags/%E7%AE%97%E6%B3%95/">
                         <span class="chip bg-color">算法</span>
                     </a>
@@ -959,7 +963,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -971,7 +975,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

@@ -794,12 +794,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ubuntu/">
-                        <span class="chip bg-color">ubuntu</span>
-                    </a>
-                    
                     <a href="/tags/mysql/">
                         <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
                     </a>
                     
                     <a href="/tags/shell/">
@@ -873,7 +873,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, mark'
         });
 
         // modify the toc link href to support Chinese.
@@ -885,7 +885,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
