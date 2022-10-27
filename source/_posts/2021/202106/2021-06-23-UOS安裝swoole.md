@@ -82,16 +82,16 @@ config.status: executing libtool commands
 
 ```bash
 itaken@itaken-home:~/Downloads/swoole-src$ make
-/bin/bash /home/willike/Downloads/swoole-src/libtool --mode=compile g++  -DENABLE_PHP_SWOOLE -I. -I/home/willike/Downloads/swoole-src -DPHP_ATOM_INC -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/main -I/home/willike/Downloads/swoole-src -I/usr/include/php/20180731 -I/usr/include/php/20180731/main -I/usr/include/php/20180731/TSRM -I/usr/include/php/20180731/Zend -I/usr/include/php/20180731/ext -I/usr/include/php/20180731/ext/date/lib -I/home/willike/Downloads/swoole-src -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/ext-src -I/home/willike/Downloads/swoole-src/thirdparty/hiredis  -DHAVE_CONFIG_H  -g -O2 -Wall -Wno-unused-function -Wno-deprecated -Wno-deprecated-declarations -std=c++11   -c /home/willike/Downloads/swoole-src/ext-src/php_swoole.cc -o ext-src/php_swoole.lo
+/bin/bash /paht/to/downloads/swoole-src/libtool --mode=compile g++  -DENABLE_PHP_SWOOLE -I. -I/paht/to/downloads/swoole-src -DPHP_ATOM_INC -I/paht/to/downloads/swoole-src/include -I/paht/to/downloads/swoole-src/main -I/paht/to/downloads/swoole-src -I/usr/include/php/20180731 -I/usr/include/php/20180731/main -I/usr/include/php/20180731/TSRM -I/usr/include/php/20180731/Zend -I/usr/include/php/20180731/ext -I/usr/include/php/20180731/ext/date/lib -I/paht/to/downloads/swoole-src -I/paht/to/downloads/swoole-src/include -I/paht/to/downloads/swoole-src/ext-src -I/paht/to/downloads/swoole-src/thirdparty/hiredis  -DHAVE_CONFIG_H  -g -O2 -Wall -Wno-unused-function -Wno-deprecated -Wno-deprecated-declarations -std=c++11   -c /paht/to/downloads/swoole-src/ext-src/php_swoole.cc -o ext-src/php_swoole.lo
 
 itaken@itaken-home:~/Downloads/swoole-src$ sudo make install
-/bin/bash /home/willike/Downloads/swoole-src/libtool --mode=install cp ./swoole.la /home/willike/Downloads/swoole-src/modules
-libtool: install: cp ./.libs/swoole.so /home/willike/Downloads/swoole-src/modules/swoole.so
-libtool: install: cp ./.libs/swoole.lai /home/willike/Downloads/swoole-src/modules/swoole.la
-libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /home/willike/Downloads/swoole-src/modules
+/bin/bash /paht/to/downloads/swoole-src/libtool --mode=install cp ./swoole.la /paht/to/downloads/swoole-src/modules
+libtool: install: cp ./.libs/swoole.so /paht/to/downloads/swoole-src/modules/swoole.so
+libtool: install: cp ./.libs/swoole.lai /paht/to/downloads/swoole-src/modules/swoole.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /paht/to/downloads/swoole-src/modules
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /home/willike/Downloads/swoole-src/modules
+   /paht/to/downloads/swoole-src/modules
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -118,7 +118,7 @@ itaken@itaken-home:~$ php -i
 phpinfo()
 PHP Version => 7.3.19-1+eagle
 
-System => Linux willike-PC 5.7.7-amd64-desktop #3000 SMP Fri Dec 18 19:38:48 CST 2020 x86_64
+System => Linux itaken-home 5.7.7-amd64-desktop #3000 SMP Fri Dec 18 19:38:48 CST 2020 x86_64
 Build Date => Nov 18 2020 07:21:12
 Server API => Command Line Interface
 Virtual Directory Support => disabled
