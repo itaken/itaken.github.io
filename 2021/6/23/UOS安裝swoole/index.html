@@ -1,0 +1,1221 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="UOS 安裝 swoole, ITAKEN GITHUB PAGES">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>UOS 安裝 swoole | ITAKEN GITHUB PAGES</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ITAKEN GITHUB PAGES</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于ITAKEN</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ITAKEN GITHUB PAGES</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于ITAKEN
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">UOS 安裝 swoole</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
+                            </a>
+                        
+                            <a href="/tags/deepin/">
+                                <span class="chip bg-color">deepin</span>
+                            </a>
+                        
+                            <a href="/tags/uos/">
+                                <span class="chip bg-color">uos</span>
+                            </a>
+                        
+                            <a href="/tags/laravel/">
+                                <span class="chip bg-color">laravel</span>
+                            </a>
+                        
+                            <a href="/tags/swoole/">
+                                <span class="chip bg-color">swoole</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                开发日常
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-06-23
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>项目使用了swoole，需要安装swoole扩展。</p>
+<pre class=" language-bash"><code class="language-bash">itaken@itaken-home:/path/to/project$ php bin/laravels start
+ _                               _  _____
+<span class="token operator">|</span> <span class="token operator">|</span>                             <span class="token operator">|</span> <span class="token operator">|</span>/ ____<span class="token operator">|</span>                                                  
+<span class="token operator">|</span> <span class="token operator">|</span>     __ _ _ __ __ ___   _____<span class="token operator">|</span> <span class="token operator">|</span> <span class="token punctuation">(</span>___                                                    
+<span class="token operator">|</span> <span class="token operator">|</span>    / _` <span class="token operator">|</span> <span class="token string">'__/ _` \ \ / / _ \ |\___ \                                                   
+| |___| (_| | | | (_| |\ V /  __/ |____) |                                                  
+|______\__,_|_|  \__,_| \_/ \___|_|_____/                                                   
+
+Speed up your Laravel/Lumen
+>>> Components
+
+In LaravelSCommand.php line 104:
+
+  Call to undefined function Hhxsv5\LaravelS\Illuminate\swoole_version()  
+
+[2021-06-21 10:47:58] [TRACE] Swoole is running, press Ctrl+C to quit.
+PHP Warning:  Use of undefined constant SWOOLE_SOCK_UNIX_STREAM - assumed '</span>SWOOLE_SOCK_UNIX_STREAM<span class="token string">' (this will throw an Error in a future version of PHP) in /path/to/project/vendor/hhxsv5/laravel-s/src/Swoole/Server.php on line 48
+PHP Fatal error:  Uncaught Error: Class '</span>Swoole\Http\Server' not found <span class="token keyword">in</span> /path/to/project/vendor/hhxsv5/laravel-s/src/Swoole/Server.php:62
+Stack trace:
+<span class="token comment" spellcheck="true">#0 /path/to/project/vendor/hhxsv5/laravel-s/src/LaravelS.php(57): Hhxsv5\LaravelS\Swoole\Server->__construct(Array)</span>
+<span class="token comment" spellcheck="true">#1 /path/to/project/vendor/hhxsv5/laravel-s/src/Console/Portal.php(132): Hhxsv5\LaravelS\LaravelS->__construct(Array, Array)</span>
+<span class="token comment" spellcheck="true">#2 /path/to/project/vendor/hhxsv5/laravel-s/src/Console/Portal.php(56): Hhxsv5\LaravelS\Console\Portal->start()</span>
+<span class="token comment" spellcheck="true">#3 /path/to/project/vendor/symfony/console/Command/Command.php(255): Hhxsv5\LaravelS\Console\Portal->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))</span>
+<span class="token comment" spellcheck="true">#4 /path/to/project/bin/laravels(12): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))</span>
+<span class="token comment" spellcheck="true">#5 &amp;#123;main in /path/to/project/vendor/hhxsv5/laravel-s/src/Swoole/Server.php on line 62</span>
+<span class="token punctuation">..</span>.</code></pre>
+<blockquote>
+<p>前置条件，需要安装<code>sudo apt-get install gcc build-essential</code></p>
+</blockquote>
+<h2 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~/Downloads$ <span class="token function">git</span> clone https://github.com/swoole/swoole-src.git <span class="token operator">&amp;&amp;</span> \
+<span class="token operator">></span> <span class="token function">cd</span> swoole-src <span class="token operator">&amp;&amp;</span> \
+<span class="token operator">></span> <span class="token function">git</span> checkout v4.6.x
+正克隆到 <span class="token string">'swoole-src'</span><span class="token punctuation">..</span>.
+remote: Enumerating objects: 85502, done.
+remote: Counting objects: 100% <span class="token punctuation">(</span>1147/1147<span class="token punctuation">)</span>, done.
+remote: Compressing objects: 100% <span class="token punctuation">(</span>510/510<span class="token punctuation">)</span>, done.
+remote: Total 85502 <span class="token punctuation">(</span>delta 733<span class="token punctuation">)</span>, reused 964 <span class="token punctuation">(</span>delta 632<span class="token punctuation">)</span>, pack-reused 84355
+接收对象中: 100% <span class="token punctuation">(</span>85502/85502<span class="token punctuation">)</span>, 45.10 MiB <span class="token operator">|</span> 216.00 KiB/s, 完成.
+处理 delta 中: 100% <span class="token punctuation">(</span>65056/65056<span class="token punctuation">)</span>, 完成.
+分支 <span class="token string">'v4.6.x'</span> 设置为跟踪来自 <span class="token string">'origin'</span> 的远程分支 <span class="token string">'v4.6.x'</span>。
+切换到一个新分支 <span class="token string">'v4.6.x'</span></code></pre>
+<h2 id="编译phpize"><a href="#编译phpize" class="headerlink" title="编译phpize"></a>编译<code>phpize</code></h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~/Downloads/swoole-src$ phpize
+Configuring for:
+PHP Api Version:         20180731
+Zend Module Api No:      20180731
+Zend Extension Api No:   320180731
+
+itaken@itaken-home:~/Downloads/swoole-src$ ./configure
+checking <span class="token keyword">for</span> <span class="token function">grep</span> that handles long lines and -e<span class="token punctuation">..</span>. /usr/bin/grep
+checking <span class="token keyword">for</span> egrep<span class="token punctuation">..</span>. /usr/bin/grep -E
+checking <span class="token keyword">for</span> a <span class="token function">sed</span> that does not truncate output<span class="token punctuation">..</span>. /usr/bin/sed
+<span class="token punctuation">..</span>.
+checking whether the g++ linker <span class="token punctuation">(</span>/usr/bin/ld -m elf_x86_64<span class="token punctuation">)</span> supports shared libraries<span class="token punctuation">..</span>. <span class="token function">yes</span>
+checking dynamic linker characteristics<span class="token punctuation">..</span>. <span class="token punctuation">(</span>cached<span class="token punctuation">)</span> GNU/Linux ld.so
+checking how to hardcode library paths into programs<span class="token punctuation">..</span>. immediate
+configure: creating ./config.status
+config.status: creating config.h
+config.status: executing libtool commands</code></pre>
+<h2 id="make-amp-amp-make-install"><a href="#make-amp-amp-make-install" class="headerlink" title="make &amp;&amp; make install"></a><code>make &amp;&amp; make install</code></h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~/Downloads/swoole-src$ <span class="token function">make</span>
+/bin/bash /home/willike/Downloads/swoole-src/libtool --mode<span class="token operator">=</span>compile g++  -DENABLE_PHP_SWOOLE -I. -I/home/willike/Downloads/swoole-src -DPHP_ATOM_INC -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/main -I/home/willike/Downloads/swoole-src -I/usr/include/php/20180731 -I/usr/include/php/20180731/main -I/usr/include/php/20180731/TSRM -I/usr/include/php/20180731/Zend -I/usr/include/php/20180731/ext -I/usr/include/php/20180731/ext/date/lib -I/home/willike/Downloads/swoole-src -I/home/willike/Downloads/swoole-src/include -I/home/willike/Downloads/swoole-src/ext-src -I/home/willike/Downloads/swoole-src/thirdparty/hiredis  -DHAVE_CONFIG_H  -g -O2 -Wall -Wno-unused-function -Wno-deprecated -Wno-deprecated-declarations -std<span class="token operator">=</span>c++11   -c /home/willike/Downloads/swoole-src/ext-src/php_swoole.cc -o ext-src/php_swoole.lo
+
+itaken@itaken-home:~/Downloads/swoole-src$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+/bin/bash /home/willike/Downloads/swoole-src/libtool --mode<span class="token operator">=</span>install <span class="token function">cp</span> ./swoole.la /home/willike/Downloads/swoole-src/modules
+libtool: install: <span class="token function">cp</span> ./.libs/swoole.so /home/willike/Downloads/swoole-src/modules/swoole.so
+libtool: install: <span class="token function">cp</span> ./.libs/swoole.lai /home/willike/Downloads/swoole-src/modules/swoole.la
+libtool: finish: PATH<span class="token operator">=</span><span class="token string">"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin"</span> ldconfig -n /home/willike/Downloads/swoole-src/modules
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/willike/Downloads/swoole-src/modules
+
+If you ever happen to want to <span class="token function">link</span> against installed libraries
+<span class="token keyword">in</span> a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the <span class="token string">'-LLIBDIR'</span>
+flag during linking and <span class="token keyword">do</span> at least one of the following:
+   - add LIBDIR to the <span class="token string">'LD_LIBRARY_PATH'</span> environment variable
+     during execution
+   - add LIBDIR to the <span class="token string">'LD_RUN_PATH'</span> environment variable
+     during linking
+   - use the <span class="token string">'-Wl,-rpath -Wl,LIBDIR'</span> linker flag
+   - have your system administrator add LIBDIR to <span class="token string">'/etc/ld.so.conf'</span>
+
+See any operating system documentation about shared libraries <span class="token keyword">for</span>
+<span class="token function">more</span> information, such as the ld<span class="token punctuation">(</span>1<span class="token punctuation">)</span> and ld.so<span class="token punctuation">(</span>8<span class="token punctuation">)</span> manual pages.
+----------------------------------------------------------------------
+Installing shared extensions:     /usr/lib/php/20180731/
+Installing header files:          /usr/include/php/20180731/</code></pre>
+<h2 id="创建swoole-ini文件"><a href="#创建swoole-ini文件" class="headerlink" title="创建swoole.ini文件"></a>创建<code>swoole.ini</code>文件</h2><pre><code>itaken@itaken-home:~$ php -i
+phpinfo()
+PHP Version =&gt; 7.3.19-1+eagle
+
+System =&gt; Linux willike-PC 5.7.7-amd64-desktop #3000 SMP Fri Dec 18 19:38:48 CST 2020 x86_64
+Build Date =&gt; Nov 18 2020 07:21:12
+Server API =&gt; Command Line Interface
+Virtual Directory Support =&gt; disabled
+Configuration File (php.ini) Path =&gt; /etc/php/7.3/cli
+Loaded Configuration File =&gt; /etc/php/7.3/cli/php.ini
+Scan this dir for additional .ini files =&gt; /etc/php/7.3/cli/conf.d
+Additional .ini files parsed =&gt; /etc/php/7.3/cli/conf.d/10-mysqlnd.ini,
+/etc/php/7.3/cli/conf.d/10-opcache.ini,
+/etc/php/7.3/cli/conf.d/10-pdo.ini,
+...
+itaken@itaken-home:/usr/lib/php/20180731$ cd /etc/php/7.3/mods-available/
+itaken@itaken-home:/etc/php/7.3/mods-available$ ll
+总用量 136K
+-rw-r--r-- 1 root root 72 11月 18  2020 bcmath.ini
+...
+-rw-r--r-- 1 root root 66 11月 18  2020 xsl.ini
+-rw-r--r-- 1 root root 66 11月 18  2020 zip.ini
+
+itaken@itaken-home:/etc/php/7.3/mods-available$ sudo cp zip.ini swoole.ini
+
+itaken@itaken-home:/etc/php/7.3/mods-available$ cat swoole.ini
+; configuration for swoole module
+; priority=20
+extension=swoole.so</code></pre>
+<h2 id="创建软链"><a href="#创建软链" class="headerlink" title="创建软链"></a>创建软链</h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:/etc/php/7.3/cli/conf.d$ <span class="token function">sudo</span> <span class="token function">ln</span> -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini
+
+itaken@itaken-home:/etc/php/7.3/fpm/conf.d$ <span class="token function">sudo</span> <span class="token function">ln</span> -s /etc/php/7.3/mods-available/swoole.ini 20-swoole.ini</code></pre>
+<h2 id="重启php-fpm"><a href="#重启php-fpm" class="headerlink" title="重启php-fpm"></a>重启<code>php-fpm</code></h2><pre class=" language-bash"><code class="language-bash">itaken@itaken-home:~$ <span class="token function">sudo</span> <span class="token function">service</span> php7.3-fpm restart</code></pre>
+<h2 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h2><pre><code>itaken@itaken-home:/path/to/project$ php bin/laravels start
+ _                               _  _____
+| |                             | |/ ____|                                                  
+| |     __ _ _ __ __ ___   _____| | (___                                                    
+| |    / _` | &#39;__/ _` \ \ / / _ \ |\___ \                                                   
+| |___| (_| | | | (_| |\ V /  __/ |____) |                                                  
+|______\__,_|_|  \__,_| \_/ \___|_|_____/                                                   
+
+Speed up your Laravel/Lumen
+&gt;&gt;&gt; Components
++----------------------+-------------------------------------------+
+| Component            | Version                                   |
++----------------------+-------------------------------------------+
+| PHP                  | 7.3.19-1+eagle                            |
+| Swoole               | 4.6.8-dev                                 |
+| LaravelS             | 3.4.4                                     |
+| Laravel Framework [] | Lumen (5.8.12) (Laravel Components 5.8.*) |
++----------------------+-------------------------------------------+
+&gt;&gt;&gt; Protocols
++-----------+--------+-------------------+--------------+
+| Protocol  | Status | Handler           | Listen At    |
++-----------+--------+-------------------+--------------+
+| Main HTTP | On     | Laravel Framework | 0.0.0.0:5200 |
++-----------+--------+-------------------+--------------+
+&gt;&gt;&gt; Feedback: https://github.com/hhxsv5/laravel-s
+[2021-06-21 11:20:20] [TRACE] Swoole is running, press Ctrl+C to quit.
+...</code></pre>
+<hr>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.swoole.co.uk/docs/get-started/installation">How to Install Swoole</a></li>
+<li><a target="_blank" rel="noopener" href="https://wiki.swoole.com/#/environment">安装 Swoole</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/77813702">configure、 make、 make install 背后的原理</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Itaken</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://itaken.github.io/2021/6/23/UOS%E5%AE%89%E8%A3%9Dswoole/">https://itaken.github.io/2021/6/23/UOS%E5%AE%89%E8%A3%9Dswoole/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Itaken</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
+                                </a>
+                            
+                                <a href="/tags/deepin/">
+                                    <span class="chip bg-color">deepin</span>
+                                </a>
+                            
+                                <a href="/tags/uos/">
+                                    <span class="chip bg-color">uos</span>
+                                </a>
+                            
+                                <a href="/tags/laravel/">
+                                    <span class="chip bg-color">laravel</span>
+                                </a>
+                            
+                                <a href="/tags/swoole/">
+                                    <span class="chip bg-color">swoole</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,linkedin,google,twitter,facebook,qzone,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+        font-size: 18px;
+        color: #ff385b;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">万水千山总是情,打赏一块行不行</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/10/25/Deepin15%E5%8D%87%E7%BA%A7PHP/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Deepin15 升级PHP">
+                        
+                        <span class="card-title">Deepin15 升级PHP</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    开发日常
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                    <a href="/tags/deepin/">
+                        <span class="chip bg-color">deepin</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/6/20/ext4%E6%97%A0%E6%B3%95%E6%8C%82%E8%BD%BD/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="ext4无法挂载：bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.">
+                        
+                        <span class="card-title">ext4无法挂载：bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
+                                    一个问题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
+                    </a>
+                    
+                    <a href="/tags/deepin/">
+                        <span class="chip bg-color">deepin</span>
+                    </a>
+                    
+                    <a href="/tags/uos/">
+                        <span class="chip bg-color">uos</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: rgb(255 255 255 / 10%);box-shadow: 0 0 black !important;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, mark'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;
+            
+                <span id="year">2017-2022</span>
+            
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Itaken</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/itaken" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:regelhh@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

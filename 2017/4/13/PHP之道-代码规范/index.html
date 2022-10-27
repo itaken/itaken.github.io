@@ -1,0 +1,1490 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="[PHP之道]代码约束摘要, ITAKEN GITHUB PAGES">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>[PHP之道]代码约束摘要 | ITAKEN GITHUB PAGES</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ITAKEN GITHUB PAGES</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于ITAKEN</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ITAKEN GITHUB PAGES</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于ITAKEN
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">[PHP之道]代码约束摘要</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
+                            </a>
+                        
+                            <a href="/tags/PHP%E4%B9%8B%E9%81%93/">
+                                <span class="chip bg-color">PHP之道</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="post-category">
+                                阅读笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2017-04-13
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>PSR 是 PHP Standard Recommendations 的简写，由 PHP FIG 组织制定的 PHP 规范，是 PHP 开发的实践标准。</p>
+</blockquote>
+<h2 id="基础编码规范-PSR-1"><a href="#基础编码规范-PSR-1" class="headerlink" title="基础编码规范 PSR-1"></a>基础编码规范 PSR-1</h2><ul>
+<li><p>PHP代码文件 <strong>必须</strong> 以 <code>不带 BOM</code> 的 <code>UTF-8</code> 编码；</p>
+</li>
+<li><p>类的命名 <strong>必须</strong> 遵循 <code>StudlyCaps</code> 大写开头的驼峰命名规范；</p>
+</li>
+<li><p>类中的 <code>常量所有字母</code> 都 <strong>必须</strong> 大写，单词间用下划线分隔；</p>
+</li>
+<li><p>方法名称 <strong>必须</strong> 符合 <code>camelCase</code> 式的小写开头驼峰命名规范。</p>
+</li>
+<li><p>一份 PHP 文件中 <code>应该</code> 要不就只定义新的声明，如类、函数或常量等不产生 <code>副作用</code> 的操作，要不就只书写会产生 <code>副作用</code> 的逻辑操作，但 <code>不该</code> 同时具有两者。</p>
+</li>
+</ul>
+<p>反例：</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+
+<span class="token comment" spellcheck="true">// 「副作用」：修改 ini 配置</span>
+<span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token string">'error_reporting'</span><span class="token punctuation">,</span> <span class="token constant">E_ALL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 「副作用」：引入文件</span>
+<span class="token keyword">include</span> <span class="token string">"file.php"</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 「副作用」：生成输出</span>
+<span class="token keyword">echo</span> <span class="token string">"&lt;html>\n"</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 声明函数</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token comment" spellcheck="true">// 函数主体部分</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+<h2 id="编码风格规范-PSR-2"><a href="#编码风格规范-PSR-2" class="headerlink" title="编码风格规范 PSR-2"></a>编码风格规范 PSR-2</h2><ul>
+<li><p>所有PHP文件 <strong>必须</strong> 以一个空白行作为结束。</p>
+</li>
+<li><p>代码 <strong>必须</strong> 使用 <code>4个空格符</code> 的缩进，<strong>一定不可</strong> 用 <code>tab键</code>。</p>
+</li>
+<li><p>PHP所有 <code>关键字</code> <strong>必须</strong> 全部 <code>小写</code>。常量 <code>true</code> 、<code>false</code> 和 <code>null</code> 也 <strong>必须</strong> 全部小写。</p>
+</li>
+<li><p>关键词 extends 和 implements <strong>必须</strong> 写在类名称的同一行。</p>
+</li>
+<li><p>类的开始花括号（{） <strong>必须</strong> 写在函数声明后自成一行，结束花括号（}）也 <strong>必须</strong> 写在函数主体后自成一行。</p>
+</li>
+<li><p>方法的开始花括号（{） <strong>必须</strong> 写在函数声明后自成一行，结束花括号（}）也 <strong>必须</strong> 写在函数主体后自成一行。</p>
+</li>
+<li><p>类的属性和方法 <strong>必须</strong> 添加访问修饰符（<code>private</code>、<code>protected</code> 以及 <code>public</code>），<code>abstract</code> 以及 <code>final</code> <strong>必须</strong> 声明在访问修饰符之前，而 <code>static</code> <strong>必须</strong> 声明在访问修饰符之后。</p>
+</li>
+<li><p>所有方法都 <strong>必须</strong> 添加访问修饰符。</p>
+</li>
+<li><p>方法的参数， 有默认值的参数，<strong>必须</strong> 放到参数列表的末尾。</p>
+</li>
+</ul>
+<p>示例：</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">Vendor<span class="token punctuation">\</span>Package</span><span class="token punctuation">;</span>
+
+<span class="token keyword">use</span> <span class="token package">FooInterface</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">BarClass</span> <span class="token keyword">as</span> Bar<span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">OtherVendor<span class="token punctuation">\</span>OtherPackage<span class="token punctuation">\</span>BazClass</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token keyword">extends</span> <span class="token class-name">Bar</span> <span class="token keyword">implements</span> <span class="token class-name">FooInterface</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">sampleFunction</span><span class="token punctuation">(</span><span class="token variable">$a</span><span class="token punctuation">,</span> <span class="token variable">$b</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$a</span> <span class="token operator">===</span> <span class="token variable">$b</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+            <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token shell-comment comment">#125; elseif ($a > $b) &amp;#123;</span>
+            <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bar</span><span class="token punctuation">(</span><span class="token variable">$arg1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token shell-comment comment">#125; else &amp;#123;</span>
+            BazClass<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">bar</span><span class="token punctuation">(</span><span class="token variable">$arg2</span><span class="token punctuation">,</span> <span class="token variable">$arg3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+    <span class="token keyword">final</span> <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+        <span class="token comment" spellcheck="true">// 方法的内容</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+<h2 id="日志接口规范"><a href="#日志接口规范" class="headerlink" title="日志接口规范"></a>日志接口规范</h2><ul>
+<li>LoggerInterface 接口对外定义了八个方法，分别用来记录 RFC 5424 中定义的八个等级的日志：debug、 info、 notice、 warning、 error、 critical、 alert 以及 emergency</li>
+<li>记录信息参数 <strong>可以</strong> 携带占位符，实现者 <strong>可以</strong> 根据上下文将其它替换成相应的值。</li>
+<li>每个记录函数都接受一个上下文数组参数，用来装载字符串类型无法表示的信息。 <strong>一定不可</strong> 抛出异常，或产生PHP出错、警告或提醒信息（error、warning、notice）。</li>
+<li>如需通过上下文参数传入了一个 Exception 对象，<strong>必须</strong> 以 exception 作为键名。</li>
+</ul>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+
+<span class="token comment" spellcheck="true">/**
+* 用上下文信息替换记录信息中的占位符
+*/</span>
+<span class="token keyword">function</span> <span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+  <span class="token comment" spellcheck="true">// 构建一个花括号包含的键名的替换数组</span>
+  <span class="token variable">$replace</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$context</span> <span class="token keyword">as</span> <span class="token variable">$key</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token variable">$val</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+      <span class="token variable">$replace</span><span class="token punctuation">[</span><span class="token string">'&amp;#123;'</span> <span class="token punctuation">.</span> <span class="token variable">$key</span> <span class="token punctuation">.</span> <span class="token string">'&amp;#125;'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$val</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+  <span class="token comment" spellcheck="true">// 替换记录信息中的占位符，最后返回修改后的记录信息。</span>
+  <span class="token keyword">return</span> <span class="token function">strtr</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token variable">$replace</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+<span class="token comment" spellcheck="true">// 含有带花括号占位符的记录信息。</span>
+<span class="token variable">$message</span> <span class="token operator">=</span> <span class="token string">"User &amp;#123;username&amp;#125; created"</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 带有替换信息的上下文数组，键名为占位符名称，键值为替换值。</span>
+<span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'username'</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'bolivar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 输出 "Username bolivar created"</span>
+<span class="token keyword">echo</span> <span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token variable">$context</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">Psr<span class="token punctuation">\</span>Log</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+ * 日志记录实例
+ *
+ * 日志信息变量 —— message，**必须** 是一个字符串或是实现了 __toString() 方法的对象。
+ *
+ * 日志信息变量中 **可以** 包含格式如 “&amp;#123;foo&amp;#125;” (代表 foo) 的占位符，
+ * 它将会由上下文数组中键名为「foo」的键值替代。
+ *
+ * 上下文数组可以携带任意的数据，唯一的限制是，当它携带的是一个 exception 对象时，它的键名 **必须** 是 "exception"。
+ *
+ * 详情可参阅： https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-3-logger-interface-cn.md
+ */</span>
+<span class="token keyword">interface</span> <span class="token class-name">LoggerInterface</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token comment" spellcheck="true">/**
+     * 系统不可用
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">emergency</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     *  **必须** 立刻采取行动
+     *
+     * 例如：在整个网站都垮掉了、数据库不可用了或者其他的情况下， `应该` 发送一条警报短信把你叫醒。
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 紧急情况
+     *
+     * 例如：程序组件不可用或者出现非预期的异常。
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">critical</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 运行时出现的错误，不需要立刻采取行动，但必须记录下来以备检测。
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">error</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 出现非错误性的异常。
+     *
+     * 例如：使用了被弃用的API、错误地使用了API或者非预想的不必要错误。
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">warning</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 一般性重要的事件。
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">notice</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 重要事件
+     *
+     * 例如：用户登录和SQL记录。
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * debug 详情
+     *
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">debug</span><span class="token punctuation">(</span><span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 任意等级的日志记录
+     *
+     * @param mixed $level
+     * @param string $message
+     * @param array $context
+     * @return null
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token variable">$level</span><span class="token punctuation">,</span> <span class="token variable">$message</span><span class="token punctuation">,</span> <span class="token keyword">array</span> <span class="token variable">$context</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+<h2 id="缓存接口规范"><a href="#缓存接口规范" class="headerlink" title="缓存接口规范"></a>缓存接口规范</h2><ul>
+<li>所有存进实现类库的数据，都 <strong>必须</strong> 能做到原封不动的取出。</li>
+<li>实在无法「完整取出」存入的数据的话，实现类库 <strong>必须</strong> 把「缓存丢失」标示作为返回，而不是损坏了的数据。</li>
+<li>缓存系统里的错误 <strong>一定不可</strong> 导致应用程序故障</li>
+</ul>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">Psr<span class="token punctuation">\</span>Cache</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+ * CacheItemInterface 定了缓存系统里对缓存项操作的接口
+ */</span>
+<span class="token keyword">interface</span> <span class="token class-name">CacheItemInterface</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token comment" spellcheck="true">/**
+     * 返回当前缓存项的「键」
+     *
+     * 「键」由实现类库来加载，并且高层的调用者（如：CacheItemPoolInterface）
+     *  `应该` 能使用此方法来获取到「键」的信息。
+     *
+     * @return string
+     *   当前缓存项的「键」
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 凭借此缓存项的「键」从缓存系统里面取出缓存项。
+     *
+     * 取出的数据 **必须** 跟使用 `set()` 存进去的数据是一模一样的。
+     *
+     * 如果 `isHit()` 返回 false 的话，此方法必须返回 `null`，需要注意的是 `null`
+     * 本来就是一个合法的缓存数据，所以你 `应该` 使用 `isHit()` 方法来辨别到底是
+     * "返回 null 数据" 还是 "缓存里没有此数据"。
+     *
+     * @return mixed
+     *   此缓存项的「键」对应的「值」，如果找不到的话，返回 `null`
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 确认缓存项的检查是否命中。
+     *
+     * 注意: 调用此方法和调用 `get()` 时 **一定不可** 有先后顺序之分。
+     *
+     * @return bool
+     *   如果缓冲池里有命中的话，返回 `true`，反之返回 `false`
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">isHit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 为此缓存项设置「值」。
+     *
+     * 参数 $value 可以是所有能被 PHP 序列化的数据，序列化的逻辑
+     * 需要在实现类库里书写。
+     *
+     * @param mixed $value
+     *   将被存储的可序列化的数据。
+     *
+     * @return static
+     *   返回当前对象。
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token variable">$value</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 设置缓存项的准确过期时间点。
+     *
+     * @param \DateTimeInterface $expiration
+     *
+     *   过期的准确时间点，过了这个时间点后，缓存项就 **必须** 被认为是过期了的。
+     *   如果明确的传参 `null` 的话，**可以** 使用一个默认的时间。
+     *   如果没有设置的话，缓存 `应该` 存储到底层实现的最大允许时间。
+     *
+     * @return static
+     *   返回当前对象。
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">expiresAt</span><span class="token punctuation">(</span><span class="token variable">$expiration</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 设置缓存项的过期时间。
+     *
+     * @param int|\DateInterval $time
+     *   以秒为单位的过期时长，过了这段时间后，缓存项就 **必须** 被认为是过期了的。
+     *   如果明确的传参 `null` 的话，**可以** 使用一个默认的时间。
+     *   如果没有设置的话，缓存 `应该` 存储到底层实现的最大允许时间。
+     *
+     * @return static
+     *   返回当前对象
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">expiresAfter</span><span class="token punctuation">(</span><span class="token variable">$time</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">Psr<span class="token punctuation">\</span>Cache</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+ * CacheItemPoolInterface 生成 CacheItemInterface 对象
+ */</span>
+<span class="token keyword">interface</span> <span class="token class-name">CacheItemPoolInterface</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token comment" spellcheck="true">/**
+     * 返回「键」对应的一个缓存项。
+     *
+     * 此方法 **必须** 返回一个 CacheItemInterface 对象，即使是找不到对应的缓存项
+     * 也 **一定不可** 返回 `null`。
+     *
+     * @param string $key
+     *   用来搜索缓存项的「键」。
+     *
+     * @throws InvalidArgumentException
+     *   如果 $key 不是合法的值，\Psr\Cache\InvalidArgumentException 异常会被抛出。
+     *
+     * @return CacheItemInterface
+     *   对应的缓存项。
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">getItem</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 返回一个可供遍历的缓存项集合。
+     *
+     * @param array $keys
+     *   由一个或者多个「键」组成的数组。
+     *
+     * @throws InvalidArgumentException
+     *   如果 $keys 里面有哪个「键」不是合法，\Psr\Cache\InvalidArgumentException 异常
+     *   会被抛出。
+     *   
+     * @return array|\Traversable
+     *   返回一个可供遍历的缓存项集合，集合里每个元素的标识符由「键」组成，即使即使是找不到对
+     *   的缓存项，也要返回一个「CacheItemInterface」对象到对应的「键」中。
+     *   如果传参的数组为空，也需要返回一个空的可遍历的集合。
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">getItems</span><span class="token punctuation">(</span><span class="token keyword">array</span> <span class="token variable">$keys</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 检查缓存系统中是否有「键」对应的缓存项。
+     *
+     * 注意: 此方法应该调用 `CacheItemInterface::isHit()` 来做检查操作，而不是
+     * `CacheItemInterface::get()`
+     *
+     * @param string $key
+     *   用来搜索缓存项的「键」。
+     *
+     * @throws InvalidArgumentException
+     *   如果 $key 不是合法的值，\Psr\Cache\InvalidArgumentException 异常会被抛出。
+     *
+     * @return bool
+     *   如果存在「键」对应的缓存项即返回 true，否则 false
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">hasItem</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 清空缓冲池
+     *
+     * @return bool
+     *   成功返回 true，有错误发生返回 false
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 从缓冲池里移除某个缓存项
+     *
+     * @param string $key
+     *   用来搜索缓存项的「键」。
+     *
+     * @throws InvalidArgumentException
+     *   如果 $key 不是合法的值，\Psr\Cache\InvalidArgumentException 异常会被抛出。
+     *
+     * @return bool
+     *   成功返回 true，有错误发生返回 false
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">deleteItem</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 从缓冲池里移除多个缓存项
+     *
+     * @param array $keys
+     *   由一个或者多个「键」组成的数组。
+     *   
+     * @throws InvalidArgumentException
+     *   如果 $keys 里面有哪个「键」不是合法，\Psr\Cache\InvalidArgumentException 异常
+     *   会被抛出。
+     *
+     * @return bool
+     *   成功返回 true，有错误发生返回 false
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">deleteItems</span><span class="token punctuation">(</span><span class="token keyword">array</span> <span class="token variable">$keys</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 立刻为「CacheItemInterface」对象做数据持久化。
+     *
+     * @param CacheItemInterface $item
+     *   将要被存储的缓存项
+     *
+     * @return bool
+     *   成功返回 true，有错误发生返回 false
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">save</span><span class="token punctuation">(</span>CacheItemInterface <span class="token variable">$item</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 稍后为「CacheItemInterface」对象做数据持久化。
+     *
+     * @param CacheItemInterface $item
+     *   将要被存储的缓存项
+     *
+     * @return bool
+     *   成功返回 true，有错误发生返回 false
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">saveDeferred</span><span class="token punctuation">(</span>CacheItemInterface <span class="token variable">$item</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 提交所有的正在队列里等待的请求到数据持久层，配合 `saveDeferred()` 使用
+     *
+     * @return bool
+     *  成功返回 true，有错误发生返回 false
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+<hr>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://laravel-china.github.io/php-the-right-way/#code_style_guide">代码风格指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://psr.phphub.org/">PHP 标准规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://laravel-china.org/topics/2078/psr-specification-psr-1-basic-coding-specification">「PSR 规范」PSR-1 基础编码规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://laravel-china.org/topics/2079/psr-specification-psr-2-coding-style-specification">「PSR 规范」PSR-2 编码风格规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://laravel-china.org/topics/2080/psr-specification-psr-3-log-interface-specification">「PSR 规范」PSR-3 日志接口规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://laravel-china.org/topics/2081/psr-specification-psr-4-automatic-loading-specification">「PSR 规范」PSR-4 自动加载规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://laravel-china.org/topics/2082/psr-specification-psr-6-cache-interface-specification">「PSR 规范」PSR-6 缓存接口规范</a></li>
+</ul>
+<h2 id="工具推荐"><a href="#工具推荐" class="headerlink" title="工具推荐"></a>工具推荐</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://cs.sensiolabs.org/">PHP Coding Standards Fixer</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically">PHP_CodeSniffer: Fixing Errors Automatically</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Itaken</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://itaken.github.io/2017/4/13/PHP%E4%B9%8B%E9%81%93-%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">https://itaken.github.io/2017/4/13/PHP%E4%B9%8B%E9%81%93-%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Itaken</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
+                                </a>
+                            
+                                <a href="/tags/PHP%E4%B9%8B%E9%81%93/">
+                                    <span class="chip bg-color">PHP之道</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,linkedin,google,twitter,facebook,qzone,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+        font-size: 18px;
+        color: #ff385b;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">万水千山总是情,打赏一块行不行</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2017/4/15/PHP%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%8B%AC%E5%8F%B7%E5%8C%BA%E5%88%AB/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="PHP 类的实例化有无括号的区别">
+                        
+                        <span class="card-title">PHP 类的实例化有无括号的区别</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2017-04-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    开发日常
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2017/4/13/%5BPHP%E4%B9%8B%E9%81%93%5D%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="[PHP之道]代码约束摘要">
+                        
+                        <span class="card-title">[PHP之道]代码约束摘要</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2017-04-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    阅读笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                    <a href="/tags/PHP%E4%B9%8B%E9%81%93/">
+                        <span class="chip bg-color">PHP之道</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: rgb(255 255 255 / 10%);box-shadow: 0 0 black !important;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, mark'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;
+            
+                <span id="year">2017-2022</span>
+            
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Itaken</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/itaken" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:regelhh@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

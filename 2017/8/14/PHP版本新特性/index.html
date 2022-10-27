@@ -1,0 +1,1323 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="PHP 5.3-7.1 版本中各增添了哪些新特性?, ITAKEN GITHUB PAGES">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>PHP 5.3-7.1 版本中各增添了哪些新特性? | ITAKEN GITHUB PAGES</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ITAKEN GITHUB PAGES</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于ITAKEN</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ITAKEN GITHUB PAGES</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于ITAKEN
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">PHP 5.3-7.1 版本中各增添了哪些新特性?</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                开发日常
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2017-08-14
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="PHP-5-3-新特性"><a href="#PHP-5-3-新特性" class="headerlink" title="PHP 5.3 新特性"></a><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/migration53.new-features.php">PHP 5.3 新特性</a></h2><ol>
+<li><p>添加了<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.namespaces.php" title="namespaces">命名空间</a>的支持.</p>
+</li>
+<li><p>添加了<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.oop5.late-static-bindings.php" title="后期动态晚绑定">静态晚绑定</a>支持.</p>
+</li>
+<li><p>添加了<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/control-structures.goto.php" title="goto操作符">跳标签</a>支持.</p>
+</li>
+<li><p>添加了原生的<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/functions.anonymous.php" title="匿名函数">闭包</a>(Lambda/匿名函数)支持.</p>
+</li>
+<li><p>新增了两个魔术方法, <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.oop5.overloading.php#language.oop5.overloading.methods" title="在静态上下文中调用一个不可访问方法时会被调用。">__callStatic</a> 和 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.oop5.magic.php#language.oop5.magic.invoke" title="以调用函数的方式调用一个对象时，方法会被自动调用。">__invoke</a>.</p>
+</li>
+<li><p>添加了 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.types.string.php#language.types.string.syntax.nowdoc" title="Nowdoc 结构不进行解析操作。">Nowdoc</a> 语法支持, 类似于 Heredoc 语法, 但是包含<strong>单引号</strong>.</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">echo</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token string">'EOT'</span>
+My name is <span class="token string">"$name"</span><span class="token punctuation">.</span> I am printing some <span class="token variable">$foo</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">foo</span><span class="token punctuation">.</span>
+Now<span class="token punctuation">,</span> I am printing some <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;$foo->bar[1]&amp;#125;.</span>
+This should not <span class="token keyword">print</span> a capital <span class="token string">'A'</span><span class="token punctuation">:</span> \<span class="token package">x41</span>
+<span class="token constant">EOT</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 输出:</span>
+<span class="token comment" spellcheck="true">// My name is "$name". I am printing some $foo->foo.</span>
+<span class="token comment" spellcheck="true">// Now, I am printing some &amp;#123;$foo->bar[1]&amp;#125;.</span>
+<span class="token comment" spellcheck="true">// This should not print a capital 'A': \x41</span></code></pre>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.types.string.php#language.types.string.syntax.heredoc" title="Heredoc 结构就象是没有使用双引号的双引号字符串">Heredoc</a> 来初始化静态变量和类属性/常量变为可能.</p>
+</li>
+<li><p>可使用<strong>双引号</strong>声明 Heredoc, 补充了 Nowdoc 语法.</p>
+</li>
+<li><p>可在类外部使用 const 关键词声明 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.constants.syntax.php" title="可以使用 const 关键字在类定义之外定义常量">常量</a>.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.operators.comparison.php#language.operators.comparison.ternary" title="表达式 (expr1) ? (expr2) : (expr3) ">三元运算</a>操作符有了简写形式: <code>?:.</code></p>
+</li>
+<li><p>HTTP 流包裹器将从 <strong>200</strong> 到 <strong>399</strong> 全部的状态码都视为成功。</p>
+</li>
+<li><p>动态访问静态方法变为可能.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.exceptions.php" title="try{}catch(Exception){}; throw new Exception()">异常</a>可以被内嵌.</p>
+<pre class=" language-php"><code class="language-php"><span class="token keyword">try</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">try</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">MyException</span><span class="token punctuation">(</span><span class="token string">'foo!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125; catch (MyException $e) &amp;#123;</span>
+        <span class="token comment" spellcheck="true">// rethrow it</span>
+        <span class="token keyword">throw</span> <span class="token variable">$e</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125; catch (Exception $e) &amp;#123;</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$e</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+</li>
+<li><p>新增了循环引用的<strong>垃圾回收器</strong>并且默认是<strong>开启</strong>的.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.mail.php" title="发送邮件">mail()</a> 现在支持邮件发送日志. (注意: 仅支持通过该函数发送的邮件.)</p>
+</li>
+</ol>
+<h2 id="PHP-5-4-新特性"><a href="#PHP-5-4-新特性" class="headerlink" title="PHP 5.4 新特性"></a><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/migration54.new-features.php">PHP 5.4 新特性</a></h2><ol>
+<li><p>新增支持 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.oop5.traits.php" title="一种代码复用的方法,Trait 和 Class 相似，但无法通过自身来实例化。">traits</a> 。</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">trait</span> <span class="token class-name">ezcReflectionReturnInfo</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">function</span> <span class="token function">getReturnType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123; </span><span class="token comment" spellcheck="true">/*1*/</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+    <span class="token keyword">function</span> <span class="token function">getReturnDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123; </span><span class="token comment" spellcheck="true">/*2*/</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ezcReflectionMethod</span> <span class="token keyword">extends</span> <span class="token class-name">ReflectionMethod</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">use</span> <span class="token package">ezcReflectionReturnInfo</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* ... */</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+</li>
+<li><p>新增短数组语法，比如 <code>$a = [1, 2, 3, 4];</code> 或 <code>$a = [&#39;one&#39; =&gt; 1, &#39;two&#39; =&gt; 2, &#39;three&#39; =&gt; 3, &#39;four&#39; =&gt; 4];</code> 。</p>
+</li>
+<li><p>新增支持对函数返回数组的成员访问解析，例如 foo()[0] 。</p>
+</li>
+<li><p>现在 闭包 支持 $this 。</p>
+</li>
+<li><p>现在不管是否设置 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/ini.core.php#ini.short-open-tag" title="否允许使用 PHP 代码开始标志的缩写形式">short_open_tag</a> php.ini 选项，<code>&lt;?=</code> 将<strong>总是可用</strong>。</p>
+</li>
+<li><p>新增在实例化时访问类成员，例如： <code>(new Foo)-&gt;bar()</code> 。</p>
+</li>
+<li><p>现在支持 <code>Class::&#123;expr&#125;()</code> 语法。</p>
+</li>
+<li><p>新增<strong>二进制</strong>直接量，例如：<strong>0b001001101</strong>。</p>
+<pre class=" language-php"><code class="language-php"><span class="token variable">$bin</span>  <span class="token operator">=</span> 0b1101<span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$bin</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 13</span></code></pre>
+</li>
+<li><p>改进解析错误信息和不兼容参数的警告。</p>
+</li>
+<li><p><strong>SESSION</strong> 扩展现在能追踪文件的 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/session.upload-progress.php" title="当 session.upload_progress.enabled INI 选项开启时，PHP 能够在每一个文件上传时监测上传进度。">上传进度</a> 。</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$key</span> <span class="token operator">=</span> <span class="token function">ini_get</span><span class="token punctuation">(</span><span class="token string">"session.upload_progress.prefix"</span><span class="token punctuation">)</span> <span class="token punctuation">.</span> <span class="token function">ini_get</span><span class="token punctuation">(</span><span class="token string">"session.upload-progress.name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$_SESSION</span><span class="token punctuation">[</span><span class="token variable">$key</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p>内置<strong>用于开发</strong>的 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/features.commandline.webserver.php" title="php -S localhost:8000">CLI 模式的 web server</a> 。</p>
+</li>
+</ol>
+<h2 id="PHP5-5-新特性"><a href="#PHP5-5-新特性" class="headerlink" title="PHP5.5 新特性"></a><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/migration55.new-features.php">PHP5.5 新特性</a></h2><ol>
+<li><p>新增 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.generators.php" title="yield关键词, 生成器">Generators</a></p>
+</li>
+<li><p>新增 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.exceptions.php" title="异常处理">finally</a> 关键字</p>
+</li>
+<li><p><strong>foreach</strong> 现在支持 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.list.php" title="把数组中的值赋给一组变量">list()</a></p>
+<pre class=" language-php"><code class="language-php"><span class="token variable">$array</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$array</span> <span class="token keyword">as</span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token variable">$a</span><span class="token punctuation">,</span> <span class="token variable">$b</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">echo</span> <span class="token string">"A: $a; B: $b\n"</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token comment" spellcheck="true">// 输出:</span>
+<span class="token comment" spellcheck="true">// A: 1; B: 2</span>
+<span class="token comment" spellcheck="true">// A: 3; B: 4</span></code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.empty.php" title="检查一个变量是否为空">empty()</a> 支持任意表达式</p>
+</li>
+<li><p><strong>array</strong> and <strong>string</strong> <abbr title="示例: [1, 2, 3][0]; 'PHP'[0];">literal dereferencing</abbr></p>
+</li>
+<li><p>新的<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/book.password.php" title="密码散列算法">密码哈希</a> API</p>
+</li>
+<li><p>改进 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/ref.image.php" title="GD 和图像处理 函数">GD</a></p>
+</li>
+</ol>
+<h2 id="PHP5-6-新特性"><a href="#PHP5-6-新特性" class="headerlink" title="PHP5.6 新特性"></a><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/migration56.new-features.php">PHP5.6 新特性</a></h2><ol>
+<li><p><abbr title="示例: const THREE = TWO + 1;">使用表达式定义常量</abbr></p>
+</li>
+<li><p>使用 <code>...</code> 运算符定义<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/functions.arguments.php#functions.variable-arg-list" title="function sum(...$numbers) {}">变长参数函数</a></p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token variable">$req</span><span class="token punctuation">,</span> <span class="token variable">$opt</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token variable">$params</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token comment" spellcheck="true">// $params 是一个包含了剩余参数的数组</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">'$req: %d; $opt: %d; number of params: %d'</span><span class="token punctuation">.</span><span class="token string">"\n"</span><span class="token punctuation">,</span>
+           <span class="token variable">$req</span><span class="token punctuation">,</span> <span class="token variable">$opt</span><span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$params</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p>使用 <abbr title="连接运算符"><code>...</code></abbr> 运算符进行<abbr title="示例: $a=[2, 3];add(1, ...$v); 等价于 add(1,2,3);">参数展开</abbr></p>
+</li>
+<li><p>使用 <code>**</code> 进行<abbr title="示例: 2**3==8">幂运算</abbr></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.namespaces.importing.php" title="使用命名空间：别名/导入">use</a> function 以及 use const</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">namespace</span> <span class="token package">Name<span class="token punctuation">\</span>Space</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">const</span> <span class="token constant">FOO</span> <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123; echo __FUNCTION__.</span><span class="token string">"\n"</span><span class="token punctuation">;</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+<span class="token keyword">namespace</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">use</span> <span class="token package">const</span> Name\<span class="token package">Space<span class="token punctuation">\</span>FOO</span><span class="token punctuation">;</span>
+    <span class="token keyword">use</span> <span class="token package">function</span> Name\<span class="token package">Space<span class="token punctuation">\</span>f</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">echo</span> <span class="token constant">FOO</span><span class="token punctuation">.</span><span class="token string">"\n"</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 输出: 42</span>
+    <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 输出: Name\Space\f</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/krakjoe/phpdbg" title="The Interactive PHP Debugger">phpdbg</a></p>
+</li>
+<li><p><abbr title="default_charset 的默认值是 UTF-8">默认字符编码</abbr></p>
+<blockquote>
+<p>对于一些字符编码相关的函数，例如 htmlentities()， html_entity_decode() 以及 htmlspecialchars() 使用 default_charset 作为默认字符集。</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/wrappers.php.php#wrappers.php.input" title="php://input 是个可以访问请求的原始数据的只读流。">php://input</a> 是可重用的了</p>
+</li>
+<li><p><strong>大文件</strong>上传（现在可以支持大于 <strong>2GB</strong> 的文件上传）</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/book.gmp.php" title="GNU Multiple Precision">GMP</a> 支持运算符重载</p>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.hash-equals.php" title="可防止时序攻击的字符串比较">hash_equals()</a> 比较字符串避免<abbr title="攻击者试图通过分析加密算法的时间执行来推导出密码。">时序攻击</abbr></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.oop5.magic.php#language.oop5.magic.debuginfo" title="当使用 var_dump() 输出对象的时候， 可以用来控制要输出的属性和值。">__debugInfo()</a></p>
+</li>
+<li><p>gost-crypto 散列算法</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/migration56.openssl.php" title="PHP 5.6.x 中的 OpenSSL 变更 ">SSL/TLS 提升</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/book.pgsql.php" title="PostgreSQL">pgsql</a> <abbr title="可以使用非阻塞的方式和 PostgreSQL 数据库进行交互。">异步支持</abbr></p>
+</li>
+</ol>
+<h2 id="PHP7-0-新特性"><a href="#PHP7-0-新特性" class="headerlink" title="PHP7.0 新特性"></a><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/migration70.new-features.php">PHP7.0 新特性</a></h2><ol>
+<li><p>标量<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/functions.arguments.php#functions.arguments.type-declaration">类型声明</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/functions.returning-values.php#functions.returning-values.type-declaration">返回值类型声明</a></p>
+</li>
+<li><p><abbr title="变量存在且值不为NULL,则返回自身的值. 示例: $a[0] ?? 'a'; 等价于 isset($a[0])?$a[0]:'a';">null合并运算符</abbr></p>
+</li>
+<li><p><abbr title="当$a小于、等于或大于$b时它分别返回-1、0或1。示例: 1 <=> 1; // 0">太空船操作符</abbr><code>&lt;=&gt;</code>（组合比较符）</p>
+</li>
+<li><p>通过 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.define.php" title="定义一个常量">define()</a> <abbr title="define('ANIMALS', ['dog','cat','bird']);">定义常量数组</abbr></p>
+</li>
+<li><p><abbr title="支持通过new class 来实例化一个匿名类"><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.oop5.anonymous.php">匿名类</a></abbr></p>
+</li>
+<li><p><abbr title="16进制形式, 示例: \u{aa}">Unicode codepoint</abbr> 转译语法</p>
+</li>
+<li><p>Closure::call()</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;private $x = 1;&amp;#125;</span>
+
+<span class="token comment" spellcheck="true">// PHP 7 之前版本的代码</span>
+<span class="token variable">$getXCB</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;return $this->x;&amp;#125;;</span>
+<span class="token variable">$getX</span> <span class="token operator">=</span> <span class="token variable">$getXCB</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bindTo</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">,</span> <span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 中间层闭包</span>
+<span class="token keyword">echo</span> <span class="token variable">$getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// PHP 7+ 及更高版本的代码</span>
+<span class="token variable">$getX</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;return $this->x;&amp;#125;;</span>
+<span class="token keyword">echo</span> <span class="token variable">$getX</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p>为<a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.unserialize.php" title="从已存储的表示中创建 PHP 的值">unserialize()</a>提供<abbr title="示例: unserialize($foo, ['allowed_classes'=>false]);">过滤</abbr></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/class.intlchar.php" title="Intl扩展">IntlChar</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.assert.php#function.assert.expectations" title="向后兼用并增强之前的 assert() 的方法。">预期</a></p>
+</li>
+<li><p>Group use <strong>declarations</strong></p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+
+<span class="token comment" spellcheck="true">// PHP 7 之前的代码</span>
+<span class="token keyword">use</span> <span class="token package">some<span class="token punctuation">\</span>namespace<span class="token punctuation">\</span>ClassA</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">some<span class="token punctuation">\</span>namespace<span class="token punctuation">\</span>ClassB</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">some<span class="token punctuation">\</span>namespace<span class="token punctuation">\</span>ClassC</span> <span class="token keyword">as</span> C<span class="token punctuation">;</span>
+
+<span class="token keyword">use</span> <span class="token package">function</span> some\<span class="token package">namespace<span class="token punctuation">\</span>fn_a</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">function</span> some\<span class="token package">namespace<span class="token punctuation">\</span>fn_b</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">function</span> some\<span class="token package">namespace<span class="token punctuation">\</span>fn_c</span><span class="token punctuation">;</span>
+
+<span class="token keyword">use</span> <span class="token package">const</span> some\<span class="token package">namespace<span class="token punctuation">\</span>ConstA</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">const</span> some\<span class="token package">namespace<span class="token punctuation">\</span>ConstB</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">const</span> some\<span class="token package">namespace<span class="token punctuation">\</span>ConstC</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// PHP 7+ 及更高版本的代码</span>
+<span class="token keyword">use</span> <span class="token package">some<span class="token punctuation">\</span>namespace<span class="token punctuation">\</span></span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;ClassA, ClassB, ClassC as C&amp;#125;;</span>
+<span class="token keyword">use</span> <span class="token package">function</span> some\<span class="token package">namespace<span class="token punctuation">\</span></span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;fn_a, fn_b, fn_c&amp;#125;;</span>
+<span class="token keyword">use</span> <span class="token package">const</span> some\<span class="token package">namespace<span class="token punctuation">\</span></span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;ConstA, ConstB, ConstC&amp;#125;;</span></code></pre>
+</li>
+<li><p>生成器可以<abbr title="可以通过调用 Generator::getReturn() 方法来获取生成器的返回值">返回</abbr>表达式</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/language.generators.syntax.php#control-structures.yield.from" title="在最外层生成其中使用 yield from，就可以把一个生成器自动委派给其他的生成器">Generator delegation</a></p>
+</li>
+<li><p>整数除法函数 <a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.intdiv.php" title="对除法结果取整">intdiv()</a></p>
+</li>
+<li><p><abbr title="session_start() 可以接受一个 array 作为参数">会话选项</abbr></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/function.preg-replace-callback-array.php">preg_replace_callback_array()</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/book.csprng.php">CSPRNG</a> <abbr title="新增 random_bytes() 和 random_int() 用来产生高安全级别的随机字符串和随机整数。">Functions</abbr></p>
+</li>
+<li><p>可以使用 list() 函数来展开实现了 <strong>ArrayAccess</strong> 接口的对象</p>
+</li>
+<li><p><abbr title="允许在克隆表达式上访问对象成员，例如： (clone $foo)->bar()。">其他特性</abbr></p>
+</li>
+</ol>
+<h2 id="PHP7-1-新特性"><a href="#PHP7-1-新特性" class="headerlink" title="PHP7.1 新特性"></a><a target="_blank" rel="noopener" href="https://secure.php.net/manual/zh/migration71.new-features.php">PHP7.1 新特性</a></h2><ol>
+<li><p><abbr title="示例: function test(?string $name){}">可为空（Nullable）类型</abbr></p>
+</li>
+<li><p><abbr title="省去 return 语句，要么使用一个空的 return 语句。对于 void 函数来说，null 不是一个合法的返回值。">Void 函数</abbr></p>
+</li>
+<li><p><abbr title="短数组语法（[]）现在可以用于将数组的值赋给一些变量（包括在foreach中）。">Symmetric array destructuring</abbr></p>
+</li>
+<li><p>类常量<abbr title="public,protected,private">可见性</abbr></p>
+</li>
+<li><p><abbr title="与callable类似">iterable 伪类</abbr></p>
+</li>
+<li><p><abbr title="try {} catch (FirstException | SecondException $e) {}">多异常捕获处理</abbr></p>
+</li>
+<li><p>list()现在<abbr title="支持在它内部去指定键名。">支持键名</abbr></p>
+</li>
+<li><p>支持为<abbr title="一个负数的偏移量会被理解为一个从字符串结尾开始的偏移量。">负的字符串偏移量</abbr></p>
+</li>
+<li><p><strong>ext/openssl</strong> 支持 <strong>AEAD</strong></p>
+</li>
+<li><p>通过 <code>Closure::fromCallable()</code> 将<strong>callables</strong>转为闭包</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">exposeFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+        <span class="token keyword">return</span> Closure<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">fromCallable</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token variable">$this</span><span class="token punctuation">,</span> <span class="token string">'privateFunction'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+    <span class="token keyword">private</span> <span class="token keyword">function</span> <span class="token function">privateFunction</span><span class="token punctuation">(</span><span class="token variable">$param</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$param</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+<span class="token variable">$privFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Test</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">exposeFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$privFunc</span><span class="token punctuation">(</span><span class="token string">'some value'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 输出 some value</span></code></pre>
+</li>
+<li><p><abbr title="pcntl_async_signals()">异步信号处理</abbr></p>
+</li>
+<li><p><abbr title="对服务器推送的支持现在已经被加入到 CURL 扩展中（ 需要版本 7.46 或更高）。">HTTP/2 server push support in ext/curl</abbr></p>
+</li>
+</ol>
+<hr>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/59918050f265da3e161aa54c">PHP最近的6个版本到底多了啥？</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Itaken</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://itaken.github.io/2017/8/14/PHP%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7/">https://itaken.github.io/2017/8/14/PHP%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Itaken</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,linkedin,google,twitter,facebook,qzone,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+        font-size: 18px;
+        color: #ff385b;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">万水千山总是情,打赏一块行不行</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2017/8/15/%E7%88%B6%E9%A1%B5%E9%9D%A2%E4%B8%8E%E5%AD%90%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%80%BC/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="父页面弹窗, 子页面如何传值父页面 ?">
+                        
+                        <span class="card-title">父页面弹窗, 子页面如何传值父页面 ?</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2017-08-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    开发日常
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
+                    </a>
+                    
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2017/8/13/token%E6%B7%B7%E6%B7%86%E7%AE%97%E6%B3%95/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="使用python 对token进行加密">
+                        
+                        <span class="card-title">使用python 对token进行加密</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2017-08-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    开发日常
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: rgb(255 255 255 / 10%);box-shadow: 0 0 black !important;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, mark'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;
+            
+                <span id="year">2017-2022</span>
+            
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Itaken</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/itaken" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:regelhh@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

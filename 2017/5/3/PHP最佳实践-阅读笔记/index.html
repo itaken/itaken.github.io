@@ -1,0 +1,1351 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="[PHP最佳实践]阅读札记, ITAKEN GITHUB PAGES">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>[PHP最佳实践]阅读札记 | ITAKEN GITHUB PAGES</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ITAKEN GITHUB PAGES</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于ITAKEN</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ITAKEN GITHUB PAGES</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于ITAKEN
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">[PHP最佳实践]阅读札记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
+                            </a>
+                        
+                            <a href="/tags/PHP%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+                                <span class="chip bg-color">PHP最佳实践</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="post-category">
+                                阅读笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2017-05-03
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="存储密码-使用-phpass-1-库来哈希和比较密码"><a href="#存储密码-使用-phpass-1-库来哈希和比较密码" class="headerlink" title="存储密码, 使用 phpass ^1 库来哈希和比较密码"></a>存储密码, 使用 <code>phpass</code> <a target="_blank" rel="noopener" href="http://www.openwall.com/phpass/">^1</a> 库来哈希和比较密码</h2><pre class=" language-php"><code class="language-php"><span class="token comment" spellcheck="true">// Include phpass 库</span>
+<span class="token keyword">require_once</span><span class="token punctuation">(</span><span class="token string">'phpass-03/PasswordHash.php'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 初始化散列器为不可移植(这样更安全)</span>
+<span class="token variable">$hasher</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PasswordHash</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 计算密码的哈希值。$hashedPassword 是一个长度为 60 个字符的字符串.</span>
+<span class="token variable">$hashedPassword</span> <span class="token operator">=</span> <span class="token variable">$hasher</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">HashPassword</span><span class="token punctuation">(</span><span class="token string">'my super cool password'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 你现在可以安全地将 $hashedPassword 保存到数据库中!</span>
+
+<span class="token comment" spellcheck="true">// 通过比较用户输入内容（产生的哈希值）和我们之前计算出的哈希值，来判断用户是否输入了正确的密码</span>
+<span class="token variable">$hasher</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">CheckPassword</span><span class="token punctuation">(</span><span class="token string">'the wrong password'</span><span class="token punctuation">,</span> <span class="token variable">$hashedPassword</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// false</span>
+
+<span class="token variable">$hasher</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">CheckPassword</span><span class="token punctuation">(</span><span class="token string">'my super cool password'</span><span class="token punctuation">,</span> <span class="token variable">$hashedPassword</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// true</span></code></pre>
+<blockquote>
+<p>phpass 在 HashPassword() 函数中已经对你的密码“加盐”了，这意味着你不需要自己“加盐”。</p>
+</blockquote>
+<h2 id="PHP-与-MySQL-使用-PDO-及其预处理语句功能。"><a href="#PHP-与-MySQL-使用-PDO-及其预处理语句功能。" class="headerlink" title="PHP 与 MySQL, 使用 PDO 及其预处理语句功能。"></a>PHP 与 <strong>MySQL</strong>, 使用 <code>PDO</code> 及其预处理语句功能。</h2><pre class=" language-php"><code class="language-php"><span class="token keyword">try</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token comment" spellcheck="true">// 新建一个数据库连接</span>
+    <span class="token comment" spellcheck="true">// You'll probably want to replace hostname with localhost in the first parameter.</span>
+    <span class="token comment" spellcheck="true">// The PDO options we pass do the following:</span>
+    <span class="token comment" spellcheck="true">// \PDO::ATTR_ERRMODE enables exceptions for errors.  This is optional but can be handy.</span>
+    <span class="token comment" spellcheck="true">// \PDO::ATTR_PERSISTENT disables persistent connections, which can cause concurrency issues in certain cases.  See "Gotchas".</span>
+    <span class="token comment" spellcheck="true">// \PDO::MYSQL_ATTR_INIT_COMMAND alerts the connection that we'll be passing UTF-8 data.</span>
+    <span class="token comment" spellcheck="true">// This may not be required depending on your configuration, but it'll save you headaches down the road</span>
+    <span class="token comment" spellcheck="true">// if you're trying to store Unicode strings in your database.  See "Gotchas".</span>
+    <span class="token variable">$link</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token punctuation">\</span>PDO</span><span class="token punctuation">(</span>   <span class="token string">'mysql:host=your-hostname;dbname=your-db'</span><span class="token punctuation">,</span>
+                        <span class="token string">'your-username'</span><span class="token punctuation">,</span>
+                        <span class="token string">'your-password'</span><span class="token punctuation">,</span>
+                        <span class="token keyword">array</span><span class="token punctuation">(</span>
+                            \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">ATTR_ERRMODE</span> <span class="token operator">=</span><span class="token operator">></span> \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">ERRMODE_EXCEPTION</span><span class="token punctuation">,</span>
+                            \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">ATTR_PERSISTENT</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">MYSQL_ATTR_INIT_COMMAND</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'set names utf8mb4'</span>
+                        <span class="token punctuation">)</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token variable">$link</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">prepare</span><span class="token punctuation">(</span><span class="token string">'select Username from Users where UserId = ? or Username = ? limit ?'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// PHP bug: if you don't specify PDO::PARAM_INT, PDO may enclose the argument in quotes.</span>
+    <span class="token comment" spellcheck="true">// This can mess up some MySQL queries that don't expect integers to be quoted.</span>
+    <span class="token comment" spellcheck="true">// See: https://bugs.php.net/bug.php?id=44639</span>
+    <span class="token comment" spellcheck="true">// If you're not sure whether the value you're passing is an integer, use the is_int() function.</span>
+    <span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bindValue</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token constant">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">PARAM_INT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bindValue</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'Bilbo Baggins'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bindValue</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token constant">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">PARAM_INT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// Using the fetchAll() method might be too resource-heavy if you're selecting a truly massive amount of rows.</span>
+    <span class="token comment" spellcheck="true">// If that's the case, you can use the fetch() method and loop through each result row one by one.</span>
+    <span class="token comment" spellcheck="true">// You can also return arrays and other things instead of objects.  See the PDO documentation for details.</span>
+    <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">fetchAll</span><span class="token punctuation">(</span>\<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">FETCH_OBJ</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$result</span> <span class="token keyword">as</span> <span class="token variable">$row</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token variable">$row</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Username</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+<span class="token keyword">catch</span><span class="token punctuation">(</span>\<span class="token package">PDOException</span> <span class="token variable">$ex</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token variable">$ex</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
+<ul>
+<li>当绑定整型变量时，如果不传递 <strong>PDO::PARAM_INT</strong> 参数有事可能会导致 PDO 对数据加引号。 这会搞坏特定的 MySQL 查询。</li>
+<li>未使用 <code>set names utf8mb4</code> 作为首个查询，可能会导致 Unicode 数据错误地存储进数据库</li>
+<li>即使你使用了 <code>set names utf8mb4</code>，你也得确认实际的数据库表使用的是 utf8mb4 字符集！</li>
+<li>可以在单个 execute() 调用中执行多条 SQL 语句。 只需使用分号分隔语句, 但是 <strong>PDO::nextRowset() after a multi-statement query doesn’t always work</strong> <a target="_blank" rel="noopener" href="https://bugs.php.net/bug.php?id=61207">^2</a></li>
+</ul>
+<h2 id="自动加载类-使用-spl-autoload-register-来注册你的自动加载函数。"><a href="#自动加载类-使用-spl-autoload-register-来注册你的自动加载函数。" class="headerlink" title="自动加载类, 使用 spl_autoload_register() 来注册你的自动加载函数。"></a>自动加载类, 使用 <code>spl_autoload_register()</code> 来注册你的自动加载函数。</h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token comment" spellcheck="true">// 首先，定义你的自动载入的函数</span>
+<span class="token keyword">function</span> <span class="token function">MyAutoload</span><span class="token punctuation">(</span><span class="token variable">$className</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+    <span class="token keyword">include_once</span><span class="token punctuation">(</span><span class="token variable">$className</span> <span class="token punctuation">.</span> <span class="token string">'.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+
+<span class="token comment" spellcheck="true">// 然后注册它。</span>
+<span class="token function">spl_autoload_register</span><span class="token punctuation">(</span><span class="token string">'MyAutoload'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Try it out!</span>
+<span class="token comment" spellcheck="true">// 因为我们没包含一个定义有 MyClass 的文件，所以自动加载器会介入并包含 MyClass.php。</span>
+<span class="token comment" spellcheck="true">// 在本例中，假定在 MyClass.php 文件中定义了 MyClass 类。</span>
+<span class="token variable">$var</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="从性能角度来看单引号和双引号-其实并不重要。"><a href="#从性能角度来看单引号和双引号-其实并不重要。" class="headerlink" title="从性能角度来看单引号和双引号, 其实并不重要。"></a>从性能角度来看单引号和双引号, <strong>其实并不重要</strong>。</h2><blockquote>
+<p>单引号字符串不会被解析，因此放入字符串的任何东西都会以原样显示。 双引号字符串会被解析，字符串中的任何 PHP 变量都会被求值。</p>
+</blockquote>
+<h2 id="define-vs-const"><a href="#define-vs-const" class="headerlink" title="define() vs. const"></a>define() <code>vs.</code> const</h2><blockquote>
+<p>使用 <code>define()</code>，除非考虑到可读性、类常量、或关注微优化</p>
+</blockquote>
+<ul>
+<li>define() 在执行期定义常量，而 const 在编译期定义常量。这样 const 就有轻微的速度优势， 但不值得考虑这个问题，除非你在构建大规模的软件。</li>
+<li>define() 将常量放入全局作用域. 不能使用 define() 定义类常量。</li>
+<li>define() 可以在 if() 代码块中调用，但 const 不行。</li>
+</ul>
+<h2 id="缓存-PHP-opcode-使用-APC"><a href="#缓存-PHP-opcode-使用-APC" class="headerlink" title="缓存 PHP opcode, 使用 APC"></a>缓存 PHP opcode, 使用 APC</h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token comment" spellcheck="true">// Store some values in the APC cache.  We can optionally pass a time-to-live,</span>
+<span class="token comment" spellcheck="true">// but in this example the values will live forever until they're garbage-collected by APC.</span>
+<span class="token function">apc_store</span><span class="token punctuation">(</span><span class="token string">'username-1532'</span><span class="token punctuation">,</span> <span class="token string">'Frodo Baggins'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">apc_store</span><span class="token punctuation">(</span><span class="token string">'username-958'</span><span class="token punctuation">,</span> <span class="token string">'Aragorn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">apc_store</span><span class="token punctuation">(</span><span class="token string">'username-6389'</span><span class="token punctuation">,</span> <span class="token string">'Gandalf'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// After storing these values, any PHP script can access them, no matter when it's run!</span>
+<span class="token variable">$value</span> <span class="token operator">=</span> <span class="token function">apc_fetch</span><span class="token punctuation">(</span><span class="token string">'username-958'</span><span class="token punctuation">,</span> <span class="token variable">$success</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$success</span> <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token variable">$value</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Aragorn</span>
+
+<span class="token variable">$value</span> <span class="token operator">=</span> <span class="token function">apc_fetch</span><span class="token punctuation">(</span><span class="token string">'username-1'</span><span class="token punctuation">,</span> <span class="token variable">$success</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// $success will be set to boolean false, because this key doesn't exist.</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$success</span> <span class="token operator">!==</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// Note the !==, this checks for true boolean false, not "falsey" values like 0 or empty string.</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Key not found'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">apc_delete</span><span class="token punctuation">(</span><span class="token string">'username-958'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// This key will no longer be available.</span></code></pre>
+<h2 id="配置-Web-服务器提供-PHP-服务-使用-PHP-FPM"><a href="#配置-Web-服务器提供-PHP-服务-使用-PHP-FPM" class="headerlink" title="配置 Web 服务器提供 PHP 服务, 使用 PHP-FPM"></a>配置 Web 服务器提供 PHP 服务, 使用 <strong>PHP-FPM</strong></h2><h2 id="发送邮件-使用-PHPMailer-3"><a href="#发送邮件-使用-PHPMailer-3" class="headerlink" title="发送邮件, 使用 PHPMailer ^3"></a>发送邮件, 使用 <strong>PHPMailer</strong> <a target="_blank" rel="noopener" href="https://github.com/PHPMailer/PHPMailer">^3</a></h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token comment" spellcheck="true">// Include the PHPMailer library</span>
+<span class="token keyword">require_once</span><span class="token punctuation">(</span><span class="token string">'phpmailer-5.1/class.phpmailer.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Passing 'true' enables exceptions.  This is optional and defaults to false.</span>
+<span class="token variable">$mailer</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PHPMailer</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Send a mail from Bilbo Baggins to Gandalf the Grey</span>
+
+<span class="token comment" spellcheck="true">// Set up to, from, and the message body.  The body doesn't have to be HTML;</span>
+<span class="token comment" spellcheck="true">// check the PHPMailer documentation for details.</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Sender</span> <span class="token operator">=</span> <span class="token string">'bbaggins@example.com'</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">AddReplyTo</span><span class="token punctuation">(</span><span class="token string">'bbaggins@example.com'</span><span class="token punctuation">,</span> <span class="token string">'Bilbo Baggins'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">SetFrom</span><span class="token punctuation">(</span><span class="token string">'bbaggins@example.com'</span><span class="token punctuation">,</span> <span class="token string">'Bilbo Baggins'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">AddAddress</span><span class="token punctuation">(</span><span class="token string">'gandalf@example.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Subject</span> <span class="token operator">=</span> <span class="token string">'The finest weed in the South Farthing'</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">MsgHTML</span><span class="token punctuation">(</span><span class="token string">'&lt;p>You really must try it, Gandalf!&lt;/p>&lt;p>-Bilbo&lt;/p>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Set up our connection information.</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">IsSMTP</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">SMTPAuth</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">SMTPSecure</span> <span class="token operator">=</span> <span class="token string">'ssl'</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Port</span> <span class="token operator">=</span> <span class="token number">465</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Host</span> <span class="token operator">=</span> <span class="token string">'my smpt host'</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Username</span> <span class="token operator">=</span> <span class="token string">'my smtp username'</span><span class="token punctuation">;</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Password</span> <span class="token operator">=</span> <span class="token string">'my smtp password'</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// All done!</span>
+<span class="token variable">$mailer</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">Send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="验证邮件地址-使用-filter-var-函数-4"><a href="#验证邮件地址-使用-filter-var-函数-4" class="headerlink" title="验证邮件地址, 使用 filter_var() 函数 ^4"></a>验证邮件地址, 使用 <code>filter_var()</code> 函数 <a target="_blank" rel="noopener" href="http://php.net/manual/zh/filter.filters.validate.php">^4</a></h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token function">filter_var</span><span class="token punctuation">(</span><span class="token string">'sgamgee@example.com'</span><span class="token punctuation">,</span> <span class="token constant">FILTER_VALIDATE_EMAIL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//Returns "sgamgee@example.com". This is a valid email address.</span>
+
+<span class="token function">filter_var</span><span class="token punctuation">(</span><span class="token string">'sauron@mordor'</span><span class="token punctuation">,</span> <span class="token constant">FILTER_VALIDATE_EMAIL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Returns boolean false! This is *not* a valid email address.</span></code></pre>
+<h2 id="净化-HTML-输入和输出"><a href="#净化-HTML-输入和输出" class="headerlink" title="净化 HTML 输入和输出"></a>净化 HTML 输入和输出</h2><ul>
+<li>对于简单的数据净化，使用 <code>htmlentities()</code> 函数, 复杂的数据净化则使用 <a target="_blank" rel="noopener" href="http://htmlpurifier.org/">HTML Purifier 库</a></li>
+<li>你可能会找到建议你使用 strip_tags() 函数的观点。 虽然 strip_tags() 从技术上来说是安全的，但如果输入的不合法的 HTML（比如， 没有结束标签），它就成了一个「愚蠢」的函数，可能会去除比你期望的更多的内容。</li>
+<li>如果你的 web 应用仅需要完全地转义（因此可以无害地呈现，但不是完全去除） HTML， 则使用 PHP 的内建 htmlentities() 函数。</li>
+</ul>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token comment" spellcheck="true">// Oh no!  The user has submitted malicious HTML, and we have to display it in our web app!</span>
+<span class="token variable">$evilHtml</span> <span class="token operator">=</span> <span class="token string">'&lt;div onclick="xss();">Mua-ha-ha!  Twiddling my evil mustache...&lt;/div>'</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Use the ENT_QUOTES flag to make sure both single and double quotes are escaped.</span>
+<span class="token comment" spellcheck="true">// Use the UTF-8 character encoding if you've stored the text as UTF-8 (as you should have).</span>
+<span class="token comment" spellcheck="true">// See the UTF-8 section in this document for more details.</span>
+<span class="token variable">$safeHtml</span> <span class="token operator">=</span> <span class="token function">htmlentities</span><span class="token punctuation">(</span><span class="token variable">$evilHtml</span><span class="token punctuation">,</span> <span class="token constant">ENT_QUOTES</span><span class="token punctuation">,</span> <span class="token string">'UTF-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// $safeHtml is now fully escaped HTML.  You can output $safeHtml to your users without fear!</span></code></pre>
+<blockquote>
+<p>对于很多 web 应用来说，简单地转义 HTML 是不够的。 你可能想完全去除任何HTML，或者允许一小部分子集的 HTML 存在。 若是如此，则使用 HTML Purifier 库。</p>
+</blockquote>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token comment" spellcheck="true">// Include the HTML Purifier library</span>
+<span class="token keyword">require_once</span><span class="token punctuation">(</span><span class="token string">'htmlpurifier-4.4.0/HTMLPurifier.auto.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Oh no!  The user has submitted malicious HTML, and we have to display it in our web app!</span>
+<span class="token variable">$evilHtml</span> <span class="token operator">=</span> <span class="token string">'&lt;div onclick="xss();">Mua-ha-ha!  Twiddling my evil mustache...&lt;/div>'</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Set up the HTML Purifier object with the default configuration.</span>
+<span class="token variable">$purifier</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HTMLPurifier</span><span class="token punctuation">(</span>HTMLPurifier_Config<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">createDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$safeHtml</span> <span class="token operator">=</span> <span class="token variable">$purifier</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">purify</span><span class="token punctuation">(</span><span class="token variable">$evilHtml</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// $safeHtml is now sanitized.  You can output $safeHtml to your users without fear!</span></code></pre>
+<blockquote>
+<p>HTML Purifier 相比 strip_tags() 是有优势的， 因为它在净化 HTML 之前会对其校验。这意味着如果用户输入无效 HTML，HTML Purifier 相比 strip_tags() 更能保留 HTML 的原意。</p>
+</blockquote>
+<ul>
+<li>以错误的字符编码使用 <code>htmlentities()</code> 会造成意想不到的输出。</li>
+<li>使用 htmlentities() 时，始终包含 ENT_QUOTES 和字符编码参数。 默认情况下，htmlentities() <strong>不会</strong> 对单引号编码。</li>
+<li>HTML Purifier 对于复杂的 HTML 效率极其的低。可以考虑设置一个缓存方案如APC来保存经过净化的结果以备后用。</li>
+</ul>
+<h2 id="PHP-与-UTF-8"><a href="#PHP-与-UTF-8" class="headerlink" title="PHP 与 UTF-8"></a>PHP 与 <strong>UTF-8</strong></h2><blockquote>
+<p>基本的<a target="_blank" rel="noopener" href="http://php.net/manual/zh/language.operators.string.php">字符串操作</a>，如串接 两个字符串、将字符串赋给变量，并不需要任何针对 UTF-8 的特殊东西。多数 <a target="_blank" rel="noopener" href="http://php.net/manual/zh/ref.strings.php">字符串函数</a>，如 <code>strpos()</code> 和 strlen，就需要特殊的考虑。 这些函数都有一个对应的 <code>mb_*</code> 函数：例如，mb_strpos() 和 mb_strlen()。 这些对应的函数统称为多字节字符串函数。 这些多字节字符串函数是专门为操作 <strong>Unicode</strong> 字符串而设计的。</p>
+</blockquote>
+<ul>
+<li>并不是所有的字符串函数都有一个对应的 mb_*。</li>
+<li>在每个 PHP 脚本的顶部（或者在全局包含脚本的顶部）你都应使用 <code>mb_internal_encoding</code> 函数，如果你的脚本会输出到浏览器，那么还得紧跟其后加个<code>mb_http_output()</code> 函数。</li>
+<li>许多操作字符串的 PHP 函数都有一个可选参数让你指定字符编码。 若有该选项， 你应始终显式地指明 UTF-8 编码。 例如，htmlentities() 就有一个字符编码方式选项，在处理这样的字符串时应始终指定 UTF-8。</li>
+</ul>
+<blockquote>
+<p>确保从 PHP 到 MySQL 的字符串为 UTF-8 编码的，确保你的数据库以及数据表均设置为 utf8mb4 字符集， 并且在你的数据库中执行任何其他查询之前先执行 MySQL 查询 <code>set names utf8mb4</code>。</p>
+</blockquote>
+<ul>
+<li>注意你必须使用 <code>utf8mb4</code> 字符集来获得完整的 UTF-8 支持，而不是 <code>utf8</code> 字符集！</li>
+</ul>
+<blockquote>
+<p>使用 mb_http_output() 函数 来确保你的 PHP 脚本输出 UTF-8 字符串到浏览器。 并且在 HTML 页面的 <head> 标签块中包含 字符集 <meta> 标签块。</p>
+</blockquote>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token comment" spellcheck="true">// Tell PHP that we're using UTF-8 strings until the end of the script</span>
+<span class="token function">mb_internal_encoding</span><span class="token punctuation">(</span><span class="token string">'UTF-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Tell PHP that we'll be outputting UTF-8 to the browser</span>
+<span class="token function">mb_http_output</span><span class="token punctuation">(</span><span class="token string">'UTF-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Our UTF-8 test string</span>
+<span class="token variable">$string</span> <span class="token operator">=</span> <span class="token string">'Aš galiu valgyti stiklą ir jis manęs nežeidžia'</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Transform the string in some way with a multibyte function</span>
+<span class="token variable">$string</span> <span class="token operator">=</span> <span class="token function">mb_substr</span><span class="token punctuation">(</span><span class="token variable">$string</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Connect to a database to store the transformed string</span>
+<span class="token comment" spellcheck="true">// See the PDO example in this document for more information</span>
+<span class="token comment" spellcheck="true">// Note the `set names utf8mb4` commmand!</span>
+<span class="token variable">$link</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token punctuation">\</span>PDO</span><span class="token punctuation">(</span>   <span class="token string">'mysql:host=your-hostname;dbname=your-db'</span><span class="token punctuation">,</span>
+                    <span class="token string">'your-username'</span><span class="token punctuation">,</span>
+                    <span class="token string">'your-password'</span><span class="token punctuation">,</span>
+                    <span class="token keyword">array</span><span class="token punctuation">(</span>
+                        \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">ATTR_ERRMODE</span> <span class="token operator">=</span><span class="token operator">></span> \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">ERRMODE_EXCEPTION</span><span class="token punctuation">,</span>
+                        \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">ATTR_PERSISTENT</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                        \<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">MYSQL_ATTR_INIT_COMMAND</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'set names utf8mb4'</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Store our transformed string as UTF-8 in our database</span>
+<span class="token comment" spellcheck="true">// Assume our DB and tables are in the utf8mb4 character set and collation</span>
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token variable">$link</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">prepare</span><span class="token punctuation">(</span><span class="token string">'insert into Sentences (Id, Body) values (?, ?)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bindValue</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token constant">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">PARAM_INT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bindValue</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Retrieve the string we just stored to prove it was stored correctly</span>
+<span class="token variable">$handle</span> <span class="token operator">=</span> <span class="token variable">$link</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">prepare</span><span class="token punctuation">(</span><span class="token string">'select * from Sentences where Id = ?'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">bindValue</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token constant">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">PARAM_INT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Store the result into an object that we'll output later in our HTML</span>
+<span class="token variable">$result</span> <span class="token operator">=</span> <span class="token variable">$handle</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">fetchAll</span><span class="token punctuation">(</span>\<span class="token package">PDO</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">FETCH_OBJ</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span><span class="token markup"><span class="token doctype">&lt;!doctype html></span></span>
+<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span></span>
+    <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
+        <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Content-Type<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/html; charset<span class="token punctuation">=</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
+        <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span></span><span class="token constant">UTF</span><span class="token number">-8</span> test page<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></span>
+    <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></span>
+    <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span></span>
+        <span class="token delimiter">&lt;?php</span>
+        <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$result</span> <span class="token keyword">as</span> <span class="token variable">$row</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token variable">$row</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">Body</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// This should correctly output our transformed UTF-8 string to the browser</span>
+        <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
+        <span class="token delimiter">?></span>
+    <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></span>
+<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></span></code></pre>
+<h2 id="处理日期和时间-使用DateTime-类。"><a href="#处理日期和时间-使用DateTime-类。" class="headerlink" title="处理日期和时间, 使用DateTime 类。"></a>处理日期和时间, 使用<code>DateTime</code> 类。</h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token comment" spellcheck="true">// Construct a new UTC date.  Always specify UTC unless you really know what you're doing!</span>
+<span class="token variable">$date</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DateTime</span><span class="token punctuation">(</span><span class="token string">'2011-05-04 05:00:00'</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DateTimeZone</span><span class="token punctuation">(</span><span class="token string">'UTC'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Add ten days to our initial date</span>
+<span class="token variable">$date</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">DateInterval</span><span class="token punctuation">(</span><span class="token string">'P10D'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">echo</span><span class="token punctuation">(</span><span class="token variable">$date</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'Y-m-d h:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2011-05-14 05:00:00</span>
+
+<span class="token comment" spellcheck="true">// Sadly we don't have a Middle Earth timezone</span>
+<span class="token comment" spellcheck="true">// Convert our UTC date to the PST (or PDT, depending) time zone</span>
+<span class="token variable">$date</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">setTimezone</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">DateTimeZone</span><span class="token punctuation">(</span><span class="token string">'America/Los_Angeles'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Note that if you run this line yourself, it might differ by an hour depending on daylight savings</span>
+<span class="token keyword">echo</span><span class="token punctuation">(</span><span class="token variable">$date</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'Y-m-d h:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2011-05-13 10:00:00</span>
+
+<span class="token variable">$later</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DateTime</span><span class="token punctuation">(</span><span class="token string">'2012-05-20'</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DateTimeZone</span><span class="token punctuation">(</span><span class="token string">'UTC'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Compare two dates</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$date</span> <span class="token operator">&lt;</span> <span class="token variable">$later</span><span class="token punctuation">)</span>
+    <span class="token keyword">echo</span><span class="token punctuation">(</span><span class="token string">'Yup, you can compare dates using these easy operators!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Find the difference between two dates</span>
+<span class="token variable">$difference</span> <span class="token operator">=</span> <span class="token variable">$date</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$later</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">echo</span><span class="token punctuation">(</span><span class="token string">'The 2nd date is '</span> <span class="token punctuation">.</span> <span class="token variable">$difference</span><span class="token punctuation">[</span><span class="token string">'days'</span><span class="token punctuation">]</span> <span class="token punctuation">.</span> <span class="token string">' later than 1st date.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li>如果你不指定一个时区，<code>DateTime::__construct()</code> 就会将生成日期的时区设置为<strong>正在运行的计算机的时区</strong>。在创建新日期时始终指定 UTC 时区，除非你确实清楚自己在做的事情。</li>
+<li>如果你在 <code>DateTime::__construct()</code> 中使用 Unix 时间戳，那么时区将始终设置为 UTC 而不管第二个参数你指定了什么。</li>
+<li>向 <code>DateTime::__construct()</code> 传递零值日期（如：“0000-00-00”，常见 MySQL 生成该值作为 DateTime 类型数据列的默认值）会产生一个<strong>无意义的日期</strong>，而不是“0000-00-00”。</li>
+<li>在 32 位系统上使用 DateTime::getTimestamp() 不会产生代表 2038 年之后日期的时间戳。64 位系统则没有问题。</li>
+</ul>
+<h2 id="检测一个值是否为-null-或-false"><a href="#检测一个值是否为-null-或-false" class="headerlink" title="检测一个值是否为 null 或 false"></a>检测一个值是否为 null 或 false</h2><blockquote>
+<p>使用 === 操作符来检测 null 和布尔 false 值。</p>
+<p>is_null() 函数能准确地检测一个值是否为 null， is_bool 可以检测一个值是否是布尔值（比如 false）， 但存在一个更好的选择：=== 操作符。</p>
+</blockquote>
+<blockquote>
+<p>原文: <a target="_blank" rel="noopener" href="http://phpbestpractices.justjavac.com/">PHP 最佳实践（译）</a></p>
+</blockquote>
+<hr>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://codahale.com/how-to-safely-store-a-password/">How To Safely Store A Password</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059">Why you Should be using PHP’s PDO for Database Access</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.laruence.com/2008/06/18/221.html">深入理解PHP原理之Opcodes</a></li>
+<li><a target="_blank" rel="noopener" href="https://alexcabal.com/installing-apache-mod_fastcgi-php-fpm-on-ubuntu-server-maverick/">INSTALLING APACHE + MOD_FASTCGI + PHP-FPM ON UBUNTU SERVER MAVERICK</a></li>
+<li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/3150413/filter-sanitize-special-chars-problem-with-line-breaks">FILTER_SANITIZE_SPECIAL_CHARS problem with line breaks</a></li>
+<li><a target="_blank" rel="noopener" href="http://php.net/manual/zh/regexp.reference.recursive.php">PCRE 正则语法 递归模式</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.noupe.com/development/php-regular-expressions.html">Getting Started with PHP Regular Expressions</a></li>
+<li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/571694/what-factors-make-php-unicode-incompatible">What factors make PHP Unicode-incompatible?</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.loftdigital.com/blog/php-utf-8-cheatsheet">PHP UTF-8 cheatsheet</a></li>
+<li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/129677/whats-the-best-method-for-sanitizing-user-input-with-php">What’s the best method for sanitizing user input with PHP?</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.openwall.com/phpass/">Portable PHP password hashing framework</a></li>
+<li><a target="_blank" rel="noopener" href="https://bugs.php.net/bug.php?id=61207">Bug #61207    PDO::nextRowset() after a multi-statement query doesn’t always work</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/PHPMailer/PHPMailer">PHPMailer/PHPMailer</a></li>
+<li><a target="_blank" rel="noopener" href="http://php.net/manual/zh/filter.filters.validate.php">Filter &gt; Types of filters</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Itaken</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://itaken.github.io/2017/5/3/PHP%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">https://itaken.github.io/2017/5/3/PHP%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Itaken</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
+                                </a>
+                            
+                                <a href="/tags/PHP%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+                                    <span class="chip bg-color">PHP最佳实践</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,linkedin,google,twitter,facebook,qzone,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+        font-size: 18px;
+        color: #ff385b;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">万水千山总是情,打赏一块行不行</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2017/5/3/libpng12-0%E6%9C%AA%E5%AE%89%E8%A3%85%E9%94%99%E8%AF%AF/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="未安装软件包 libpng12-0 错误">
+                        
+                        <span class="card-title">未安装软件包 libpng12-0 错误</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2017-05-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
+                                    一个问题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
+                    </a>
+                    
+                    <a href="/tags/shell/">
+                        <span class="chip bg-color">shell</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2017/5/2/mysql-server-has-gone-away/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL server has gone away">
+                        
+                        <span class="card-title">MySQL server has gone away</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2017-05-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
+                                    一个问题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: rgb(255 255 255 / 10%);box-shadow: 0 0 black !important;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, mark'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;
+            
+                <span id="year">2017-2022</span>
+            
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Itaken</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/itaken" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:regelhh@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

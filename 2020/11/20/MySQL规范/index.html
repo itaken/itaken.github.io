@@ -1,0 +1,1160 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="MySQL规范, ITAKEN GITHUB PAGES">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>MySQL规范 | ITAKEN GITHUB PAGES</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ITAKEN GITHUB PAGES</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于ITAKEN</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ITAKEN GITHUB PAGES</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于ITAKEN
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">MySQL规范</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                                <span class="chip bg-color">转载</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD%E9%AA%8C%E8%AF%81/" class="post-category">
+                                转载验证
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-11-20
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="规范目的"><a href="#规范目的" class="headerlink" title="规范目的"></a>规范目的</h2><p>优化数据访问层代码</p>
+<h2 id="规范范围"><a href="#规范范围" class="headerlink" title="规范范围"></a>规范范围</h2><p>公司业务过程中使用的所有SQL代码 ，基于<code>Mysql 5.5+</code></p>
+<h2 id="规范原则"><a href="#规范原则" class="headerlink" title="规范原则"></a>规范原则</h2><p>减少SQL性能问题导致的系统故障，提高系统的稳定性。</p>
+<h2 id="规范内容"><a href="#规范内容" class="headerlink" title="规范内容"></a>规范内容</h2><ol>
+<li><p><strong>所有的DDL语句都不能回滚</strong>。<br>解释：MySQL的DDL语句是非事务的，当执行到DDL语句时，会隐式的将当前回话的事务进行一次“COMMIT”操作，因此在MySQL中执行DDL语句时，应该严格地将DDL和DML完全分开，不能混合在一起执行。</p>
+</li>
+<li><p>新建的<strong>数据库命名</strong>规范要统一：&lt;业务系统缩写&gt;_&lt;子系统缩写&gt;；分库名称命名格式是&lt;业务系统缩写&gt;_&lt;子系统缩写&gt;_&lt;编号&gt;，编号从0开始递增。<br>解释：采用<strong>26个小写字母和0-9的自然数</strong>（一般不使用）加上下互相 ‘_’ 组成，命名简洁明确，多个单词用下划线 ‘_’ 隔开</p>
+</li>
+<li><p><code>库名</code>、<code>表名</code>、<code>字段名</code>、<code>索引名</code>必须使用<strong>小写字母</strong>。库名和表名<strong>不超过40个字符</strong>。临时表以tmp开头，备份表以bak结尾。<br>解释：采用26个小写字母和0-9的自然数（一般不使用）加上下互相 ‘_’ 组成，命名简洁明确，多个单词用下划线 ‘_’ 隔开</p>
+</li>
+<li><p><strong>单表字段不能超过50个</strong>，超出建议拆表。<br>解释：mysql内存加载过程中，数据加载的最小单位是页。每个页中存储的行越多,则数据加载的页会越少，性能更好。</p>
+</li>
+<li><p>表一旦设计好，字段<strong>只允许增加</strong>，<strong>不允许减少</strong>（drop column），<strong>不允许改名称</strong>（change column)<br>解释：减少字段，修改名称可能会导致已有业务的兼容性问题，不用字段废弃即可，不需要删除。对于实在需要修改名称的，用增加新字段的方式来带代替。</p>
+</li>
+<li><p>统一使用<code>INNODB存储引擎</code>,<code>utf8编码</code>, 整个数据库的编码统一为<code>utf8_general_ci</code>；如果需要存储emoji表情或者一些Unicode的符号。采用<code>utf8mb4</code>字符集，整个数据库的编码统一为<code>utf8mb4_general_ci</code><br>解释：MySQL里面实现的utf8最长使用3个字符，包含了大多数字符但并不是所有。例如emoji和一些不常用的汉字，如“墅”，这些需要四个字节才能编码的就不支持。确认没有特殊需求时，使用utf8比utf8mb4占用更少的空间。</p>
+</li>
+<li><p>禁止使用Mysql的<code>存储过程</code>，<code>函数</code>，<code>触发器</code><br>解释：互联网高并发的场景，很多数据都是分库分表的，而且要求高度可扩展，原则是对DB的保护做到最大化，能减少DB压力的就减少DB压力，尽量把运算逻辑拉到代码里面。存储过程的优点在于封装性好，直接让DB进行运算，但是缺点在于难以维护，而且大大增大DB压力。所以开发过程中禁止使用存储过程。</p>
+</li>
+<li><p><strong>表必须有主键</strong>，建议统一由Auto-Increment字段生成整型，不建议使用组合主键，自增id只作为虚拟主键，不建议与业务数据处理有关联关系。<br>解释：自增主键方便dba运维，比如归档，批量更新数据，可以根据主键来做范围归档，做到更精准的遍历数据。使用非自增id做主键，那么计算主键索引值可能每次结果都不会出现连续的，这样在插入B+树叶子节点的时候，就不会在最后一个叶子节点尾部插入。而是中间某个叶子节点插入节点，导致插入数据需要不断对页数据进行重排，效率会明显降低。如果使用varchar作为主键，索引比int大多了，bigint是8字节，索引大了，数据大了，IO压力也会加大。 按加载到内存考虑，varchar 占用的内存空间，是它定义的字符长度的至少3倍，同时非int, bigint容易产生索引分裂，InnoDB数据是按照主键聚簇的，数据在物理上按照主键大小顺序存储，使用其他列或者组合无法保证顺序插入，随机IO大，导致插入性能下降。</p>
+</li>
+<li><p>字段的数据类型和长度，必须符合数据的实际, 不能滥用<code>varchar</code><br>解释：合理的类型定义: 自增主键：bigint unsigned; 状态/code字段：tinyint/int/varchar; 日期时间：timestamp; 日期：date; 带小数数值：decimal ; 整数数值：tinyint/int/bigint (unsigned); 字符：varchar</p>
+</li>
+<li><p>尽量用<strong>单表查询</strong>，避免多表JOIN，禁止多于3表join，join的字段数据类型必须绝对一致。<br>解释：互联网高并发的场景，任何表的数据都有可能爆发性增长。多表查询是笛卡尔乘积方式，需要检索的数据是几何倍上升的。多表查询数据量大了很容易遇到速度问题。做优化时，优化不仅仅是一个语句，而是所有业务。对于业务的理解不够，多表查询又多，优化是非常困难的。而单表的多次查询，业务逻辑清晰，优化方便，用多几行的代码和多几次的数据库查询是值得的。</p>
+</li>
+<li><p>表名列名必须有注释（必须加上<code>COMMENT &#39;&lt;字段扼要解说&gt;&#39;</code>），表结构变更须由库表OWNER所在团队发起<br>解释：加上注释可以让其他开发人员更方便的理解字段和业务模型。同时业务表后续都会入仓数据仓库给大数据团队做进一步的数据挖掘，注释可以方便大数据团队更好的做数据挖掘。</p>
+</li>
+<li><p>不使用<code>TEXT</code>、<code>BLOB</code>、<code>char</code>，请使用VARCHAR(N)，N表示的是字符数不是字节数，比如VARCHAR(255)，可以最大可存储255个汉字，需要根据实际的宽度来选择N，请注意同一表中， 除blobs数据类型外，所有列允许最大长度之和 所占的 字节数  不能超过 65535。<br>解释：char是定长格式，绝大多数场景，我们的业务数据不是定长的字符串，用char会浪费存储空间。</p>
+</li>
+<li><p>每张表<strong>数据量</strong>建议控制在三千万以下。<br>解释：控制DDL变更时长，同时缩短整库备份时间，降低恢复难度；从性能角度看，走索引，每次查询数据精准到就几百行，22亿和1亿性能是没有区别的，如果是比较特殊场景，如where后面不带时间范围条件，全表查某个类型（type）的查询就有性能问题</p>
+</li>
+<li><p>如果字段只有true or false，请使用<code>tinyint</code>（数值范围-128~127）， 禁止使用enum，不方便扩展。<br>解释：ENUM 字段底层其实是用整型来存储，比如如果用 ENUM 来存储字符串 ‘3’、’2’、’1’ 这样的数字字符串，那对应的索引就是 1、2、3，要是不熟悉的开发人员，很容易就会造成混淆，新增错误的数据。同时对于枚举类型，是很有可能会随时增加的，如果每增加一个枚举，就要修改字段，代价太大。</p>
+</li>
+<li><p>存储时间（精确到秒）建议使用<code>TIMESTAMP</code>类型，而不是DATETIME类型<br>解释：TIMESTAMP使用4字节，DATETIME使用8个字节，使用TIMESTAMP更节约空间。同时TIMESTAMP具有自动赋值以及自动更新的特性。</p>
+</li>
+<li><p>禁止default NULL。建议数字类型<code>not null</code> default 0，字符类型not null default ‘’，时间not null default ‘1970-01-01 00:00:00’；<br>解释：1）NULL值会有额外的空间来存储，并不是Null标志位只固定占用1个字节==，而是以8为单位，满8个null字段就多1个字节，不满8个也占用1个字节，高位用0补齐。对于相同数据的表，字段中有NULL值的表比NOT NULL的大，为了空间容量和性能，参考：<a target="_blank" rel="noopener" href="http://mysql.taobao.org/monthly/2016/08/07/">http://mysql.taobao.org/monthly/2016/08/07/</a>；2）NULL值是不相等的 ,对业务表述可能会有影响,不能=‘NULL’ 或者 = ‘null’，只能 is null，这个最终不利于开发的编写；3）<code>count()</code>,<code>max()</code>,<code>min()</code>是忽略NULL的，而count(*)是包含NULL值，那么count(col)和count(*)结果不一样</p>
+</li>
+<li><p>所有表必须有create_time和update_time，有明确操作来源的，考虑加上created_by, last_updated_by两个字段，记录数据的创建者和修改者。<br>解释：方便后期数据分析与记录变化排查，哪怕只是配置表，只有10行记录; 有利于数据迁移和同步数据 有利于数据统一归档。</p>
+</li>
+<li><p>所有业务实体表/关系表，<strong>禁止硬删除</strong>，必须软删除，加上is_deleted字段，标注这条记录的状态。<br>解释：软删可以记录最近的删除相关信息，方便出问题时的排查分析，以及业务历史数据分析。</p>
+</li>
+<li><p>加字段禁止使用<code>after</code>。<br>解释：我我们不确定全局代码里面（如其他团队使用你的表）是否都insert into table（col，col，col。。。） value，如果你在中间插一个字段，就导致数据偏移的问题了，同样select * 的也可能会影响数值的偏移</p>
+</li>
+<li><p>字段size大小好合理设计，特别是varchar字段。<br>解释：过大的varchar长度浪费存储资源，而过小的varchar长度可能出现业务突发情况时导致数据长度超过字段长度从而产生故障。</p>
+</li>
+<li><p>SELECT语句只获取需要的字段，禁止使用<code>SELECT * FROM语</code>句<br>解释：可以有效防止新增字段对应用逻辑的影响，还能减少对性能的影响。</p>
+</li>
+<li><p>INSERT语句必须显式的指明字段名称，不使用<code>INSERT INTO table value()</code>。<br>解释：可以有效防止字段并更时字段偏移引发的问题。</p>
+</li>
+<li><p>禁止在where子句中对字段施加<strong>函数</strong>.<br>解释：会导致全表扫描。如to_date（add_time)&gt;xxxxx,应改为:add_time &gt;= unix_timestamp(date_add(str_to_date(‘20130227’,’%Y%m%d’),interval - 29 day))</p>
+</li>
+<li><p>写到应用程序里的SQL语句，禁止一切DDL操作，如对这些权限有要求，必需与DBA协商同意方可使用<br>解释：DDL写入程序，可能对表结构产生不可控的影响，进而影响业务使用。</p>
+</li>
+<li><p>WHERE条件中必须使用合适的类型，<strong>避免MySQL进行隐式类型转化</strong>，如ISENDED=1，字段类型是tinyint，那么不能是ISENDED=‘1’。<br>解释：隐式转换会导致索引失效。</p>
+</li>
+<li><p>避免在SQL语句进行数学运算或者函数运算。<br>解释：容易将业务逻辑和DB耦合在一起，推荐在业务逻辑中完成功能。</p>
+</li>
+<li><p>INSERT语句尽量使用<code>batch</code>提交。<br>解释：减小DB的写压力。</p>
+</li>
+<li><p>尽可能使用合理的SQL语句减少与数据库的交互次数。<br>解释：减小交互次数可以减小DBD的负载。</p>
+</li>
+<li><p>不使用<code>ORDER BY RAND()</code> 。<br>解释：在ORDER BY从句里面使用RAND()函数，会导致数据列被多次扫描。可以用max(id) * rand()代替</p>
+</li>
+<li><p>使用合理的分页方式以提高分页的效率。<br>解释：对于大表的扫描，直接<code>select * from XXX limit X,Y</code>，在深度翻页时会导致严重的慢查询。推荐的方式为：<code>select * from XXX WHERE id&gt;=M order by id limit N</code>; M为上一轮扫描的最大id值。</p>
+</li>
+<li><p>InnoDB表避免使用<code>COUNT(*)</code>操作。<br>解释：会显著增大DB的负载，建议计数统计实时要求较强可以使用memcache或者redis，非实时统计可以使用单独统计表，定时更新。</p>
+</li>
+<li><p>不建议使用%前缀模糊查询，例如LIKE “%XXX”<br>解释：会显著增大DB的负载，如果有较多类似的查询需求，建议数据入ES，在ES做模糊查询。</p>
+</li>
+<li><p>避免多余的排序，排序尽量在业务端做。<br>解释：排序会显著增大DB的负载。使用GROUP BY 时，默认会进行排序，当你不需要排序时，可以使用<code>order by null</code>,例如<code>Select a.OwnerUserID,count(*) cnt from DP_MessageList a group by a.OwnerUserID order by null</code>; 如果有较多排序需求，建议数据入ES，在ES做排序。</p>
+</li>
+<li><p>禁止使用 <code>REPLACE INTO</code>。<br>解释：Replace into 操作在唯一键重复情况下，是先尝试写入，检测到冲突则删除原记录，再写入新记录。该操作在二进制日志中只有一条 update 操作，将导致同一张表的 auto_increment 值主从不一致，主从切换后，极易致业务写入失败；同时一次 Replace into 的写入操作最坏情况下有两次 DB 操作，操作负担重；在并发情况下，Replace into 因不同 session 获取锁的顺序问题，产生死锁的概率更高。</p>
+</li>
+<li><p>禁止使用子查询，比如<code>select col、col from table where id in （select col from table</code>）<br>解释：会显著增大DB的负载，高并发场景下，会出现严重的延迟问题。</p>
+</li>
+<li><p>数据查询每次返回数据记录数大小不能超过1000<br>解释：会显著增大DB的负载，高并发场景下，会出现严重的延迟问题。需要根据业务QPS和记录长度来评估1000以内什么值合适。</p>
+</li>
+<li><p>禁止使用 <code>UUID()</code>，<code>USER()</code>这样的MYSQL INSIDE函数<br>解释：会导致主备数据不一致，重要的是会严重影响mysql性能。</p>
+</li>
+<li><p>如果应用使用的是长连接，应用必须具有<strong>自动重连</strong>的机制。避免每执行一个SQL去检查一次DB可用性；<br>解释：会显著增大DB的负载</p>
+</li>
+<li><p>原则上禁止使用<strong>分区表</strong><br>解释：分区表在物理上表现为多个文件，在逻辑上表现为一个表 谨慎选择分区键， 跨分区查询效率可能更低，如果有对应的需求，建议将数据入大数据的分区的数据仓库，比如Hive分区表，基于大数据做离线查询。</p>
+</li>
+<li><p>对于访问量非常大，且不做表拆分的数据库，需考虑读写分离<br>解释：读写分离可以提高查询性能，但是读写分离有出现主从复制有延迟的可能性，需要综合评估。</p>
+</li>
+<li><p>单个事务，处理的行数不能超过1000 rows/s<br>解释：超出了会导致主从复制延迟的问题，进而引发其他问题。</p>
+</li>
+<li><p>事务操作完后要<strong>及时commit</strong>，释放锁。<br>解释：避免死锁和性能问题。</p>
+</li>
+<li><p>如果存在并发对相同对数据做DML，要按顺序操作。<br>解释：避免死锁。</p>
+</li>
+<li><p>非唯一索引使用“idx_表缩写名称_字段缩写名称”进行命名。唯一索引建议使用“uniq_表缩写名称_字段缩写名称”进行命名。索引名称必须使用小写。</p>
+</li>
+<li><p><strong>唯一键不和主键重复</strong>。每个业务实体表和关系表都应该至少有一个业务主键对应的唯一索引。<br>解释：与业务相关的唯一健可以避免业务数据错乱。</p>
+</li>
+<li><p>索引字段的顺序需要考虑字段值去重之后的个数，个数多的放在前面<br>解释：提高索引检索的效率。</p>
+</li>
+<li><p>使用EXPLAIN判断SQL语句是否合理使用索引，尽量避免extra列出现：<code>Using File Sort，Using Temporary。</code>。<br>解释：using temporary：意味着mysql对查询结果进行排序的时候使用了一张临时表。using filesort：说明mysql会对数据使用一个外部的索引排序，而不是按照表内的索引顺序进行读取。</p>
+</li>
+<li><p>UPDATE、DELETE语句需要根据WHERE条件添加索引。<br>解释：提高sql执行效率。</p>
+</li>
+<li><p>合理创建联合索引（避免冗余）<br>解释：比如(a,b,c) 相当于 (a) 、(a,b) 、(a,b,c)。</p>
+</li>
+<li><p>组合<strong>索引字段数</strong>不允许超过5个<br>解释：字段超过5个时，实际已经起不到有效过滤数据的作用。</p>
+</li>
+<li><p>合理利用覆盖索引。<br>解释：比如<code>SELECT email,uid FROM user_email WHERE uid=xx</code>，如果uid不是主键，适当时候可以将索引添加为index(uid,email)，以获得性能提升。</p>
+</li>
+<li><p>单表索引尽量不要超过10个<br>解释：虽然索引大大提高了查询速度，同时却会降低更新表的速度，如对表进行 insert、update和delete。因为更新表时，不仅要保存数据，还要保存一下索引文件。</p>
+</li>
+<li><p>主键的内容不能被修改。<br>解释：如果的确有主键修改需求，建议先删除记录，再重新添加。</p>
+</li>
+<li><p>禁用数据库<strong>外键</strong> 。<br>解释：外键会导致性能下降，每次对数据进行DELETE或UPDATE操作都必须考虑外键约束，数据库都会判断当前操作是否违反数据完整性，性能下降。同时，使用外键，外键关联的数据查询要去另一张表，获取额外的锁，容易造成死锁。此外还会导致扩展性问题，在数据迁移时会遇到问题。</p>
+</li>
+</ol>
+<blockquote>
+<p>原文: …</p>
+</blockquote>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Itaken</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://itaken.github.io/2020/11/20/MySQL%E8%A7%84%E8%8C%83/">https://itaken.github.io/2020/11/20/MySQL%E8%A7%84%E8%8C%83/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Itaken</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                                    <span class="chip bg-color">转载</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,linkedin,google,twitter,facebook,qzone,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+        font-size: 18px;
+        color: #ff385b;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">万水千山总是情,打赏一块行不行</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/11/22/git-signing-failed/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="sign_and_send_pubkey: signing failed: agent refused operation">
+                        
+                        <span class="card-title">sign_and_send_pubkey: signing failed: agent refused operation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="post-category">
+                                    一个问题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E9%9B%86/">
+                        <span class="chip bg-color">问题集</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/ssh/">
+                        <span class="chip bg-color">ssh</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/20/PHP%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83%E4%B8%8Ecode-review/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="PHP开发规范和code review">
+                        
+                        <span class="card-title">PHP开发规范和code review</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD%E9%AA%8C%E8%AF%81/" class="post-category">
+                                    转载验证
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                        <span class="chip bg-color">转载</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: rgb(255 255 255 / 10%);box-shadow: 0 0 black !important;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, mark'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, mark').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;
+            
+                <span id="year">2017-2022</span>
+            
+            <span id="year">2017</span>
+            <a href="/about" target="_blank">Itaken</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/itaken" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:regelhh@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
